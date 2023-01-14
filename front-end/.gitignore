@@ -16,6 +16,7 @@ w resize listen.js
 /ignoredfiles
 ignoredfiles/
 svg/
+0oldfiles/
 
 # Editor directories and files
 .vscode/*

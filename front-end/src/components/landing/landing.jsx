@@ -36,31 +36,31 @@ export default function Landing()
         </div>
 
         <div className='category phones-c'>
-          <a href="/categories/laptops" className='textCenter'>
+          <a href="/categories/smartphones" className='textCenter'>
             Smart Phones
           </a>
         </div>
 
         <div className='category desktops-c'>
-          <a href="/categories/laptops" className='textCenter'>
+          <a href="/categories/desktops" className='textCenter'>
             Desktops
           </a>
         </div>
 
         <div className='category clothing-c'>
-          <a href="/categories/laptops" className='textCenter'>
+          <a href="/categories/clothing" className='textCenter'>
             Clothing
           </a>
         </div>
 
         <div className='category featured-c'>
-          <a href="/categories/laptops" className='textCenter'>
+          <a href="/categories/featured" className='textCenter'>
             Featured
           </a>
         </div>
 
         <div className='category medical-c'>
-          <a href="/categories/laptops" className='textCenter'>
+          <a href="/categories/medical" className='textCenter'>
             Medical
           </a>
         </div>

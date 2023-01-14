@@ -1,7 +1,9 @@
 
-import aboelsaod from "./images/abo-elsaod.png";
-import akkad from "./images/akkad.png";
-import baron from "./images/baron.png";
+
+
+import aboelsaod from "/src/assets/images/clients/abo-elsaod.png";
+import akkad from "/src/assets/images/clients/akkad.png";
+import baron from "/src/assets/images/clients/baron.png";
 
 const ClientsData = [
     {

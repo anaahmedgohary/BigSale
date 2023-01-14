@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-import ghazawyData from "../../malls/clients/ghazzawy/ghazawyData.js";
+// import ghazawyData from "./ghazawyData.js";
+import laptopData from './labtopdata.js';
 import MapperDeOffers from './mapperdeoffers.jsx';
 
 export default function LaptopsMap() {
   return (
       <div className='laptops-container'>
           {
-              ghazawyData.map((item, index) =>
+              laptopData.map((item, index) =>
               {
                   if (item.category === "laptops")
                   {

@@ -4,6 +4,12 @@
   margin: 0;
 }
 
+#mallsDiv {
+  padding-block: 10%;
+  padding-inline: 1%;
+  width: 100%;
+  background-color: #cccbbd;
+}
 #mallsDiv .mallsHead {
   width: 300px;
   margin: auto;
@@ -92,4 +98,4 @@
 }
 .providerphone:hover {
   box-shadow: none;
-}/*# sourceMappingURL=malls.css.map */
+}/*# sourceMappingURL=clients.css.map */

@@ -8,9 +8,10 @@ import "./AppStyle/app.css";
 
 import Header from './components/header/header';
 import Landing from './components/landing/landing';
-import Providers from './components/categories/providers';
+import Clients from './components/clients/clients';
 import GhazawyMall from "./components/clients/ghazzawy/ghazawy";
 import Laptops from './components/categories/products/laptops/Laptops';
+import SmartPhone from "./components/categories/products/smartphones/smartphone";
 import GlobalCart from "./components/cartGlobal/globalcart";
 
 
@@ -22,9 +23,10 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Landing />} />
-        <Route path='/providers' element={<Providers />} />
+        <Route path='/providers' element={<Clients />} />
         <Route path='/ghazawy-2' element={<GhazawyMall />} />
         <Route path='/categories/laptops' element={<Laptops />} />
+        <Route path='/categories/smartphones' element={<SmartPhone />} />
         <Route path='/cart' element={<GlobalCart />} />
       </Routes>
     </Router>

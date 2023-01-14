@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import ClientsMaper from './clientsmaper';
 import ClientsData from './clientsdata.js';
 
-import "./style/malls.css"
+import "./style/clients.css";
 import $ from "jquery";
 
 
