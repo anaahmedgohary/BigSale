@@ -1,0 +1,110 @@
+.sliderDiv {
+  text-align: center;
+  background-color: transparent;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: grid;
+}
+
+.navbtndiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  width: 240px;
+  left: 50%;
+  translate: -50%;
+  bottom: 0%;
+}
+.navbtndiv .navbtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.navbtndiv #prevbtn {
+  position: absolute;
+  left: 0;
+}
+.navbtndiv #nxtbtn {
+  position: absolute;
+  right: 0;
+}
+
+.slidersListDiv {
+  width: 96px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.slidersList {
+  background-color: white;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0%;
+  transition: all 500ms;
+}
+.slidersList a {
+  text-decoration: none;
+}
+.slidersList .slider {
+  display: grid;
+  text-align: center;
+  left: 0;
+  padding-inline: 20PX;
+  border: solid 3px;
+}
+.slidersList .slider:hover {
+  background-color: green;
+}
+
+@-webkit-keyframes slidera {
+  0% {
+    right: 33%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@keyframes slidera {
+  0% {
+    right: 33%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+.slidersList2 {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  -webkit-animation: slider2 4s linear 0s infinite alternate forwards;
+          animation: slider2 4s linear 0s infinite alternate forwards;
+}
+
+@-webkit-keyframes slider2 {
+  100% {
+    translate: 100%;
+  }
+}
+
+@keyframes slider2 {
+  100% {
+    translate: 100%;
+  }
+}/*# sourceMappingURL=slider.css.map */

@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexCenterWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
+}
+
+$eleBlack: rgba(30, 30, 30, 1);
+$backColor: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+$wraperColor: linear-gradient(to right, #fffbd5, #b20a2c);
+$specialGreen: rgb(37, 158, 98);
+$nickelodeon: rgb(244, 109, 37);
+
+.cartDiv{
+    background-color: wheat;
+    background-color: rgba(240, 248, 255, 0.99);
+    background-image: url(/src/assets/images/bg01.png);
+    background-size: auto;
+   // background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: overlay;
+    padding-block: 100px;
+}

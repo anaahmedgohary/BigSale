@@ -1,0 +1,73 @@
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexCenterWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
+}
+
+$eleBlack:rgba(30,30,30,1);
+$backColor: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+$wraperColor: linear-gradient(to right, #fffbd5, #b20a2c);
+$specialGreen: rgb(155, 243, 199);
+$nickelodeon: rgb(244, 109, 37);
+
+
+.GhazawyContainer{
+    background-color: antiquewhite;
+    padding-block: 40px;
+    padding-inline: 12px;
+    text-align: center;
+}
+.offers{
+    //border: solid silver;
+    @include flexCenterWrap();
+    gap: 40px;
+}
+
+.offer{
+    border: solid;
+    @include gridCenter();
+    gap: 30px;
+    padding-block: 20px;
+    min-width: 320px;
+    box-shadow: 2px 2px 5px;
+    border-radius: 5px;
+
+    ul{
+        @include gridCenter();
+        list-style: none;
+        font-size: 1.2rem;
+        min-width: 100%;
+
+        img{
+         width: 200px;
+         height: 150px;
+         border-radius: 5px;
+        }
+    }
+
+    
+}

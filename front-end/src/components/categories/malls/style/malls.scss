@@ -1,0 +1,151 @@
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexCenterWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
+}
+
+$eleBlack:rgba(30,30,30,1);
+$backColor: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+$wraperColor: linear-gradient(to right, #fffbd5, #b20a2c);
+$specialGreen: rgb(155, 243, 199);
+$nickelodeon: rgb(244, 109, 37);
+
+
+
+
+
+
+#mallsDiv{
+
+    .mallsHead{
+        width: 300px;
+        margin:auto;
+      //  border:solid green;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+        min-height: 5rem;
+
+        button{
+            background-color:  orange;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            right: 0;
+            //bottom: 0;
+            box-shadow: 2px 2px 2px #0f0c29;
+            transition: 200ms;
+            &:hover{
+                background-color: green;
+            }
+        }
+    }
+    
+
+// .mallsDiver{
+//     padding-block:4%;
+//     border: solid;
+//     @include gridCenter();
+//     gap:10px;
+// }
+
+.mallDiv{
+    background-color: silver;
+    border: solid black;
+    padding-block: 20px;
+    min-width: 300px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px ;
+    //width: 100%;
+    transition: 500ms;
+    &:hover{
+       // zoom: 1.01;
+       
+        background-color: #fffbd5;
+    }
+
+    .provider-list{
+        list-style: none;
+        @include gridCenter();
+        gap:10px;
+
+        li{
+            font-size: 1.4rem;
+        }
+    }
+
+    img{
+        width: 250px;
+        height: 150px;
+        border-radius: 8px;
+    }
+}
+}
+
+
+
+
+
+
+.malls-Div{
+    @include flexCenterWrap();
+    gap: 40px;
+    
+}
+
+.mallDiv{
+        min-width: 300px;
+}
+
+.providerLink{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(48, 43, 99);
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: -2px 2px 4px rgb(165, 24, 24);
+    &:hover{
+        box-shadow: none;
+    }
+}
+
+.providerphone{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(41, 90, 53);
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: -2px 2px 4px rgb(48, 43, 99);
+    &:hover{
+        box-shadow: none;
+    }
+}
+

@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#mallsDiv .mallsHead {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  min-height: 5rem;
+}
+#mallsDiv .mallsHead button {
+  background-color: orange;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  box-shadow: 2px 2px 2px #0f0c29;
+  transition: 200ms;
+}
+#mallsDiv .mallsHead button:hover {
+  background-color: green;
+}
+#mallsDiv .mallDiv {
+  background-color: silver;
+  border: solid black;
+  padding-block: 20px;
+  min-width: 300px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px;
+  transition: 500ms;
+}
+#mallsDiv .mallDiv:hover {
+  background-color: #fffbd5;
+}
+#mallsDiv .mallDiv .provider-list {
+  list-style: none;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+}
+#mallsDiv .mallDiv .provider-list li {
+  font-size: 1.4rem;
+}
+#mallsDiv .mallDiv img {
+  width: 250px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.malls-Div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.mallDiv {
+  min-width: 300px;
+}
+
+.providerLink {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: white;
+  background-color: rgb(48, 43, 99);
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: -2px 2px 4px rgb(165, 24, 24);
+}
+.providerLink:hover {
+  box-shadow: none;
+}
+
+.providerphone {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: white;
+  background-color: rgb(41, 90, 53);
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: -2px 2px 4px rgb(48, 43, 99);
+}
+.providerphone:hover {
+  box-shadow: none;
+}/*# sourceMappingURL=malls.css.map */

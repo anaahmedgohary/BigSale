@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.GhazawyContainer {
+  background-color: antiquewhite;
+  padding-block: 40px;
+  padding-inline: 12px;
+  text-align: center;
+}
+
+.offers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.offer {
+  border: solid;
+  display: grid;
+  place-items: center;
+  gap: 30px;
+  padding-block: 20px;
+  min-width: 320px;
+  box-shadow: 2px 2px 5px;
+  border-radius: 5px;
+}
+.offer ul {
+  display: grid;
+  place-items: center;
+  list-style: none;
+  font-size: 1.2rem;
+  min-width: 100%;
+}
+.offer ul img {
+  width: 200px;
+  height: 150px;
+  border-radius: 5px;
+}/*# sourceMappingURL=ghazawy.css.map */

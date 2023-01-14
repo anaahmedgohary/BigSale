@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  min-height: 200px;
+  padding-inline: 0%;
+  background-image: url(../../../assets/images/bg02.png);
+  background-size: auto 100%;
+  background-position: center center;
+  display: grid;
+  position: relative;
+  overflow: hidden;
+}
+.header .sideBar-btn-div {
+  display: none;
+}
+.header .svg-img {
+  position: absolute;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  fill: red;
+  z-index: -6;
+  color: red;
+}
+.header .main-nav {
+  display: flex;
+  align-self: flex-start;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+.header .main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  padding-block: 1%;
+  background-color: rgb(36, 31, 31);
+}
+.header .main-nav ul li {
+  flex: 1;
+  flex-grow: 0;
+  min-width: 120px;
+}
+.header .main-nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: rgb(204, 38, 35);
+  padding-block: 5px;
+  border-radius: 12px;
+}
+.header .main-nav ul li a:hover {
+  background-color: orange;
+}
+
+#sidebarContainer {
+  display: none;
+}
+
+.topFixedBar {
+  display: none;
+}
+
+.sidebar-nav {
+  display: none;
+}
+
+@-webkit-keyframes slideRighter {
+  0% {
+    translate: -100% 0;
+  }
+  100% {
+    translate: 0% 0%;
+  }
+}
+
+@keyframes slideRighter {
+  0% {
+    translate: -100% 0;
+  }
+  100% {
+    translate: 0% 0%;
+  }
+}
+@-webkit-keyframes slideHide {
+  100% {
+    translate: 100% 0%;
+  }
+}
+@keyframes slideHide {
+  100% {
+    translate: 100% 0%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .topFixedBar {
+    display: grid;
+    height: 50px;
+    width: 100%;
+    background-color: #0f0c29;
+    position: fixed;
+    z-index: 2;
+  }
+  .topFixedBar #fixedBarTitle {
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: 60%;
+    max-height: 100%;
+  }
+  .header {
+    position: relative;
+  }
+  .header .main-nav {
+    display: none;
+  }
+  .header .sideBar-btn-div {
+    position: absolute;
+    top: 10%;
+    left: 12%;
+    border-radius: 6px;
+    background-color: #0f0c29;
+    display: grid;
+    place-items: center;
+    z-index: 10;
+  }
+  .header .sideBar-btn-div .sideBar-btn {
+    height: 40px;
+    width: 40px;
+    gap: 3px;
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .header .sideBar-btn-div .sideBar-btn:hover {
+    background-color: rgb(158, 47, 69);
+  }
+  .header .sideBar-btn-div .sideBar-btn:hover span {
+    background-color: whitesmoke;
+    border-color: darkgreen;
+  }
+  .header .sideBar-btn-div .sideBar-btn span {
+    width: 80%;
+    height: 6px;
+    background-color: black;
+    border-radius: 50px 50px;
+  }
+  .header #sidebarContainer {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(89, 89, 90, 0.7);
+    position: fixed;
+    z-index: 9;
+  }
+  .header .slideshow {
+    -webkit-animation: slideRighter 3s ease-out 1s 1 normal forwards;
+            animation: slideRighter 3s ease-out 1s 1 normal forwards;
+  }
+  .header .slidehide {
+    -webkit-animation: slideHide 1s ease-in 0s 1 normal forwards;
+            animation: slideHide 1s ease-in 0s 1 normal forwards;
+  }
+  .header .sidebar-nav {
+    background-color: #24243e;
+    min-width: 350px;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    left: -200%;
+  }
+  .header .sidebar-nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    border-radius: 12px;
+    margin-inline: auto;
+    padding-inline: 4%;
+  }
+  .header .sidebar-nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    background-color: rgb(37, 158, 98);
+    padding-block: 5px;
+    border-radius: 12px;
+  }
+  .header .sidebar-nav ul li a:hover {
+    background-color: orange;
+  }
+  .hiddennav {
+    display: none;
+  }
+}/*# sourceMappingURL=header.css.map */

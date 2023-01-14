@@ -1,0 +1,204 @@
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexCenterWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
+}
+
+$eleBlack:rgba(30,30,30,1);
+$backColor: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+$wraperColor: linear-gradient(to right, #fffbd5, #b20a2c);
+$specialGreen: rgb(155, 243, 199);
+$nickelodeon: rgb(244, 109, 37);
+
+
+.isEmptydiv{
+    @include flexCenter();
+    text-align: center;
+}
+
+.cartCont{
+    border: solid red;
+    margin-block: 12%;
+}
+
+.itemsNCartDiv{
+    @include gridCenter();
+    border: solid;
+
+    p:nth-of-type(1){
+        font-size: 1.3rem;
+        background-color: darkgreen;
+        color: white;
+        padding-inline: 2%;
+    }
+    p:nth-of-type(2){
+        font-size: 1.3rem;
+        background-color: #b20a2c;
+        color: aliceblue;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        @include gridCenter();
+    }
+}
+
+.itemsDiv{
+    border: solid 5px seagreen;
+    @include flexCenterWrap();
+    gap: 40px;
+}
+
+.itemDiv{
+    border: solid salmon;
+    @include gridCenter();
+    text-align: center;
+    min-width: 300px;
+
+    .itemDetails{
+        border: solid;
+        width: 100%;
+        @include gridCenter();
+        gap: 6px;
+        font-size: 26px;
+
+        div{
+            width: 100%;
+            border-top: solid;
+            word-wrap: break-word;
+            word-break: break-all;
+            line-break: anywhere;
+            white-space: normal;
+            min-height: 3rem;
+            @include gridCenter();
+        }
+    }
+
+    .control-div{
+        background-color:darkolivegreen;
+        width: 100%;
+
+        .remove-item-div{
+            padding-block: 1%;
+            text-align: right;
+
+            button{
+                cursor: pointer;
+                background-color: orange;
+                border-radius: 6px 6px 6px 6px;
+            }
+        }
+
+        .add-item-div{
+            border-bottom: solid;
+            padding-block: 1%;
+
+            button{
+cursor: pointer;
+                background-color: greenyellow;
+                padding-inline: 2%;
+                min-height: 2rem;
+                font-size: 1rem;
+                width: 50%;
+                max-width: 140px;
+            }
+        }
+        .minus-item-div{
+            padding-block: 1%;
+            border-bottom: solid;
+            
+
+            button{
+cursor: pointer;
+                background-color: sandybrown;
+                padding-inline: 2%;
+                min-height: 2rem;
+                font-size: 1rem;
+                width: 50%;
+                max-width: 50px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+.totalNclearDiv{
+    border: solid blue;
+    //@include flexCenter();
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-left: 12%;
+    padding-right: 2%;
+    padding-block: 4%;
+
+}
+
+.totalPrice-div{
+    //border: solid;
+    
+    p:nth-of-type(1){
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    p:nth-of-type(2){
+        text-align: center;
+        font-size: 30px;
+        font-weight: bolder;
+        //text-decoration: underline;
+        border-top: solid;
+        padding: 1%;
+        border-bottom: solid;
+    }
+}
+
+
+.clearCDiv{
+    //justify-self: flex-end;
+    //border: solid;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;    
+    //justify-self: flex-end;
+
+    button {
+        background-color: lightcoral;
+        color: white;
+        border-radius: 5px;
+        padding-inline: 1%;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover{
+            color: black;
+        }
+    }
+}
