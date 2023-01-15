@@ -1,0 +1,32 @@
+
+
+
+.not-found{
+    text-align: center;
+    background-image: url(/src/assets/images/404notfound.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+   position: relative;
+}
+
+.not-found a{
+    position: absolute;
+    bottom: 20%;
+    text-align: center;
+    text-decoration: none;
+    color: green;
+    background-color: white;
+    padding: 20px;
+    border-radius: 14px;
+    border: solid black;
+    box-shadow: 3px 3px black;
+    transition: 500ms;
+}
+
+.not-found a:hover{
+    background-color: gold;
+    color: black;
+}

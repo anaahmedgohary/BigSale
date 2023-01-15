@@ -11,7 +11,7 @@ import $ from "jquery";
 // import HuaweiP30 from "./sliderStyle/images/Huawei-P30-Pro.jpg";
 import ImgSlider from "./imgslider";
 
-export default function Header()
+export default function MainHeader()
 {
 
     
@@ -117,7 +117,7 @@ export default function Header()
 
             <div className='topFixedBar'>
                 <div id='fixedBarTitle'>
-                    <h1>Zagazig Deals</h1>
+                    <h1>Big Sale</h1>
                 </div>
                 <div className='sideBar-btn-div' id='sidebtndiv'>
                     <button className='sideBar-btn' title='Toggle sidebar menu'

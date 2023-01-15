@@ -19,7 +19,7 @@ export default function Landing()
         <h1 className='textCenter'>Welcome to BIG SALE</h1>
         <div className='short-about'>
           <p className='textCenter'>
-            We have the best SALES, DISCOUNTS, OFFERS and DEALS in the city of ZAGAZIG
+            We have the best SALES, DISCOUNTS, OFFERS and DEALS in the local market.
           </p>
         </div>
       </div>
