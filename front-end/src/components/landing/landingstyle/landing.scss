@@ -44,7 +44,7 @@ $nickelodeon: rgb(244, 109, 37);
     min-height: 100vh;
    // max-width: 90%;
     margin-inline: auto;
-    background-image: url(./images/bg01.png);
+    background-image: url(/src/assets/images/Homepage/bg01.png);
     background-size: auto;
     background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: overlay;
@@ -155,38 +155,38 @@ $nickelodeon: rgb(244, 109, 37);
 }
 
 .Laptops-c{
-    background-image: url(./images/laptops.jpg);
+    background-image: url(/src/assets/images/Homepage/laptops.jpg);
     &:hover{
     animation: zoomer 6s ease-in 0s 1 alternate backwards;
     }
 }
 .phones-c{
-    background-image: url(./images/smartphones02.jpg);
+    background-image: url(/src/assets/images/Homepage/smartphones02.jpg);
     &:hover{
     animation: zoomer 6s ease-in 0s 1 alternate backwards;
     }
 }
 .desktops-c{
-    background-image: url(./images/desktops.jpg);
+    background-image: url(/src/assets/images/Homepage/desktops.jpg);
     &:hover{
     animation: zoomer 6s ease-in 0s 1 alternate backwards;
     }
 }
 .clothing-c{
-    background-image: url(./images/clothing02.png);
+    background-image: url(/src/assets/images/Homepage/clothing02.png);
     &:hover{
     animation: zoomer 6s linear 0s 1 alternate backwards;
     }
 }
 .featured-c{
     order: -5;
-    background-image: url(./images/featured.jpg);
+    background-image: url(/src/assets/images/Homepage/featured.jpg);
     &:hover{
     animation: zoomer 6s linear 0s 1 alternate backwards;
     }
 }
 .medical-c{
-    background-image: url(./images/medical.jpg);
+    background-image: url(/src/assets/images/Homepage/medical.jpg);
     &:hover{
     animation: zoomer 6s ease-in 0s 1 alternate backwards;
     }

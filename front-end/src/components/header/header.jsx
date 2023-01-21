@@ -14,6 +14,10 @@ import $ from "jquery";
 export default function MainHeader()
 {
 
+    useEffect(() =>
+    {
+        $("#sidebarContainer").hide();
+    }, []);
    // function getwwidth(width) { this.width = width };
     const [wwidth, setWwidth] = useState(0);
     useLayoutEffect(() =>
@@ -27,6 +31,7 @@ export default function MainHeader()
       //  console.log(`current window width: ${wwidth}`)
         wwidth >= 900 ? ($("#sidebarContainer").hide(), setShowbar(false)) : false;
     })
+
 
     const [showbar, setShowbar] = useState(false);
     useEffect(() =>
@@ -62,10 +67,7 @@ export default function MainHeader()
 
     }, [showbar]);
 
-    useEffect(() =>
-    {
-        $("#sidebarContainer").hide();
-    }, []);
+    
     
     // useEffect(() =>
     // {

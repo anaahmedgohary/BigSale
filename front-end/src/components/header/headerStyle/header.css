@@ -7,7 +7,7 @@
 .header {
   min-height: 200px;
   padding-inline: 0%;
-  background-image: url(../../../assets/images/bg02.png);
+  background-image: url(/src/assets/images/bg02.png);
   background-size: auto 100%;
   background-position: center center;
   display: grid;
