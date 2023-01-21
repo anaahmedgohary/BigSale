@@ -74,7 +74,7 @@
   place-items: center;
 }
 .itemDiv .control-div {
-  background-color: darkolivegreen;
+  background-color: rgb(233, 247, 154);
   width: 100%;
 }
 .itemDiv .control-div .remove-item-div {
@@ -92,7 +92,7 @@
 }
 .itemDiv .control-div .add-item-div button {
   cursor: pointer;
-  background-color: greenyellow;
+  color: white;
   padding-inline: 2%;
   min-height: 2rem;
   font-size: 1rem;

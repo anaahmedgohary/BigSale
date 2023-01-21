@@ -106,8 +106,13 @@ $nickelodeon: rgb(244, 109, 37);
     gap: 20px;
 
     .link-img{
+        margin: auto;
         width: 30px;
         height: 30px;
+        transition: 400ms;
+        &:hover{
+            scale: 1.1;
+        }
     }
 }
 .contact-link{

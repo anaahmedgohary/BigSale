@@ -4,8 +4,8 @@ import './nopage.css';
 export default function NoPage() {
   return (
       <div className='not-found'>
-          <a href="/">
-              <h1>Go Back Home!</h1>
+          <a href="/" className='font-bold'>
+            Go Back Home!
           </a>
     </div>
   )

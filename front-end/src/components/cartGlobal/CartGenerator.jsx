@@ -64,7 +64,7 @@ export default function CartGenerator()
                                 <div className='control-div'>
                                     
                                     <div className='add-item-div'>
-                                        <button
+                                        <button className=' bg-green-700 hover:bg-green-800 font-medium rounded-lg text-sm '
                                             onClick={() =>
                                             {
                                                 updateItemQuantity(item.id, item.quantity + 1)
@@ -74,7 +74,7 @@ export default function CartGenerator()
                                         Add  +1</button>
                                     </div>
                                     <div className='minus-item-div'>
-                                        <button
+                                        <button className='rounded-full'
                                             onClick={() =>
                                             {
                                                 updateItemQuantity(item.id, item.quantity - 1)

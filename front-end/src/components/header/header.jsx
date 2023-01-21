@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react'
 
 import "./headerStyle/header.css";
-import "./sliderStyle/slider.css"
+// import "./sliderStyle/slider.css"
 // import headBg from "./headerStyle/image/assetttAsset4.svg";
 import $ from "jquery";
 
@@ -9,12 +9,11 @@ import $ from "jquery";
 // import iphone from "./sliderStyle/images/iPhone-13-2.jpg";
 // import galaxya from "./sliderStyle/images/galaxyA.jpg";
 // import HuaweiP30 from "./sliderStyle/images/Huawei-P30-Pro.jpg";
-import ImgSlider from "./imgslider";
+// import ImgSlider from "./imgslider";
 
 export default function MainHeader()
 {
 
-    
    // function getwwidth(width) { this.width = width };
     const [wwidth, setWwidth] = useState(0);
     useLayoutEffect(() =>
@@ -117,7 +116,7 @@ export default function MainHeader()
 
             <div className='topFixedBar'>
                 <div id='fixedBarTitle'>
-                    <h1>Big Sale</h1>
+                    <a href="/" className='hover:text-orange-400 font-extrabold'>Big Sale</a>
                 </div>
                 <div className='sideBar-btn-div' id='sidebtndiv'>
                     <button className='sideBar-btn' title='Toggle sidebar menu'
@@ -152,7 +151,7 @@ export default function MainHeader()
            </div>
 
 
-            <ImgSlider />
+            {/* <ImgSlider /> */}
 
 
 

@@ -1,0 +1,98 @@
+loading-div {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  -webkit-animation: lds-dual-ring 1.2s linear infinite;
+          animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 80px;
+  height: 4px;
+  margin: 0 auto;
+  background-color: #aaa;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.loader {
+  width: 60%;
+  height: 100%;
+  background-color: #de4b4b;
+  display: block;
+  -webkit-animation: animate ease-out 1s infinite;
+          animation: animate ease-out 1s infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: translatex(-50%);
+  }
+  50% {
+    transform: translatex(100%);
+  }
+  100% {
+    transform: translatex(-50%);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translatex(-50%);
+  }
+  50% {
+    transform: translatex(100%);
+  }
+  100% {
+    transform: translatex(-50%);
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -95,7 +95,7 @@ $nickelodeon: rgb(244, 109, 37);
     }
 
     .control-div{
-        background-color:darkolivegreen;
+        background-color:rgb(233, 247, 154);
         width: 100%;
 
         .remove-item-div{
@@ -115,7 +115,8 @@ $nickelodeon: rgb(244, 109, 37);
 
             button{
 cursor: pointer;
-                background-color: greenyellow;
+                // background-color: greenyellow;
+                color: white;
                 padding-inline: 2%;
                 min-height: 2rem;
                 font-size: 1rem;

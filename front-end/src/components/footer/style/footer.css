@@ -83,8 +83,13 @@
   gap: 20px;
 }
 .contact-us-div .link-img {
+  margin: auto;
   width: 30px;
   height: 30px;
+  transition: 400ms;
+}
+.contact-us-div .link-img:hover {
+  scale: 1.1;
 }
 
 .contact-link {

@@ -9,13 +9,12 @@ html, body {
   padding: 0;
 }
 
-.container {
-  margin-top: 2%;
+.homeContainer {
+  padding-inline: 40px;
   padding-top: 40px;
   padding-bottom: 200px;
   background-color: rgb(183, 228, 106);
   min-height: 100vh;
-  padding-inline: 40px;
   margin-inline: auto;
   background-image: url(./images/bg01.png);
   background-size: auto;
@@ -32,67 +31,86 @@ html, body {
   width: 100%;
   margin-inline: auto;
   margin-bottom: 50px;
+  padding-top: 50px;
   padding-bottom: 20px;
   color: white;
   box-shadow: -4px -4px 4px 4px black;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.welcome-div h1 {
+  width: 100%;
+}
+
+.short-about p {
+  font-size: 1.2rem;
 }
 
 #close-welcome-div {
   cursor: pointer;
   padding-inline: 2px;
   position: absolute;
+  left: 0;
+  top: 0;
   font-size: 22px;
   background-color: rgb(139, 139, 135);
+  transition: 300ms;
 }
-
-.short-about {
-  margin-top: 4%;
-}
-.short-about p {
-  font-size: 1.2rem;
+#close-welcome-div:hover {
+  background-color: goldenrod;
 }
 
 .categories {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
 }
 
 .category {
+  min-width: 300px;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  align-content: end;
   border: solid;
   min-height: 300px;
   background-size: cover;
   background-position: center;
-  background-color: rgba(36, 36, 62, 0.8);
+  background-color: rgba(220, 220, 236, 0.1);
   background-blend-mode: multiply;
   border-radius: 8px;
   box-shadow: 4px 4px 4px 4px black;
+  opacity: 0.9;
 }
-.category img {
-  width: 100px;
+.category:hover {
+  opacity: 1;
 }
 .category a {
-  font-size: 6rem;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  font-size: 40px;
+  font-weight: 1000;
+  color: black;
+  background-color: rgb(36, 83, 57);
   text-decoration: none;
+  text-align: center;
   line-break: auto;
   word-break: break-word;
   white-space: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  transition: 400ms;
 }
-.category:hover {
-  cursor: pointer;
-  background-color: rgba(36, 36, 62, 0.6);
+.category a:hover {
+  opacity: 1;
+  color: white;
 }
 
 .Laptops-c {
@@ -128,6 +146,7 @@ html, body {
 }
 
 .featured-c {
+  order: -5;
   background-image: url(./images/featured.jpg);
 }
 .featured-c:hover {
@@ -164,67 +183,5 @@ html, body {
   }
   100% {
     background-size: auto 100%;
-  }
-}
-@media screen and (max-width: 1350px) {
-  .categories {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .category a {
-    font-size: 4rem;
-  }
-}
-@media screen and (max-width: 950px) {
-  .categories {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .category a {
-    font-size: 4rem;
-  }
-}
-@media screen and (max-width: 750px) {
-  .category a {
-    font-size: 3rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  .categories {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .category a {
-    font-size: 5rem;
-  }
-}
-@media screen and (max-width: 400px) {
-  .categories {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .category a {
-    font-size: 4rem;
-  }
-}
-@media screen and (min-width: 1800px) {
-  .categories {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media screen and (min-width: 2600px) {
-  .categories {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-@media screen and (min-width: 2900px) {
-  .categories {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-@media screen and (min-width: 3100px) {
-  .categories {
-    grid-template-columns: repeat(6, 1fr);
-    place-items: center;
-  }
-  .category a {
-    font-size: 8rem;
-    padding-inline: 20px;
   }
 }/*# sourceMappingURL=landing.css.map */
