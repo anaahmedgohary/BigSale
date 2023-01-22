@@ -17,6 +17,7 @@ import DeskTops from "./components/categories/products/desktops/DeskTops";
 import GlobalCart from "./components/cartGlobal/globalcart";
 import MainFooter from "./components/footer/footer";
 import NoPage from "./components/page404/nopage";
+import SideCart from "components/cartGlobal/sidecart/sideCart";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <MainHeader />
       <Routes>
         <Route path='/' element={<Landing />} />
+        <Route path='/t' element={<SideCart />} />
         <Route path='/providers' element={<Clients />} />
         <Route path='/ghazawy-2' element={<GhazawyMall />} />
         <Route path='/categories/featured' element={<FeaturedDeals />} />

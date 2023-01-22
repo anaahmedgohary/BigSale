@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useCart } from "react-use-cart";
-
+import $ from 'jquery';
 import "./cartstyle/cart.css";
 
 export default function CartGenerator()
 {
+    
     const {
         isEmpty,
         totalItems,
@@ -16,6 +17,19 @@ export default function CartGenerator()
         emptyCart,
     } = useCart();
 
+    useEffect(() =>
+    {
+        let item_quantity = document.querySelectorAll('.item_quantity')
+        item_quantity.forEach(el =>
+        {
+            let par = el.parentElement.parentElement.parentElement;
+            let minB = par.querySelector('.minus-item');
+            // console.log(minB)
+            //  el.value <= 1 ? minB.style.display = 'none' : minB.style.display = 'inline-block';
+            el.value <= 1 ? minB.style.visibility = 'collapse' : minB.style.visibility = 'visible';
+        });
+    }, [items])
+
     if (isEmpty)
     {
         return (
@@ -24,6 +38,7 @@ export default function CartGenerator()
             </div>
         )
     }
+
 
 
     return (
@@ -40,10 +55,11 @@ export default function CartGenerator()
                     items.map((item, index) =>
                     {
                         return (
-                            <div key={item.id} id={`${item.id}`} className="itemDiv">
+                            <div key={item.id} className="itemDiv">
                                 <div className='itemDetails'>
                                     <div>
-                                        <img src={item.img} alt="" style={{ width: "100px" }} />
+                                        <img src={item.img} alt="product"
+                                        className='product-img'/>
                                     </div>
 
                                     <div>
@@ -57,7 +73,9 @@ export default function CartGenerator()
                                     </div>
                                     
                                     <div>
-                                    Quantity:  {item.quantity}
+                                        <label>Quantity:</label>
+                                        <input className='item_quantity' readOnly value={item.quantity} />
+                                    
                                     </div>
                                 </div>
 
@@ -74,12 +92,11 @@ export default function CartGenerator()
                                         Add  +1</button>
                                     </div>
                                     <div className='minus-item-div'>
-                                        <button className='rounded-full'
+                                        <button className='rounded-full minus-item'
                                             onClick={() =>
                                             {
-                                                updateItemQuantity(item.id, item.quantity - 1)
-                                            }
-                                            }
+                                                updateItemQuantity(item.id, item.quantity - 1);
+                                            }}
                                         >
                                             -1
                                         </button>
@@ -90,7 +107,7 @@ export default function CartGenerator()
                                             {
                                                 removeItem(item.id)
                                             }}
-                                        >Remove item</button>
+                                        >Remove</button>
                                     </div>
                                 </div>
                             </div>

@@ -1,0 +1,175 @@
+.cartSection {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  background-color: wheat;
+  font-size: 12px;
+  padding-block: 40px;
+  max-width: 350px;
+  border: solid red;
+  padding-inline: 0;
+  overflow-y: scroll;
+  z-index: 1;
+}
+.cartSection .itemsNCartDiv {
+  background-color: black;
+  color: white;
+  padding-block: 6px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  row-gap: 5px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.cartSection .itemsNCartDiv p {
+  font-size: 16px;
+}
+.cartSection .itemsDiv {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cartSection .itemsDiv .itemDiv {
+  font-size: 12px;
+}
+.cartSection .itemsDiv .itemDiv .product-img {
+  height: 40px;
+}
+.cartSection .itemsDiv .itemDiv .itemDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+}
+.cartSection .itemsDiv .itemDiv .itemDetails div {
+  padding: 0;
+}
+.cartSection .itemsDiv .itemDiv .itemDetails .imgAndName {
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cartSection .itemsDiv .itemDiv .itemDetails .detailDiv {
+  line-height: 6px;
+}
+.cartSection .itemsDiv .itemDiv .itemDetails .detailDiv:not(:nth-child(-n+1)) {
+  display: flex;
+  justify-content: center;
+}
+.cartSection .itemsDiv .itemDiv .itemDetails .detailDiv:not(:nth-child(-n+1)) input {
+  max-width: 80px;
+  padding: 0;
+  border: none;
+  width: 20px;
+}
+.cartSection .itemsDiv .itemDiv .itemDetails .detailDiv label {
+  font-size: 12px;
+  text-align: center;
+}
+.cartSection .itemsDiv .itemDiv .itemDetails .detailDiv input {
+  background-color: transparent;
+  text-align: center;
+  font-size: 14px;
+  border: solid;
+}
+.cartSection .itemsDiv .itemDiv .controls-div {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  width: 100%;
+}
+.cartSection .itemsDiv .itemDiv .controls-div .addOrMinusDiv {
+  align-self: flex-start;
+  display: flex;
+  gap: 20px 20px;
+  padding-left: 6px;
+}
+.cartSection .itemsDiv .itemDiv .controls-div .addOrMinusDiv button {
+  width: 80px;
+  border: solid;
+  border-radius: 0;
+  padding-inline: 4px;
+  padding-block: 4px;
+}
+.cartSection .itemsDiv .itemDiv .controls-div .addOrMinusDiv .addplusonebtn {
+  background-color: green;
+}
+.cartSection .itemsDiv .itemDiv .controls-div .addOrMinusDiv .minus-item {
+  background-color: yellow;
+}
+.cartSection .itemsDiv .itemDiv .controls-div .remove-item-div {
+  align-self: flex-end;
+  padding-right: 2px;
+}
+.cartSection .itemsDiv .itemDiv .controls-div .remove-item-div button {
+  background-color: red;
+  color: white;
+  padding-inline: 8px;
+}
+.cartSection .checkoutOrClearDiv {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  gap: 60px;
+  padding-inline: 14px;
+  padding-top: 20px;
+  border: solid;
+}
+.cartSection .checkoutOrClearDiv div {
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  border: solid;
+}
+.cartSection .checkoutOrClearDiv .totalAndCheckout {
+  display: flex;
+}
+.cartSection .checkoutOrClearDiv .totalPrice-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cartSection .checkoutOrClearDiv .totalPrice-div input {
+  font-size: 25px;
+  font-weight: 600;
+  width: 120px;
+  text-align: center;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.cartSection .checkoutOrClearDiv .checkoutDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartSection .checkoutOrClearDiv .checkoutDiv a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: solid;
+  flex-grow: 1;
+  height: 100%;
+  background-color: green;
+  font-size: 24px;
+  color: white;
+  font-weight: 800;
+}
+.cartSection .checkoutOrClearDiv .clearCDiv {
+  height: 20%;
+  align-self: end;
+}
+.cartSection .checkoutOrClearDiv .clearCDiv button {
+  color: black;
+  border-radius: 0;
+  background-color: red;
+  padding-inline: 12px;
+}/*# sourceMappingURL=sidecart.css.map */

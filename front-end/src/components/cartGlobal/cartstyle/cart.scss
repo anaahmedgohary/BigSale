@@ -38,13 +38,13 @@ $nickelodeon: rgb(244, 109, 37);
 }
 
 .cartCont{
-    border: solid red;
-    margin-block: 12%;
+    // border: solid red;
+     padding-block: 1px;
 }
 
 .itemsNCartDiv{
     @include gridCenter();
-    border: solid;
+    // border: solid;
 
     p:nth-of-type(1){
         font-size: 1.3rem;
@@ -64,16 +64,23 @@ $nickelodeon: rgb(244, 109, 37);
 }
 
 .itemsDiv{
-    border: solid 5px seagreen;
+    // border: solid 5px seagreen;
     @include flexCenterWrap();
+    align-items: stretch;
+    align-content: stretch;
     gap: 40px;
 }
 
 .itemDiv{
-    border: solid salmon;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 40%;
+    min-width: 300px;
+    max-width: 600px;
+    // border: solid salmon;
     @include gridCenter();
     text-align: center;
-    min-width: 300px;
+    
 
     .itemDetails{
         border: solid;
@@ -82,9 +89,12 @@ $nickelodeon: rgb(244, 109, 37);
         gap: 6px;
         font-size: 26px;
 
+        .product-img{
+            height: 100px;
+        }
+
         div{
             width: 100%;
-            border-top: solid;
             word-wrap: break-word;
             word-break: break-all;
             line-break: anywhere;
@@ -99,18 +109,19 @@ $nickelodeon: rgb(244, 109, 37);
         width: 100%;
 
         .remove-item-div{
-            padding-block: 1%;
+            padding-block: 6px;
+            padding-inline: 5px;
             text-align: right;
 
             button{
+                padding-inline: 5px;
                 cursor: pointer;
-                background-color: orange;
+                background-color: red;
                 border-radius: 6px 6px 6px 6px;
             }
         }
 
         .add-item-div{
-            border-bottom: solid;
             padding-block: 1%;
 
             button{
@@ -126,8 +137,6 @@ cursor: pointer;
         }
         .minus-item-div{
             padding-block: 1%;
-            border-bottom: solid;
-            
 
             button{
 cursor: pointer;
@@ -151,7 +160,6 @@ cursor: pointer;
 
 
 .totalNclearDiv{
-    border: solid blue;
     //@include flexCenter();
     display: flex;
     flex-wrap: wrap;
@@ -163,7 +171,6 @@ cursor: pointer;
 }
 
 .totalPrice-div{
-    //border: solid;
     
     p:nth-of-type(1){
         text-align: center;
@@ -183,7 +190,6 @@ cursor: pointer;
 
 .clearCDiv{
     //justify-self: flex-end;
-    //border: solid;
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;    

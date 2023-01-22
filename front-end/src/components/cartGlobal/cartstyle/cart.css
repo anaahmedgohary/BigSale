@@ -12,14 +12,12 @@
 }
 
 .cartCont {
-  border: solid red;
-  margin-block: 12%;
+  padding-block: 1px;
 }
 
 .itemsNCartDiv {
   display: grid;
   place-items: center;
-  border: solid;
 }
 .itemsNCartDiv p:nth-of-type(1) {
   font-size: 1.3rem;
@@ -39,20 +37,24 @@
 }
 
 .itemsDiv {
-  border: solid 5px seagreen;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
   gap: 40px;
 }
 
 .itemDiv {
-  border: solid salmon;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 40%;
+  min-width: 300px;
+  max-width: 600px;
   display: grid;
   place-items: center;
   text-align: center;
-  min-width: 300px;
 }
 .itemDiv .itemDetails {
   border: solid;
@@ -62,9 +64,11 @@
   gap: 6px;
   font-size: 26px;
 }
+.itemDiv .itemDetails .product-img {
+  height: 100px;
+}
 .itemDiv .itemDetails div {
   width: 100%;
-  border-top: solid;
   word-wrap: break-word;
   word-break: break-all;
   line-break: anywhere;
@@ -78,16 +82,17 @@
   width: 100%;
 }
 .itemDiv .control-div .remove-item-div {
-  padding-block: 1%;
+  padding-block: 6px;
+  padding-inline: 5px;
   text-align: right;
 }
 .itemDiv .control-div .remove-item-div button {
+  padding-inline: 5px;
   cursor: pointer;
-  background-color: orange;
+  background-color: red;
   border-radius: 6px 6px 6px 6px;
 }
 .itemDiv .control-div .add-item-div {
-  border-bottom: solid;
   padding-block: 1%;
 }
 .itemDiv .control-div .add-item-div button {
@@ -101,7 +106,6 @@
 }
 .itemDiv .control-div .minus-item-div {
   padding-block: 1%;
-  border-bottom: solid;
 }
 .itemDiv .control-div .minus-item-div button {
   cursor: pointer;
@@ -114,7 +118,6 @@
 }
 
 .totalNclearDiv {
-  border: solid blue;
   display: flex;
   flex-wrap: wrap;
   padding-left: 12%;
