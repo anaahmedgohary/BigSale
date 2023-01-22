@@ -1,10 +1,9 @@
-import $ from "jquery";
-import laptops from "./images/2laps.jpg";
-import iphone10 from "./images/Apple-iPhone-X-1-600x600.jpg";
-import samsungj7 from "./images/samsung_xxl_23147701_32725484.jpg";
-import HUAWEIP50 from "./images/P50.jpg";
-import legion5 from "./images/lenovo-laptop-legion-5.png";
-import HPZBook15 from "./images/hp-zbook-15-g3.jpg";
+import laptops from "assets/images/ghazawy/2laps.jpg";
+import iphone10 from "assets/images/ghazawy/Apple-iPhone-X-1-600x600.jpg";
+import samsungj7 from "assets/images/ghazawy/samsung_xxl_23147701_32725484.jpg";
+import HUAWEIP50 from "assets/images/ghazawy/P50.jpg";
+import legion5 from "assets/images/ghazawy/lenovo-laptop-legion-5.png";
+import HPZBook15 from "assets/images/ghazawy/hp-zbook-15-g3.jpg";
 
 
 

@@ -1,33 +1,8 @@
 import React from 'react';
-import "./ghazawyStyle/ghazawy.css";
-
-import GhazawyMapper from './ghazawyMapper';
-import CartCounter from '../../cartGlobal/cartcounter';
-import GlobalCart from '../../cartGlobal/globalcart';
-
-import { CartProvider } from "react-use-cart";
-
-
+import "./style/ghazawy.css";
+import ghazawyOffers from './ghazawyData'
+import ProductPage from 'assets/productcardmap/productPage.jsx';
 export default function GhazawyMall()
 {
-  return (
-    <CartProvider>
-        <CartCounter />
-      <div className='GhazawyContainer'>
-        <div>
-          <h1>
-            الغزاوي
-          </h1>
-        </div>
-
-        <div>
-          <GhazawyMapper />
-        </div>
-
-        <div>
-          <GlobalCart />
-        </div>
-      </div>
-    </CartProvider>
-  )
+  return (<ProductPage data={ghazawyOffers} />)
 }
