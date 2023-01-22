@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
-
 import ClientsMaper from './clientsmaper';
 import ClientsData from './clientsdata.js';
-
 import "./style/clients.css";
 import $ from "jquery";
-
 
 export default function Malls()
 {
@@ -47,9 +44,5 @@ export default function Malls()
                 }
             </div>
         </div>
-
-
-
-
     )
 }

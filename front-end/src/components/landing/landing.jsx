@@ -55,19 +55,16 @@ export default function Landing()
           </a>
         </div>
 
-        <div className='category clothing-c' onClick={() => { window.location = '/categories/clothing' }}>
+        {/* <div className='category clothing-c' onClick={() => { window.location = '/categories/clothing' }}>
           <a href="/categories/clothing" className='textCenter'>
             Clothing
           </a>
         </div>
-
-        
-
         <div className='category medical-c' onClick={() => { window.location = '/categories/medical' }}>
           <a href="/categories/medical" className='textCenter'>
             Medical
           </a>
-        </div>
+        </div> */}
         
       </div>
 

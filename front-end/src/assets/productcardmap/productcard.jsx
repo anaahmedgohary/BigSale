@@ -1,13 +1,11 @@
 import React from 'react';
 import { useCart } from "react-use-cart";
 
-export default function ProductMapper(props)
+export default function ProductCard(props)
 {
-
     const { addItem } = useCart();
 
     return (
-
         <div className='mainDiv' key={props.id}>
             <ul>
                 <li>
@@ -33,8 +31,5 @@ export default function ProductMapper(props)
                 </button>
             </div>
         </div>
-
-
-
     )
 }

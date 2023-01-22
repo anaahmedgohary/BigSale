@@ -1,0 +1,60 @@
+.cardsContainer {
+  background-color: rgba(240, 248, 255, 0.99);
+  background-image: url(/src/assets/images/bg01.png);
+  background-size: auto;
+  background-blend-mode: overlay;
+  padding-block: 100px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.mainDiv {
+  background-color: rgb(171, 219, 171);
+  min-width: 340px;
+  border: solid;
+  padding-block: 20px;
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  border-radius: 12px;
+}
+.mainDiv ul {
+  list-style: none;
+  display: grid;
+  place-items: center;
+}
+.mainDiv ul li {
+  font-size: 1.4rem;
+}
+.mainDiv .addOrBuyDiv {
+  text-align: center;
+  background-color: black;
+  padding-block: 10px;
+  width: 100%;
+}
+.mainDiv .addOrBuyDiv button {
+  background-color: rgb(199, 245, 147);
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 500ms;
+}
+.mainDiv .addOrBuyDiv button:hover {
+  scale: 1.2;
+  color: white;
+  background-color: darkolivegreen;
+}
+
+.main-img {
+  height: 140px;
+  width: 250px;
+  border-radius: 8px;
+}/*# sourceMappingURL=cards.css.map */

@@ -1,15 +1,7 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react'
-
 import "./headerStyle/header.css";
-// import "./sliderStyle/slider.css"
-// import headBg from "./headerStyle/image/assetttAsset4.svg";
 import $ from "jquery";
 
-// slider images
-// import iphone from "./sliderStyle/images/iPhone-13-2.jpg";
-// import galaxya from "./sliderStyle/images/galaxyA.jpg";
-// import HuaweiP30 from "./sliderStyle/images/Huawei-P30-Pro.jpg";
-// import ImgSlider from "./imgslider";
 
 export default function MainHeader()
 {
@@ -67,32 +59,6 @@ export default function MainHeader()
 
     }, [showbar]);
 
-    
-    
-    // useEffect(() =>
-    // {
-    //     let ooo = $(".slider");
-
-    //    // console.log(ooo)
-    //     const animatorslider = (item) =>
-    //     {
-    //        // item.css("left", "100%");
-    //       //  console.log(item);
-    //        // let mitem = item;
-    //        // mitem.style.left = "200%"
-    //     }
-
-    //     for (let o of ooo)
-    //     {
-    //       //  console.log(o);
-    //         setTimeout(animatorslider(o), 500)
-    //         //animatorslider
-    //     }
-        
-        
-    // })
-
-          
 
     return (
         

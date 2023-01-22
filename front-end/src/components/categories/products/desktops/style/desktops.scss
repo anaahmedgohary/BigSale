@@ -1,0 +1,82 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexCenterWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
+}
+
+
+
+
+
+
+
+
+
+.mapContainer{
+    background-color: rgba(240, 248, 255, 0.99);
+    background-image: url(../../../../../assets/images/bg01.png);
+    background-size: auto;
+   // background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: overlay;
+    padding-block: 100px;
+}
+
+.product-container{
+    @include flexCenterWrap();
+    gap: 50px;
+}
+
+.mainDiv{
+    background-color: rgb(171, 219, 171);
+    min-width: 340px;
+    border: solid;
+    padding-block: 20px;
+    @include gridCenter();
+    gap: 20px;
+    border-radius: 12px;
+
+    ul{
+        list-style: none;
+        @include gridCenter();
+        li{
+            font-size: 1.4rem;
+        }
+    }
+
+    .addOrBuyDiv{
+        text-align: center;
+        background-color: black;
+        padding-block: 10px;
+        width: 100%;
+        button{
+            background-color: rgb(199, 245, 147);
+            padding: 10px;
+            border-radius: 50px;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 500ms;
+            &:hover{
+                scale: 1.2;
+                color: white;
+                background-color: darkolivegreen;
+            }
+        }
+    }
+}
+.main-img{
+        height: 140px;
+        width: 250px;
+        border-radius: 8px;
+    }

@@ -34,11 +34,11 @@ export default function MainFooter() {
           <h4>Site Links</h4>
           <div className='site-links'>
             <a className='site-link' href="/categories/featured">Featured Offers</a>
-            <a className='site-link' href="/categories/newoffers">New Offers</a>
+            {/* <a className='site-link' href="/categories/newoffers">New Offers</a> */}
             <a className='site-link' href="/categories/laptops">Labtops</a>
             <a className='site-link' href="/categories/smartphones">Smartphones</a>
             <a className='site-link' href="/categories/desktops">Desktops</a>
-            <a className='site-link' href="/categories/fashion">Fashion</a>
+            {/* <a className='site-link' href="/categories/fashion">Fashion</a> */}
           </div>
 
         </div>
