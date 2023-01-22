@@ -18,7 +18,8 @@ const smartphoneData = [
         dicount: "",
         dicountPercent: "",
         dateAdded: "15/11/2022",
-        period: "6 days"
+        period: "6 days",
+        provider: "Ghazawy",
     },
     {
         id: "3",
@@ -32,7 +33,8 @@ const smartphoneData = [
         dicount: "",
         dicountPercent: "",
         dateAdded: "15/11/2022",
-        period: "6 days"
+        period: "6 days",
+        provider: "Amana",
     },
     {
         id: "4",
@@ -46,7 +48,8 @@ const smartphoneData = [
         dicount: "",
         dicountPercent: "",
         dateAdded: "15/11/2022",
-        period: "6 days"
+        period: "6 days",
+        provider: "Hyper",
     },
 ];
 

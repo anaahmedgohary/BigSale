@@ -24,6 +24,7 @@ export default function CardsMaker(props) {
               dicountPercent={item.dicountPercent}
               dateAdded={item.dateAdded}
               period={item.period}
+              provider={item.provider}
               item={item}
 
             />

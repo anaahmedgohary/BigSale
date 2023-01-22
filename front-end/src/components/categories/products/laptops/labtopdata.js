@@ -17,7 +17,8 @@ const laptopData = [
         dicount: "",
         dicountPercent: "",
         dateAdded: "15/11/2022",
-        period: "6 days"
+        period: "6 days",
+        provider: "Ghazawy",
     },
     {
         id: "5",
@@ -31,7 +32,8 @@ const laptopData = [
         dicount: "",
         dicountPercent: "",
         dateAdded: "15/11/2022",
-        period: "3 days"
+        period: "3 days",
+        provider: "Amana",
     },
     {
         id: "6",
@@ -45,7 +47,8 @@ const laptopData = [
         dicount: "",
         dicountPercent: "",
         dateAdded: "15/11/2022",
-        period: "4 days"
+        period: "4 days",
+        provider: "Hyper",
     },
 
 ];
