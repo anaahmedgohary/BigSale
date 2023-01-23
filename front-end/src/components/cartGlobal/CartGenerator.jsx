@@ -92,13 +92,13 @@ export default function CartGenerator()
                                         Add  +1</button>
                                     </div>
                                     <div className='minus-item-div'>
-                                        <button className='rounded-full minus-item'
+                                        <button className='minus-item'
                                             onClick={() =>
                                             {
                                                 updateItemQuantity(item.id, item.quantity - 1);
                                             }}
                                         >
-                                            -1
+                                           minus -1
                                         </button>
                                     </div>
                                     <div className='remove-item-div'>
@@ -120,8 +120,17 @@ export default function CartGenerator()
             <div className='totalNclearDiv'>
 
                 <div className='totalPrice-div'>
-                    <p>Total</p>
-                    <p>{cartTotal}</p>
+                    
+                    <div className='checkoutLink'>
+                        <a href="/checkoutcart" className='text-cente'>
+                            Checkout
+                        </a>
+                    </div>
+
+                    <div>
+                        <p>Total</p>
+                        <p>{cartTotal}</p>
+                    </div>
                 </div>
 
                 <div className='clearCDiv'>

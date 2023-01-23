@@ -77,6 +77,12 @@
   display: grid;
   place-items: center;
 }
+.itemDiv .item_quantity {
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
 .itemDiv .control-div {
   background-color: rgb(233, 247, 154);
   width: 100%;
@@ -91,6 +97,11 @@
   cursor: pointer;
   background-color: red;
   border-radius: 6px 6px 6px 6px;
+  transition: 200ms;
+}
+.itemDiv .control-div .remove-item-div button:hover {
+  color: white;
+  opacity: 0.6;
 }
 .itemDiv .control-div .add-item-div {
   padding-block: 1%;
@@ -109,22 +120,32 @@
 }
 .itemDiv .control-div .minus-item-div button {
   cursor: pointer;
+  text-align: center;
   background-color: sandybrown;
-  padding-inline: 2%;
+  padding-inline: 20px;
   min-height: 2rem;
-  font-size: 1rem;
-  width: 50%;
-  max-width: 50px;
+  font-size: 16px;
+  transition: 600ms;
+}
+.itemDiv .control-div .minus-item-div button:hover {
+  color: red;
+  background-color: wheat;
 }
 
 .totalNclearDiv {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 12%;
-  padding-right: 2%;
-  padding-block: 4%;
+  display: grid;
+  gap: 80px;
+  padding-inline: min(60px, 4%);
+  padding-block: min(60px, 4%);
 }
 
+.totalPrice-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid;
+  width: 100%;
+}
 .totalPrice-div p:nth-of-type(1) {
   text-align: center;
   font-size: 1.2rem;
@@ -136,6 +157,30 @@
   border-top: solid;
   padding: 1%;
   border-bottom: solid;
+}
+
+.checkoutLink {
+  text-align: center;
+}
+.checkoutLink a {
+  background-color: rgb(16, 52, 99);
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px black;
+  transition: 200ms;
+}
+.checkoutLink a:hover {
+  color: rgb(154, 243, 127);
+  box-shadow: 2px 2px 2px black;
+  background-color: rgb(36, 72, 119);
+}
+.checkoutLink a:active {
+  background-color: white;
+  box-shadow: 0px 0px 0px;
+  color: green;
 }
 
 .clearCDiv {
