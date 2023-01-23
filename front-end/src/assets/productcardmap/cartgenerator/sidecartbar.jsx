@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useCart } from "react-use-cart";
 import './style/sidecart.css';
 
-export default function SideCart(props)
+export default function SideCartBar(props)
 {
     const {
         isEmpty,
@@ -59,7 +59,7 @@ export default function SideCart(props)
                         items.map((item, index) =>
                         {
                             return (
-                                <div key={item.id} className="itemDiv">
+                                <div key={index} className="itemDiv">
                                     <div className='itemsDetails'>
 
                                         <div className='detailDiv imgAndName'>

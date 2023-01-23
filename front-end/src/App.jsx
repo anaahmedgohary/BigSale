@@ -17,7 +17,7 @@ import DeskTops from "./components/categories/products/desktops/DeskTops";
 import GlobalCart from "./components/cartGlobal/globalcart";
 import MainFooter from "./components/footer/footer";
 import NoPage from "./components/page404/nopage";
-import SideCart from "components/cartGlobal/sidecart/sideCart";
+import SideCart from "components/cartGlobal/sidecart/test";
 
 
 function App() {
