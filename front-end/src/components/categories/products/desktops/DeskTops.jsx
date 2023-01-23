@@ -1,8 +1,8 @@
 import React from 'react';
 import './style/desktops.css';
 import desktopsData from "./destopsData.js";
-import ProductPage from 'assets/productcardmap/productPage.jsx';
+import ProductsAndCart from 'assets/productcardmap/product&sidecart';
 export default function DeskTops()
 {
-    return (<ProductPage data={desktopsData} />)
+    return (<ProductsAndCart data={desktopsData} />)
 }

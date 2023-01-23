@@ -1,8 +1,8 @@
 import React from 'react';
 import "./style/ghazawy.css";
 import ghazawyOffers from './ghazawyData'
-import ProductPage from 'assets/productcardmap/productPage.jsx';
+import ProductsAndCart from 'assets/productcardmap/product&sidecart';
 export default function GhazawyMall()
 {
-  return (<ProductPage data={ghazawyOffers} />)
+  return (<ProductsAndCart data={ghazawyOffers} />)
 }

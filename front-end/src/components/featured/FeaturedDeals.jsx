@@ -1,8 +1,8 @@
 import React from 'react';
 import featData from "./featuredData.js";
 // have to be CapitalLetterFirst for react component
-import ProductPage from 'assets/productcardmap/productPage.jsx';
+import ProductsAndCart from 'assets/productcardmap/product&sidecart';
 export default function FeaturedDeals()
 {
-  return (<ProductPage data={featData} />)
+  return (<ProductsAndCart data={featData} />)
 }

@@ -18,6 +18,7 @@ ignoredfiles/
 svg/
 0oldfiles/
 guide/
+reusables/
 
 # Editor directories and files
 .vscode/*
