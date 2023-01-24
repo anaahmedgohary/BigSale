@@ -139,7 +139,7 @@ export default function SideCartBar(props)
                     </div>
                     <div className='totalPrice-div'>
                         <p>Total</p>
-                        <input readOnly value={cartTotal} />
+                        <input id='TotalInCart' readOnly value={cartTotal} />
                     </div>
                 </div>
 

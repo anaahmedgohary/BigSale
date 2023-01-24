@@ -77,7 +77,7 @@ export default function MainHeader()
                         <a href="/categories/laptops">Laptops</a>
                     </li>
                     <li><a href="/categories/smartphones">Smartphones</a></li>
-                    <li><a href="/contact" target="_blank" rel="noopener noreferrer">Contact</a></li>
+                    <li><a href="#getInToutch">Contact</a></li>
                 </ul>
             </nav>
 
@@ -111,7 +111,7 @@ export default function MainHeader()
                                 <a href="/categories/laptops">Laptops</a>
                             </li>
                             <li><a href="/categories/smartphones">Smartphones</a></li>
-                            <li><a href="/contact" target="_blank" rel="noopener noreferrer">Contact</a></li>
+                            <li><a href="#getInToutch">Contact</a></li>
                      </ul>    
                  
                  </div>

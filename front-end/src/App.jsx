@@ -17,7 +17,9 @@ import DeskTops from "./components/categories/products/desktops/DeskTops";
 import GlobalCart from "./components/cartGlobal/globalcart";
 import MainFooter from "./components/footer/footer";
 import NoPage from "./components/page404/nopage";
+import Checkout from "components/checkout/checkout";
 // import SideCart from "components/cartGlobal/sidecart/test";
+// checkoutcart
 
 
 function App() {
@@ -36,6 +38,7 @@ function App() {
         <Route path='/categories/smartphones' element={<SmartPhone />} />
         <Route path='/categories/desktops' element={<DeskTops />} />
         <Route path='/cart' element={<GlobalCart />} />
+        <Route path='/checkoutcart' element={<Checkout />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
       <MainFooter/>

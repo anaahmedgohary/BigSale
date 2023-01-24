@@ -1,0 +1,135 @@
+
+
+
+
+
+
+
+.chechout_container{
+    background-color: darkolivegreen;
+    display: flex;
+    flex-flow: column;
+    // row-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding-block: 100px;
+
+.totaldiv_cc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    label{
+        font-size: 28px;
+        min-width: 140px;
+        
+    }
+    input{
+        background-color: transparent;
+        outline: none;
+        // border: solid;
+        max-width: 140px;
+        font-size: 28px;
+        text-decoration: underline;
+        // text-align: center;
+    }
+}
+
+.payment_section{
+    background-color: whitesmoke;
+    width: 100%;
+    padding-block: 50px;
+}
+
+.card_form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        row-gap: 20px;
+        padding-block: 40px;
+        width: 100%;
+        padding-inline: 20px;
+        // border: solid;
+
+        .card_form_row{
+            min-width: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-shrink: 0;
+            row-gap: 0px;
+            column-gap: 20px;
+            width: 100%;
+            min-width: 320px;
+            label{
+                // flex-grow: 1;
+                text-align: center;
+                flex-shrink: 0;
+                font-size: 20px;
+                width: min(50%, 140px);
+                // border: solid;
+            }
+            input{
+                // flex-grow: 1;
+                text-align: center;
+                flex-shrink: 0;
+                width: 320px;
+                background-color: rgb(232, 240, 254);
+                border: 1px solid rgb(132, 140, 154);
+                box-shadow: 1px 1px 2px 0px;
+                min-height: 40px;
+                border-radius: 8px;
+                outline: none;
+            }
+            select{
+                // flex-grow: 1;
+                flex-shrink: 0;
+                width: 320px;
+                text-align: center;
+                background-color: wheat;
+                min-height: 40px;
+                border-radius: 8px;
+            }
+        }
+        .submit_form_cc{
+            margin-top: 40px;
+            input{
+                font-size: 20px;
+                font-weight: 600;
+                color: white;
+                cursor: pointer;
+                border: solid black;
+                background-color: rgb(192, 186, 151);
+                padding-inline: 10px;
+                padding-block: 4px;
+                border-radius: 8px;
+                outline: green solid 0px;
+                transition: 400ms;
+                &:hover{
+                    box-shadow: 4px 4px 4px;
+                    background-color: lightgreen;
+                    color: black;
+                }
+                &:active{
+                    transition: 0;
+                    outline-width: 2px;
+                    
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+}

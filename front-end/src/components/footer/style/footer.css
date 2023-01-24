@@ -1,7 +1,7 @@
 .sections-container {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: stretch;
   flex-wrap: wrap;
   gap: 40px;
   color: white;
@@ -12,6 +12,7 @@
 .footerCol {
   padding-inline: 10px;
   flex-basis: 25%;
+  flex-shrink: 0;
   flex-grow: 1;
 }
 
@@ -22,7 +23,7 @@
   gap: 20px;
   text-align: center;
   flex-basis: 30%;
-  flex-grow: 1;
+  min-width: 300px;
 }
 
 .logo-div {
@@ -52,12 +53,13 @@
   display: grid;
   place-items: center;
   gap: 20px;
+  min-width: 200px;
 }
 
 .site-links {
   display: grid;
   place-items: center;
-  gap: 5px;
+  gap: 20px;
 }
 
 .site-link {
@@ -69,15 +71,12 @@
   transition: 200ms;
   width: 100%;
 }
-.site-link:not(:last-child) {
-  border-bottom: solid;
-  border-color: rgba(255, 255, 255, 0.4);
-}
 .site-link:hover {
   color: orangered;
 }
 
 .contact-us-div {
+  min-width: 112px;
   display: grid;
   place-items: center;
   gap: 20px;
@@ -93,6 +92,8 @@
 }
 
 .contact-link {
+  flex-grow: 1;
+  flex-shrink: 0;
   text-align: center;
 }
 
@@ -106,7 +107,7 @@
 
 .follow-subscribe-col {
   flex-basis: 40%;
-  flex-grow: 1;
+  min-width: 300px;
 }
 
 .followus-div {
@@ -138,7 +139,7 @@
   border-radius: 8px;
   padding-block: 6px;
   padding-inline: 6px;
-  min-width: 220px;
+  width: 100%;
   min-height: 26px;
 }
 
@@ -161,18 +162,19 @@
 
 .social-links {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
 }
 
 .social-link {
+  flex-grow: 1;
+}
+
+.social-link-img {
   width: 40px;
   height: 40px;
   transition: 400ms;
 }
-.social-link:hover {
+.social-link-img:hover {
   rotate: 360deg;
 }
 

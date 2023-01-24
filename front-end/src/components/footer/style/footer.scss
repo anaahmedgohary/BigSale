@@ -26,19 +26,19 @@ $nickelodeon: rgb(244, 109, 37);
     // display: grid;
     // grid-template-columns: repeat(3, 1fr);
     display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    align-items: stretch;
+    align-content: stretch;
+    // justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 40px;
     color: white;
     padding-top: 50px;
     padding-bottom: 40px;
-   // border: solid;
 }
 .footerCol{
     padding-inline: 10px;
     flex-basis: 25%;
-   // flex-shrink: 1;
+   flex-shrink: 0;
     flex-grow: 1;
 }
 
@@ -48,9 +48,8 @@ $nickelodeon: rgb(244, 109, 37);
     @include gridCenter();
     gap: 20px;
     text-align: center;
-   // border: solid;
     flex-basis: 30%;
-    flex-grow: 1;
+    min-width: 300px;
 }
 .logo-div{
     text-align: center;
@@ -65,7 +64,6 @@ $nickelodeon: rgb(244, 109, 37);
     }
 }
 .about-parag{
-   // border: solid;
    // max-width: 50%;
     text-align: center;
     p{
@@ -78,10 +76,11 @@ $nickelodeon: rgb(244, 109, 37);
 .nav-links-col{
     @include gridCenter();
     gap: 20px;
+    min-width: 200px;
 }
 .site-links{
     @include gridCenter();
-    gap: 5px;
+    gap: 20px;
 }
 .site-link{
     text-decoration: none;
@@ -92,20 +91,19 @@ $nickelodeon: rgb(244, 109, 37);
     font-size: 20px;
     transition: 200ms;
     width: 100%;
-    &:not(:last-child){
-        border-bottom: solid;
-        border-color: rgba(255, 255, 255, 0.4);
-    }
     &:hover{
         color: orangered;
     }
 }
 
 .contact-us-div{
+    // flex-basis: min(28%, 100px);
+    min-width: 112px;
    @include gridCenter();
     gap: 20px;
 
     .link-img{
+        
         margin: auto;
         width: 30px;
         height: 30px;
@@ -116,21 +114,22 @@ $nickelodeon: rgb(244, 109, 37);
     }
 }
 .contact-link{
+    flex-grow: 1;
+    flex-shrink: 0;
     text-align: center;
 }
 
 .follow-subscribe{
-   // border: solid red;
     //@include gridCenter();
     @include flexCenterWrap();
     gap: 40px;
+    
 }
 .follow-subscribe-col{
     flex-basis: 40%;
-    flex-grow: 1;
+    min-width: 300px;
 }
 .followus-div{
-   // border: solid red;
     @include gridCenter();
     gap: 20px;
 }
@@ -151,7 +150,7 @@ $nickelodeon: rgb(244, 109, 37);
     border-radius: 8px;
     padding-block: 6px;
     padding-inline: 6px;
-    min-width: 220px;
+    width: 100%;
     min-height: 26px;
 }
 .sub-input{
@@ -171,11 +170,15 @@ $nickelodeon: rgb(244, 109, 37);
     }
 }
 .social-links{
-    @include flexCenterWrap();
-    gap: 20px;
+    // @include flexCenterWrap();
+    display: flex;
+    gap: 40px;
     
 }
 .social-link{
+    flex-grow: 1;
+}
+.social-link-img{
     width: 40px;
     height: 40px;
     transition: 400ms;

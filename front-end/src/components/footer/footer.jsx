@@ -38,13 +38,14 @@ export default function MainFooter() {
             <a className='site-link' href="/categories/laptops">Labtops</a>
             <a className='site-link' href="/categories/smartphones">Smartphones</a>
             <a className='site-link' href="/categories/desktops">Desktops</a>
+            <a className='site-link' href="/cart">Cart</a>
             {/* <a className='site-link' href="/categories/fashion">Fashion</a> */}
           </div>
 
         </div>
 
-        <div className='contact-us-div footerCol'>
-          <h4>Get in touch</h4>
+        <div className='contact-us-div footerCol' id='getInToutch'>
+          <h4 className='text-center'>Get in touch</h4>
           <div className='contact-link email-div'>
             <p>Email us</p>
             <a href="mailto:xyz@gmail.com:" title='Email us'>
@@ -70,17 +71,17 @@ export default function MainFooter() {
           <div className='followus-div follow-subscribe-col'>
             <h4>Follow us</h4>
             <div className='social-links'>
-              <a href="https://www.fb.com" target="_blank" rel="noopener noreferrer">
-                <img className='social-link' src={facebook} alt="facebook" title='facebook' />
+              <a className='social-link' href="https://www.fb.com" target="_blank" rel="noopener noreferrer">
+                <img className='social-link-img' src={facebook} alt="facebook" title='facebook' />
               </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                <img className='social-link' src={insta} alt="instagram" title='instagram' />
+              <a className='social-link' href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <img className='social-link-img' src={insta} alt="instagram" title='instagram' />
               </a>
-              <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
-                <img className='social-link' src={tiktok} alt="tiktok" title='tiktok' />
+              <a className='social-link' href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+                <img className='social-link-img' src={tiktok} alt="tiktok" title='tiktok' />
               </a>
-              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                <img className='social-link' src={youtube} alt="youtube" title='youtube' />
+              <a className='social-link' href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                <img className='social-link-img' src={youtube} alt="youtube" title='youtube' />
               </a>
             </div>
           </div>

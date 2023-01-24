@@ -16,24 +16,29 @@
 }
 
 .itemsNCartDiv {
-  display: grid;
-  place-items: center;
+  background-color: #0f0c29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: min(20%, 20px);
+  padding-block: 20px;
+  margin-bottom: 60px;
 }
 .itemsNCartDiv p:nth-of-type(1) {
   font-size: 1.3rem;
-  background-color: darkgreen;
   color: white;
   padding-inline: 2%;
 }
 .itemsNCartDiv p:nth-of-type(2) {
-  font-size: 1.3rem;
-  background-color: #b20a2c;
-  color: aliceblue;
-  width: 2rem;
-  height: 2rem;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: white;
+  color: green;
+  line-height: 35px;
+  width: 35px;
+  text-align: center;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
 }
 
 .itemsDiv {
@@ -47,17 +52,20 @@
 }
 
 .itemDiv {
+  border: solid 8px;
+  border-radius: 14px;
+  padding-inline: 4px;
+  padding-block: 8px;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 40%;
-  min-width: 300px;
+  min-width: 320px;
   max-width: 600px;
   display: grid;
   place-items: center;
   text-align: center;
 }
 .itemDiv .itemDetails {
-  border: solid;
   width: 100%;
   display: grid;
   place-items: center;
@@ -84,8 +92,47 @@
   outline: none;
 }
 .itemDiv .control-div {
-  background-color: rgb(233, 247, 154);
+  background-color: rgb(40, 40, 40);
+  border-radius: 10px;
   width: 100%;
+  padding-block: 4px;
+}
+.itemDiv .control-div .addOrMinus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 20px;
+}
+.itemDiv .control-div .addOrMinus div {
+  flex-basis: 26%;
+}
+.itemDiv .control-div .add-item-div {
+  padding-block: 1%;
+}
+.itemDiv .control-div .add-item-div button {
+  cursor: pointer;
+  color: white;
+  min-height: 40px;
+  font-size: 18px;
+  min-width: 120px;
+}
+.itemDiv .control-div .minus-item-div {
+  padding-block: 1%;
+}
+.itemDiv .control-div .minus-item-div button {
+  cursor: pointer;
+  text-align: center;
+  background-color: sandybrown;
+  min-height: 40px;
+  min-width: 120px;
+  font-size: 18px;
+  max-width: 140px;
+  border-radius: 8px;
+}
+.itemDiv .control-div .minus-item-div button:hover {
+  color: red;
+  background-color: wheat;
 }
 .itemDiv .control-div .remove-item-div {
   padding-block: 6px;
@@ -103,34 +150,6 @@
   color: white;
   opacity: 0.6;
 }
-.itemDiv .control-div .add-item-div {
-  padding-block: 1%;
-}
-.itemDiv .control-div .add-item-div button {
-  cursor: pointer;
-  color: white;
-  padding-inline: 2%;
-  min-height: 2rem;
-  font-size: 1rem;
-  width: 50%;
-  max-width: 140px;
-}
-.itemDiv .control-div .minus-item-div {
-  padding-block: 1%;
-}
-.itemDiv .control-div .minus-item-div button {
-  cursor: pointer;
-  text-align: center;
-  background-color: sandybrown;
-  padding-inline: 20px;
-  min-height: 2rem;
-  font-size: 16px;
-  transition: 600ms;
-}
-.itemDiv .control-div .minus-item-div button:hover {
-  color: red;
-  background-color: wheat;
-}
 
 .totalNclearDiv {
   display: grid;
@@ -141,7 +160,7 @@
 
 .totalPrice-div {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border-top: solid;
   width: 100%;

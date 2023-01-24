@@ -43,23 +43,30 @@ $nickelodeon: rgb(244, 109, 37);
 }
 
 .itemsNCartDiv{
-    @include gridCenter();
-    // border: solid;
+    background-color: #0f0c29;
+    @include flexCenterWrap();
+    gap: min(20%, 20px);
+    padding-block: 20px;
+    margin-bottom: 60px;
 
     p:nth-of-type(1){
         font-size: 1.3rem;
-        background-color: darkgreen;
+        // background-color: darkgreen;
         color: white;
         padding-inline: 2%;
     }
     p:nth-of-type(2){
-        font-size: 1.3rem;
-        background-color: #b20a2c;
-        color: aliceblue;
-        width: 2rem;
-        height: 2rem;
+        font-size: 20px;
+        font-weight: 600;
+        // background-color: rgb(54, 138, 117);
+        background-color: white;
+        color: green;
+        // padding-inline: 10px;
+        line-height: 35px;
+         width: 35px;
+         text-align: center;
+        // height: 40px;
         border-radius: 50%;
-        @include gridCenter();
     }
 }
 
@@ -72,10 +79,14 @@ $nickelodeon: rgb(244, 109, 37);
 }
 
 .itemDiv{
+    border: solid 8px;
+    border-radius: 14px;
+    padding-inline: 4px;
+    padding-block: 8px;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 40%;
-    min-width: 300px;
+    min-width: 320px;
     max-width: 600px;
     // border: solid salmon;
     @include gridCenter();
@@ -83,7 +94,7 @@ $nickelodeon: rgb(244, 109, 37);
     
 
     .itemDetails{
-        border: solid;
+        // border: solid;
         width: 100%;
         @include gridCenter();
         gap: 6px;
@@ -111,9 +122,59 @@ $nickelodeon: rgb(244, 109, 37);
     }
 
     .control-div{
-        background-color:rgb(233, 247, 154);
+        background-color:rgb(40, 40, 40);
+        border-radius: 10px;
         width: 100%;
+        padding-block: 4px;
+        // display: flexoo;
 
+        .addOrMinus{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding-bottom: 20px;
+
+            div{
+                // flex-grow: 1;
+                flex-basis: 26%;
+            }
+        }
+        
+
+        .add-item-div{
+            padding-block: 1%;
+
+            button{
+                cursor: pointer;
+                // background-color: greenyellow;
+                color: white;
+                min-height: 40px;
+                font-size: 18px;
+                // width: 50%;
+                min-width: 120px;
+            }
+        }
+        .minus-item-div{
+            padding-block: 1%;
+
+            button{
+                cursor: pointer;
+                text-align: center;
+                background-color: sandybrown;
+                min-height: 40px;
+                min-width: 120px;
+                font-size: 18px;
+                // width: 50%;
+                max-width: 140px;
+                border-radius: 8px;
+                // transition: 600ms;
+                &:hover{
+                    color: red;
+                    background-color: wheat;
+                }
+            }
+        }
         .remove-item-div{
             padding-block: 6px;
             padding-inline: 5px;
@@ -128,38 +189,6 @@ $nickelodeon: rgb(244, 109, 37);
                 &:hover{
                     color: white;
                     opacity: 0.6;
-                }
-            }
-        }
-
-        .add-item-div{
-            padding-block: 1%;
-
-            button{
-cursor: pointer;
-                // background-color: greenyellow;
-                color: white;
-                padding-inline: 2%;
-                min-height: 2rem;
-                font-size: 1rem;
-                width: 50%;
-                max-width: 140px;
-            }
-        }
-        .minus-item-div{
-            padding-block: 1%;
-
-            button{
-                cursor: pointer;
-                text-align: center;
-                background-color: sandybrown;
-                padding-inline: 20px;
-                min-height: 2rem;
-                font-size: 16px;
-                transition: 600ms;
-                &:hover{
-                    color: red;
-                    background-color: wheat;
                 }
             }
         }
@@ -183,7 +212,7 @@ cursor: pointer;
 
 .totalPrice-div{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     // gap: 20px;
     border-top: solid;

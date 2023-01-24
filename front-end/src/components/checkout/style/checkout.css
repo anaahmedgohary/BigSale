@@ -1,0 +1,107 @@
+.chechout_container {
+  background-color: darkolivegreen;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 100px;
+}
+.chechout_container .totaldiv_cc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+.chechout_container .totaldiv_cc label {
+  font-size: 28px;
+  min-width: 140px;
+}
+.chechout_container .totaldiv_cc input {
+  background-color: transparent;
+  outline: none;
+  max-width: 140px;
+  font-size: 28px;
+  text-decoration: underline;
+}
+.chechout_container .payment_section {
+  background-color: whitesmoke;
+  width: 100%;
+  padding-block: 50px;
+}
+.chechout_container .card_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  row-gap: 20px;
+  padding-block: 40px;
+  width: 100%;
+  padding-inline: 20px;
+}
+.chechout_container .card_form .card_form_row {
+  min-width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  row-gap: 0px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  width: 100%;
+  min-width: 320px;
+}
+.chechout_container .card_form .card_form_row label {
+  text-align: center;
+  flex-shrink: 0;
+  font-size: 20px;
+  width: min(50%, 140px);
+}
+.chechout_container .card_form .card_form_row input {
+  text-align: center;
+  flex-shrink: 0;
+  width: 320px;
+  background-color: rgb(232, 240, 254);
+  border: 1px solid rgb(132, 140, 154);
+  box-shadow: 1px 1px 2px 0px;
+  min-height: 40px;
+  border-radius: 8px;
+  outline: none;
+}
+.chechout_container .card_form .card_form_row select {
+  flex-shrink: 0;
+  width: 320px;
+  text-align: center;
+  background-color: wheat;
+  min-height: 40px;
+  border-radius: 8px;
+}
+.chechout_container .card_form .submit_form_cc {
+  margin-top: 40px;
+}
+.chechout_container .card_form .submit_form_cc input {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  border: solid black;
+  background-color: rgb(192, 186, 151);
+  padding-inline: 10px;
+  padding-block: 4px;
+  border-radius: 8px;
+  outline: green solid 0px;
+  transition: 400ms;
+}
+.chechout_container .card_form .submit_form_cc input:hover {
+  box-shadow: 4px 4px 4px;
+  background-color: lightgreen;
+  color: black;
+}
+.chechout_container .card_form .submit_form_cc input:active {
+  transition: 0;
+  outline-width: 2px;
+}/*# sourceMappingURL=checkout.css.map */
