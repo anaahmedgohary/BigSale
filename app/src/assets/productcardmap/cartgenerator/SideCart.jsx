@@ -9,13 +9,22 @@ export default function BarCart()
 
     return (
         <>
-            {sideCart ? (true) :
+            {sideCart ?
+                (true)
+                :
                 (<div onClick={() => { setSideCart(!sideCart) }}>
                     <BarCartCounter />
                 </div>)
             }
 
-            <div onClick={(e) => { if (e.target === document.querySelector('#sideCartDiv')) { setSideCart(!sideCart) }}} id='sideCartDiv' className={`${sideCart ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div onClick={(e) =>
+            {
+                if (e.target === document.querySelector('#sideCartDiv'))
+                {
+                    console.log(SideCartBar)
+                    setSideCart(!sideCart)
+                }
+            }} id='sideCartDiv' className={`${sideCart ? 'translate-x-0' : ' translate-x-[112%]'}`}>
                     <SideCartBar hideBtn={() => { setSideCart(false) }} />
             </div>
         </>

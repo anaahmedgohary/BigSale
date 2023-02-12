@@ -1,77 +1,38 @@
-import React, { useEffect, useState, useLayoutEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./headerStyle/header.css";
-import $ from "jquery";
-
 
 export default function MainHeader()
 {
-
-    useEffect(() =>
-    {
-        $("#sidebarContainer").hide();
-    }, []);
-   // function getwwidth(width) { this.width = width };
-    const [wwidth, setWwidth] = useState(0);
-    useLayoutEffect(() =>
-    {
-        function updateSize()
-        {
-            setWwidth(window.innerWidth);
-        };
-        window.addEventListener("resize", updateSize);
-        updateSize();
-      //  console.log(`current window width: ${wwidth}`)
-        wwidth >= 900 ? ($("#sidebarContainer").hide(), setShowbar(false)) : false;
-    })
-
-
     const [showbar, setShowbar] = useState(false);
+
     useEffect(() =>
     {
-        function hndleBar()
+        let sideBarModal = document.querySelector("#sidebarContainer").classList;
+        let sideBar = document.querySelector(".sidebar-nav").classList;
+        if (showbar)
         {
-            showbar ?
-                (
-                    $("#sidebarContainer").show()
-                    , $(".sidebar-nav").animate({ left: "4%" }, 400)
-                )
-                :
-                (
-                    $(".sidebar-nav").animate({ left: "-200%" }, 400,
-                        () =>
-                        { 
-                            $("#sidebarContainer").hide()
-                        })
-                );
+            sideBar.remove("slide-out")
+            sideBar.add("slide-in")
+            sideBarModal.remove("startHidden")
+            sideBarModal.remove("slidehide")
+            sideBarModal.add("slideshow")
+        } else
+        {
+            sideBar.remove("slide-in")
+            sideBar.add("slide-out")
+            sideBarModal.remove("slideshow")
+            sideBarModal.add("slidehide")
         }
-        hndleBar();
-
-        $("#sidebarContainer").on("click", (e) =>
-        {
-            let barList = document.getElementById("barList") || document.querySelector(".bar-List");
-            let barDiv = document.querySelector(".sidebar-nav");
-            
-            if (e.target != barDiv && e.target != barList)
-            {
-                setShowbar(false);
-            }
-        })
-
     }, [showbar]);
 
-
     return (
-        
-        <header className='header'>
-            {/* <img className='svg-img' src={headBg} alt="" /> */}
 
+        <header className='header'>
             <nav className='main-nav' id='MainNav'>
                 <ul id='navList' className=''>
                     <li><a href="/">Categories</a></li>
-                    {/* <li><a href="/" target="_blank" rel="noopener noreferrer">Today</a></li>
-                    <li><a href="/" target="_blank" rel="noopener noreferrer">weekly</a></li> */}
                     <li>
-                        <a href="/providers">Providers</a>
+                        <a href="/categories/desktops">Desktops</a>
                     </li>
                     <li>
                         <a href="/categories/laptops">Laptops</a>
@@ -81,14 +42,13 @@ export default function MainHeader()
                 </ul>
             </nav>
 
-
             <div className='topFixedBar'>
                 <div id='fixedBarTitle'>
                     <a href="/" className='hover:text-orange-400 font-extrabold'>Big Sale</a>
                 </div>
                 <div className='sideBar-btn-div' id='sidebtndiv'>
                     <button className='sideBar-btn' title='Toggle sidebar menu'
-                            onClick={() => { setShowbar(!showbar) }}
+                        onClick={() => { setShowbar(!showbar) }}
                     >
                         <span></span>
                         <span></span>
@@ -96,42 +56,34 @@ export default function MainHeader()
                     </button>
                 </div>
 
-                
-            
-                <div id='sidebarContainer' className=''>
-                    
-                    
+                <div id='sidebarContainer' className='startHidden'
+                    onClick={(e) =>
+                    {
+                        if (e.target == document.querySelector("#sidebarContainer"))
+                        {
+                            setShowbar(!showbar)
+                        }
+                    }}
+                >
+
                     <div className='sidebar-nav'>
                         <ul className='bar-List' id='barList'>
                             <li><a href="/">Categories</a></li>
                             <li>
-                                <a href="/providers">Providers</a>
+                                <a href="/categories/desktops">Desktops</a>
                             </li>
                             <li>
                                 <a href="/categories/laptops">Laptops</a>
                             </li>
                             <li><a href="/categories/smartphones">Smartphones</a></li>
                             <li><a href="#getInToutch">Contact</a></li>
-                     </ul>    
-                 
-                 </div>
-             </div>
-           </div>
+                        </ul>
 
+                    </div>
+                </div>
+            </div>
 
-            {/* <ImgSlider /> */}
+        </header>
 
-
-
-
-
-
-
-
-
-
-
-            </header>
-        
     )
 }

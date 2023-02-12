@@ -17,7 +17,6 @@
 
 #sideCartDiv{
     transition: 400ms;
-    // border: solid;
     // background-color: red;
     // background-color: rgba(0, 0, 0, 0.6);
     // padding-inline: 50px;
@@ -31,23 +30,38 @@
     z-index: 2;
 }
 
+
 .cartSection {
     position: fixed;
-    height: 100%;
+    height: 100vh;
+    min-width: 260px;
     max-width: 350px;
+    border: red 5px solid;
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    box-shadow: 40px 0px 20px 60px black;
     top: 0%;
     right: 0%;
-    background-color: wheat;
+    background-color: skyblue;
     font-size: 12px;
     padding-top: 20px;
     padding-bottom: 8px;
+    padding-right: 5px;
     overflow-y: scroll;
     z-index: 2;
+
+   
+    .isEmptyCart{
+        margin: auto;
+        position: absolute;
+        top: 26%;
+        min-width: 200px;
+
+    }
 
     .sideCartHeader{
         position: relative;
         min-height: 66px;
-        // border: solid red;
         display: flex;
         align-items: center;
         padding-inline: 20px;
@@ -73,7 +87,6 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        // border: solid;
         // min-height: 66px;
         // row-gap: 5px;
         // column-gap: 20px;
@@ -88,6 +101,8 @@
             color: green;
             font-size: 24px;
             font-weight: 800;
+            border: none;
+            outline: none;
         }
     }
     .ItemsDiv {
@@ -99,6 +114,7 @@
 
         .itemDiv {
             font-size: 12px;
+            border: none;
 
             .product-img {
                 height: 40px;
@@ -127,7 +143,6 @@
                     // gap: 0;
 
                     &:not(:nth-child(-n + 1)) {
-                        // border-top: solid red;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -140,28 +155,24 @@
                             max-width: 80px;
                             padding: 0;
                             border: none;
+                            outline: none;
                             width: 50%;
                         }
-                        // .item_price{
-                            
-                        //     border: solid;
-                        // }
+                        
                     }
 
-                    // &:not(:first-of-type){
-                    //     border-top: solid;
-                    // }
+                   
                     label {
                         font-size: 12px;
                         // flex-basis: 40%;
                         text-align: center;
-                        // border: solid;
                     }
                     input {
                         background-color: transparent;
                         text-align: center;
                         font-size: 14px;
-                        border: solid;
+                        border: none;
+                        outline: none;
                     }
                 }
             }
@@ -214,13 +225,11 @@
         gap: 20px;
         padding-inline: 14px;
         padding-top: 20px;
-        // border: solid;
 
         div {
             flex-basis: 50%;
             flex-grow: 1;
             flex-shrink: 0;
-            // border: solid;
         }
         .totalAndCheckout {
             display: flex;

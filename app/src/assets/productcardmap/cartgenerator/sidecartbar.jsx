@@ -22,8 +22,7 @@ export default function SideCartBar(props)
         {
             let par = el.parentElement.parentElement.parentElement;
             let minB = par.querySelector('.minus-item');
-            // console.log(minB)
-            //  el.value <= 1 ? minB.style.display = 'none' : minB.style.display = 'inline-block';
+            
             el.value <= 1 ? minB.style.visibility = 'collapse' : minB.style.visibility = 'visible';
         });
     }, [items])
@@ -31,8 +30,19 @@ export default function SideCartBar(props)
     if (isEmpty)
     {
         return (
-            <div className='isEmptydiv'>
-                <h3>Cart is Empty dear!</h3>
+            <div className='cartSection'>
+
+                <div className='sideCartHeader'>
+                    <a href="/cart" title='Go To Cart Page' className='hover:text-cyan-600'>
+                        <i className="fa-solid fa-cart-shopping fa-3x"></i>
+                    </a>
+
+                    <button className='closeSideCart' onClick={props.hideBtn}>
+                        <i className="fa-regular fa-circle-xmark fa-4x transition-all red-400 text-red-600 hover:text-yellow-200 hover:bg-orange-400 rounded-full"></i>
+                    </button>
+                </div>
+                <h1 className='isEmptyCart text-center text-[50px]'>Cart is Empty!</h1>
+
             </div>
         )
     }

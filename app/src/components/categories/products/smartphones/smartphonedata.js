@@ -6,6 +6,7 @@ import HUAWEIP50 from "/src/assets/images/ghazawy/P50.jpg";
 
 
 const smartphoneData = [
+    
     {
         id: "2",
         img: iphone10,

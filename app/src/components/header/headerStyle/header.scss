@@ -4,7 +4,6 @@
     margin: 0;
 }
 
-
 @mixin flexCenter {
     display: flex;
     justify-content: center;
@@ -21,20 +20,15 @@
     display: grid;
     place-items: center;
 }
-
-$eleBlack: rgba(30, 30, 30, 1);
-$backColor: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-$wraperColor: linear-gradient(to right, #fffbd5, #b20a2c);
 $specialGreen: rgb(37, 158, 98);
-$nickelodeon: rgb(244, 109, 37);
 
 .header {
-    min-height: 200px;
+    // min-height: 200px;
     padding-inline: 0%;
-       background-image: url(/src/assets/images/bg02.png);
-       background-size: auto 100%;
-   // background-repeat: no-repeat;
-    background-position: center center;
+    //    background-image: url(/src/assets/images/bg02.png);
+    //    background-size: auto 100%;
+    // background-repeat: no-repeat;
+    // background-position: center center;
     display: grid;
     position: relative;
     overflow: hidden;
@@ -82,7 +76,7 @@ $nickelodeon: rgb(244, 109, 37);
                 @include flexCenter();
                 align-content: center;
                 //  border: solid blue;
-               flex-grow: 1;
+                flex-grow: 1;
                 flex-shrink: 0;
                 a {
                     flex-grow: 1;
@@ -111,55 +105,45 @@ $nickelodeon: rgb(244, 109, 37);
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#sidebarContainer{
+.topFixedBar {
     display: none;
 }
 
-.topFixedBar{
-display: none;
+@keyframes fadeIn {
+    100% {
+        left: 0%;
+    }
 }
- .sidebar-nav{
-    display: none;
- }
-
-@keyframes slideRighter {
+@keyframes fadeOut {
+    100% {
+        left: -100%;
+    }
+}
+@keyframes slideIn {
     0%{
-        translate: -100% 0;
+        left: -100%;
     }
-    100%{
-        translate: 0% 0%;
+    100% {
+        left: 0%;
     }
 }
-@keyframes slideHide {
-    // 0%{
-    //     translate: 50% 0;
-    // }
-    100%{
-        translate: 100% 0%;
+@keyframes slideOut {
+    0%{
+        left: 0%;
     }
+    100% {
+        left: -100%;
+    }
+}
+.slide-in {
+    animation: slideIn 300ms ease-out 0ms 1 normal forwards;
+}
+.slide-out {
+    animation: slideOut 400ms ease-in 0ms 1 normal forwards;
 }
 
 @media screen and(max-width:900px) {
-
-    .topFixedBar{
+    .topFixedBar {
         display: grid;
         min-height: 60px;
         width: 100%;
@@ -167,7 +151,7 @@ display: none;
         position: fixed;
         z-index: 2;
 
-        #fixedBarTitle{
+        #fixedBarTitle {
             color: white;
             text-align: center;
             position: absolute;
@@ -176,15 +160,13 @@ display: none;
             translate: -50% -50%;
             width: 60%;
             max-height: 100%;
-            a{
+            a {
                 font-size: 40px;
             }
         }
     }
 
     .header {
-        position: relative;
-
         .main-nav {
             display: none;
         }
@@ -197,9 +179,9 @@ display: none;
             // margin-top: 18px ;
             //border: solid 2px;
             border-radius: 6px;
-           // border: solid 2px white;
+            // border: solid 2px white;
             background-color: #0f0c29;
-          //  padding: 6px;
+            //  padding: 6px;
             @include gridCenter();
             z-index: 10;
 
@@ -209,7 +191,7 @@ display: none;
                 gap: 3px;
                 background-color: white;
                 border: none;
-               // border-top: solid 20px rgb(221, 161, 94);
+                // border-top: solid 20px rgb(221, 161, 94);
                 border-radius: 6px;
                 justify-self: end;
                 display: flex;
@@ -230,55 +212,55 @@ display: none;
                     width: 80%;
                     height: 6px;
                     background-color: black;
-                   // border: solid red;
+                    // border: solid red;
                     border-radius: 50px 50px;
                 }
             }
         }
 
-        #sidebarContainer{
-           display: grid;
+        #sidebarContainer {
+            display: grid;
             width: 100%;
             height: 100vh;
             background-color: rgba(89, 89, 90, 0.7);
             position: fixed;
             z-index: 9;
-         // left:100%
+            // left:100%
         }
-        .slideshow{
-            animation: slideRighter 3s ease-out 1s 1 normal forwards;
+        .startHidden {
+            left: -100%;
         }
-        .slidehide{
-            animation: slideHide 1s ease-in 0s 1 normal forwards;
+        .slideshow {
+            animation: fadeIn 300ms ease-out 0ms 1 normal forwards;
+        }
+        .slidehide {
+            animation: fadeOut 400ms ease-in 100ms 1 normal forwards;
         }
 
         .sidebar-nav {
-           // align-self: center;
-           // justify-self: center;
-            background-color: #24243e;
-           min-width: 350px;
-           width: 60%;
-           height: 100%;
-           // border: solid red;
             @include flexCenterWrap();
+            // display: none;
+            // align-self: center;
+            // justify-self: center;
+            background-color: #24243e;
+            min-width: 350px;
+            width: 60%;
+            height: 100%;
+            // border: solid red;
             position: absolute;
-            left: -200%;
-
-            
-            // }
+            // left: -200%;
             ul {
                 width: 100%;
                 list-style: none;
                 display: flex;
                 flex-direction: column;
                 gap: 60px;
-               // border: solid white;
+                // border: solid white;
                 border-radius: 12px;
                 margin-inline: auto;
                 padding-inline: 4%;
 
                 li {
-
                     a {
                         @include flexCenter();
                         text-decoration: none;

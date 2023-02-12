@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  align-items: flex-start;
   gap: 50px;
 }
 
@@ -57,4 +58,73 @@
   height: 140px;
   width: 250px;
   border-radius: 8px;
+}
+
+.detailsSlide {
+  transition: 600ms;
+  -webkit-animation: slidedown 600ms 0ms ease-in-out 1 forwards;
+          animation: slidedown 600ms 0ms ease-in-out 1 forwards;
+}
+
+@-webkit-keyframes slidedown {
+  0% {
+    height: 427px;
+    overflow: hidden;
+  }
+  50% {
+    height: 600px;
+    overflow: hidden;
+  }
+  99% {
+    height: 728px;
+    overflow: hidden;
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    height: 427px;
+    overflow: hidden;
+  }
+  50% {
+    height: 600px;
+    overflow: hidden;
+  }
+  99% {
+    height: 728px;
+    overflow: hidden;
+  }
+}
+.detailsRoll {
+  transition: 600ms;
+  -webkit-animation: slideUp 300ms 0ms ease-in-out 1 forwards;
+          animation: slideUp 300ms 0ms ease-in-out 1 forwards;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    padding-bottom: 301px;
+    overflow: hidden;
+  }
+  50% {
+    padding-bottom: 151px;
+    overflow: hidden;
+  }
+  99% {
+    padding-bottom: 18px;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    padding-bottom: 301px;
+    overflow: hidden;
+  }
+  50% {
+    padding-bottom: 151px;
+    overflow: hidden;
+  }
+  99% {
+    padding-bottom: 18px;
+  }
 }/*# sourceMappingURL=cards.css.map */

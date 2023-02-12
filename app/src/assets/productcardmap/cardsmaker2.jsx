@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import "./style/cards.css";
 import ProductCard from './productcard2';
-
+import AOS from 'aos';
+import "/node_modules/aos/dist/aos.css"
 export default function CardsMaker(props)
 {
+  AOS.init(600);
   const [showDetails, setShowDetails] = useState(false);
   useEffect(() =>
   {

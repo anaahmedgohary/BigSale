@@ -5,11 +5,7 @@
 }
 
 .header {
-  min-height: 200px;
   padding-inline: 0%;
-  background-image: url(/src/assets/images/bg02.png);
-  background-size: auto 100%;
-  background-position: center center;
   display: grid;
   position: relative;
   overflow: hidden;
@@ -80,45 +76,73 @@
   color: black;
 }
 
-#sidebarContainer {
-  display: none;
-}
-
 .topFixedBar {
   display: none;
 }
 
-.sidebar-nav {
-  display: none;
-}
-
-@-webkit-keyframes slideRighter {
-  0% {
-    translate: -100% 0;
-  }
+@-webkit-keyframes fadeIn {
   100% {
-    translate: 0% 0%;
+    left: 0%;
   }
 }
 
-@keyframes slideRighter {
+@keyframes fadeIn {
+  100% {
+    left: 0%;
+  }
+}
+@-webkit-keyframes fadeOut {
+  100% {
+    left: -100%;
+  }
+}
+@keyframes fadeOut {
+  100% {
+    left: -100%;
+  }
+}
+@-webkit-keyframes slideIn {
   0% {
-    translate: -100% 0;
+    left: -100%;
   }
   100% {
-    translate: 0% 0%;
+    left: 0%;
   }
 }
-@-webkit-keyframes slideHide {
+@keyframes slideIn {
+  0% {
+    left: -100%;
+  }
   100% {
-    translate: 100% 0%;
+    left: 0%;
   }
 }
-@keyframes slideHide {
+@-webkit-keyframes slideOut {
+  0% {
+    left: 0%;
+  }
   100% {
-    translate: 100% 0%;
+    left: -100%;
   }
 }
+@keyframes slideOut {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+.slide-in {
+  -webkit-animation: slideIn 300ms ease-out 0ms 1 normal forwards;
+          animation: slideIn 300ms ease-out 0ms 1 normal forwards;
+}
+
+.slide-out {
+  -webkit-animation: slideOut 400ms ease-in 0ms 1 normal forwards;
+          animation: slideOut 400ms ease-in 0ms 1 normal forwards;
+}
+
 @media screen and (max-width: 900px) {
   .topFixedBar {
     display: grid;
@@ -140,9 +164,6 @@
   }
   .topFixedBar #fixedBarTitle a {
     font-size: 40px;
-  }
-  .header {
-    position: relative;
   }
   .header .main-nav {
     display: none;
@@ -192,25 +213,27 @@
     position: fixed;
     z-index: 9;
   }
+  .header .startHidden {
+    left: -100%;
+  }
   .header .slideshow {
-    -webkit-animation: slideRighter 3s ease-out 1s 1 normal forwards;
-            animation: slideRighter 3s ease-out 1s 1 normal forwards;
+    -webkit-animation: fadeIn 300ms ease-out 0ms 1 normal forwards;
+            animation: fadeIn 300ms ease-out 0ms 1 normal forwards;
   }
   .header .slidehide {
-    -webkit-animation: slideHide 1s ease-in 0s 1 normal forwards;
-            animation: slideHide 1s ease-in 0s 1 normal forwards;
+    -webkit-animation: fadeOut 400ms ease-in 100ms 1 normal forwards;
+            animation: fadeOut 400ms ease-in 100ms 1 normal forwards;
   }
   .header .sidebar-nav {
-    background-color: #24243e;
-    min-width: 350px;
-    width: 60%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: #24243e;
+    min-width: 350px;
+    width: 60%;
+    height: 100%;
     position: absolute;
-    left: -200%;
   }
   .header .sidebar-nav ul {
     width: 100%;

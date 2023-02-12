@@ -11,7 +11,7 @@ html, body {
 
 .homeContainer {
   padding-inline: 40px;
-  padding-top: 40px;
+  padding-top: 200px;
   padding-bottom: 200px;
   background-color: rgb(183, 228, 106);
   min-height: 100vh;
@@ -20,6 +20,10 @@ html, body {
   background-size: auto;
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .textCenter {

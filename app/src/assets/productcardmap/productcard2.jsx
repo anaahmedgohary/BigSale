@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useCart } from "react-use-cart";
+import "./style/cards.css";
 
 export default function ProductCard(props)
 {
@@ -17,10 +18,10 @@ export default function ProductCard(props)
     if (!showDetails)
     {
         return (
-            <div className='mainDiv' key={props.id}>
+            <div className='mainDiv detailsRoll' key={props.id}>
                     <ul>
                         <li>
-                            <img className='main-img' src={props.img} alt="product" />
+                        <img className='main-img' src={props.img} alt="product" />
                         </li>
                         <li>{props.name}</li>
                         <li>Dicount: {props.dicountPercent}</li>
@@ -47,7 +48,7 @@ export default function ProductCard(props)
         )
     }
     return (
-        <div className='mainDiv' key={props.id}>
+        <div className='mainDiv detailsSlide' key={props.id}>
 
             <ul>
                 <li>

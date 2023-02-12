@@ -29,6 +29,7 @@
 
 .card-container{
     @include flexCenterWrap();
+    align-items: flex-start;
     gap: 50px;
 }
 
@@ -75,3 +76,48 @@
         width: 250px;
         border-radius: 8px;
     }
+
+
+.detailsSlide{
+    // height: auto;
+    transition: 600ms;
+    // outline: 20px solid red;
+    animation: slidedown 600ms 0ms ease-in-out 1  forwards;
+}
+@keyframes slidedown {
+    0%{
+        height: 427px;
+        overflow: hidden;
+    }
+    50%{
+        height: 600px;
+        overflow: hidden;
+    }
+    99%{
+        height: 728px;
+        overflow: hidden;
+    }
+}
+
+.detailsRoll{
+    // height: auto;
+    transition: 600ms;
+    // outline: 20px solid red;
+    animation: slideUp 300ms 0ms ease-in-out 1  forwards;
+}
+@keyframes slideUp {
+    0%{
+        // height: 728px;
+        padding-bottom: 301px;
+        overflow: hidden;
+    }
+    50%{
+        padding-bottom: 151px;
+        // height: 600px;
+        overflow: hidden;
+    }
+    99%{
+        padding-bottom: 18px;
+        // height: 427px;
+    }
+}
