@@ -82,14 +82,16 @@
   line-break: anywhere;
   white-space: normal;
   min-height: 3rem;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .itemDiv .item_quantity {
   text-align: center;
   background-color: transparent;
   border: none;
   outline: none;
+  width: 90px;
 }
 .itemDiv .control-div {
   background-color: rgb(40, 40, 40);

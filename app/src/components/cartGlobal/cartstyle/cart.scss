@@ -1,12 +1,8 @@
-
-
-
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
 
 @mixin flexCenter {
     display: flex;
@@ -25,37 +21,36 @@
     place-items: center;
 }
 
-$eleBlack:rgba(30,30,30,1);
+$eleBlack: rgba(30, 30, 30, 1);
 $backColor: linear-gradient(to right, #0f0c29, #302b63, #24243e);
 $wraperColor: linear-gradient(to right, #fffbd5, #b20a2c);
 $specialGreen: rgb(155, 243, 199);
 $nickelodeon: rgb(244, 109, 37);
 
-
-.isEmptydiv{
+.isEmptydiv {
     @include flexCenter();
     text-align: center;
 }
 
-.cartCont{
+.cartCont {
     // border: solid red;
-     padding-block: 1px;
+    padding-block: 1px;
 }
 
-.itemsNCartDiv{
+.itemsNCartDiv {
     background-color: #0f0c29;
     @include flexCenterWrap();
     gap: min(20%, 20px);
     padding-block: 20px;
     margin-bottom: 60px;
 
-    p:nth-of-type(1){
+    p:nth-of-type(1) {
         font-size: 1.3rem;
         // background-color: darkgreen;
         color: white;
         padding-inline: 2%;
     }
-    p:nth-of-type(2){
+    p:nth-of-type(2) {
         font-size: 20px;
         font-weight: 600;
         // background-color: rgb(54, 138, 117);
@@ -63,14 +58,14 @@ $nickelodeon: rgb(244, 109, 37);
         color: green;
         // padding-inline: 10px;
         line-height: 35px;
-         width: 35px;
-         text-align: center;
+        width: 35px;
+        text-align: center;
         // height: 40px;
         border-radius: 50%;
     }
 }
 
-.itemsDiv{
+.itemsDiv {
     // border: solid 5px seagreen;
     @include flexCenterWrap();
     align-items: stretch;
@@ -78,7 +73,7 @@ $nickelodeon: rgb(244, 109, 37);
     gap: 40px;
 }
 
-.itemDiv{
+.itemDiv {
     border: solid 8px;
     border-radius: 14px;
     padding-inline: 4px;
@@ -91,61 +86,60 @@ $nickelodeon: rgb(244, 109, 37);
     // border: solid salmon;
     @include gridCenter();
     text-align: center;
-    
 
-    .itemDetails{
+    .itemDetails {
         // border: solid;
         width: 100%;
         @include gridCenter();
         gap: 6px;
         font-size: 26px;
 
-        .product-img{
+        .product-img {
             height: 100px;
         }
 
-        div{
+        div {
             width: 100%;
             word-wrap: break-word;
             word-break: break-all;
             line-break: anywhere;
             white-space: normal;
             min-height: 3rem;
-            @include gridCenter();
+            @include flexCenter();
         }
     }
-    .item_quantity{
+    .item_quantity {
         text-align: center;
         background-color: transparent;
         border: none;
         outline: none;
+        width: 90px;
     }
 
-    .control-div{
-        background-color:rgb(40, 40, 40);
+    .control-div {
+        background-color: rgb(40, 40, 40);
         border-radius: 10px;
         width: 100%;
         padding-block: 4px;
         // display: flexoo;
 
-        .addOrMinus{
+        .addOrMinus {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 40px;
             padding-bottom: 20px;
 
-            div{
+            div {
                 // flex-grow: 1;
                 flex-basis: 26%;
             }
         }
-        
 
-        .add-item-div{
+        .add-item-div {
             padding-block: 1%;
 
-            button{
+            button {
                 cursor: pointer;
                 // background-color: greenyellow;
                 color: white;
@@ -155,10 +149,10 @@ $nickelodeon: rgb(244, 109, 37);
                 min-width: 120px;
             }
         }
-        .minus-item-div{
+        .minus-item-div {
             padding-block: 1%;
 
-            button{
+            button {
                 cursor: pointer;
                 text-align: center;
                 background-color: sandybrown;
@@ -169,24 +163,24 @@ $nickelodeon: rgb(244, 109, 37);
                 max-width: 140px;
                 border-radius: 8px;
                 // transition: 600ms;
-                &:hover{
+                &:hover {
                     color: red;
                     background-color: wheat;
                 }
             }
         }
-        .remove-item-div{
+        .remove-item-div {
             padding-block: 6px;
             padding-inline: 5px;
             text-align: right;
 
-            button{
+            button {
                 padding-inline: 5px;
                 cursor: pointer;
                 background-color: red;
                 border-radius: 6px 6px 6px 6px;
                 transition: 200ms;
-                &:hover{
+                &:hover {
                     color: white;
                     opacity: 0.6;
                 }
@@ -195,34 +189,26 @@ $nickelodeon: rgb(244, 109, 37);
     }
 }
 
-
-
-
-
-
-
-
-
-.totalNclearDiv{
+.totalNclearDiv {
     display: grid;
     gap: 80px;
     padding-inline: min(60px, 4%);
     padding-block: min(60px, 4%);
 }
 
-.totalPrice-div{
+.totalPrice-div {
     display: flex;
     justify-content: space-around;
     align-items: center;
     // gap: 20px;
     border-top: solid;
     width: 100%;
-    
-    p:nth-of-type(1){
+
+    p:nth-of-type(1) {
         text-align: center;
         font-size: 1.2rem;
     }
-    p:nth-of-type(2){
+    p:nth-of-type(2) {
         text-align: center;
         font-size: 30px;
         font-weight: bolder;
@@ -232,12 +218,11 @@ $nickelodeon: rgb(244, 109, 37);
         border-bottom: solid;
     }
 }
-.checkoutLink{
+.checkoutLink {
     // flex-grow: 1;
     // flex-basis: 40%;
     text-align: center;
-    a{
-        
+    a {
         background-color: rgb(16, 52, 99);
         color: white;
         // border: solid white;
@@ -248,25 +233,24 @@ $nickelodeon: rgb(244, 109, 37);
         border-radius: 8px;
         box-shadow: 4px 4px 4px black;
         transition: 200ms;
-                &:hover{
-                    color: rgb(154, 243, 127);
-                    box-shadow: 2px 2px 2px black;
-                    background-color: rgb(36, 72, 119);
-                }
-                &:active{
-                    background-color: white;
-                    box-shadow: 0px 0px 0px;
-                    color: green;
-                }
+        &:hover {
+            color: rgb(154, 243, 127);
+            box-shadow: 2px 2px 2px black;
+            background-color: rgb(36, 72, 119);
+        }
+        &:active {
+            background-color: white;
+            box-shadow: 0px 0px 0px;
+            color: green;
+        }
     }
 }
 
-
-.clearCDiv{
+.clearCDiv {
     //justify-self: flex-end;
     flex-grow: 1;
     display: flex;
-    justify-content: flex-end;    
+    justify-content: flex-end;
     //justify-self: flex-end;
 
     button {
@@ -278,7 +262,7 @@ $nickelodeon: rgb(244, 109, 37);
         font-weight: 600;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
             color: black;
         }
     }

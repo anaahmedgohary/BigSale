@@ -9,7 +9,6 @@ lerna-debug.log*
 
 node_modules
 node_modules/
-/node_modules
 dist
 dist-ssr
 *.local
@@ -17,9 +16,11 @@ w resize listen.js
 .vscode/
 .vscode
 /.vscode
-/ignoredfiles
 ignoredfiles/
 svg/
+0oldfiles/
+guide/
+reusables/
 
 # Editor directories and files
 .vscode/*
