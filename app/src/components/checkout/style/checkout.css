@@ -1,5 +1,5 @@
 .chechout_container {
-  background-color: darkolivegreen;
+  background-color: transparent;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -26,6 +26,7 @@
   max-width: 140px;
   font-size: 28px;
   text-decoration: underline;
+  text-align: center;
 }
 .chechout_container .payment_section {
   background-color: whitesmoke;

@@ -6,7 +6,7 @@
 
 
 .chechout_container{
-    background-color: darkolivegreen;
+    background-color: transparent;
     display: flex;
     flex-flow: column;
     // row-gap: 40px;
@@ -34,7 +34,7 @@
         max-width: 140px;
         font-size: 28px;
         text-decoration: underline;
-        // text-align: center;
+        text-align: center;
     }
 }
 

@@ -14,7 +14,7 @@ export default function Checkout()
         const newTotal = function updateTotal()
         {
             let totalInput = document.querySelector('#TotalInCart');
-            if (totalInput.value)
+            if (totalInput && totalInput.value)
             {
                 setTotal(totalInput.value);
                 return totalInput.value;

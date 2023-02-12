@@ -17,14 +17,13 @@ import DeskTops from "./components/categories/products/desktops/DeskTops";
 import GlobalCart from "./components/cartGlobal/globalcart";
 import MainFooter from "./components/footer/footer";
 import NoPage from "./components/page404/nopage";
-import Checkout from "components/checkout/checkout";
+import Checkout from "./components/checkout/checkout";
 // import SideCart from "components/cartGlobal/sidecart/test";
 // checkoutcart
 
 
 function App() {
   //const [count, setCount] = useState(0)
-// http://127.0.0.1:5173/categories/featured
   return (
     <Router className="App">
       <MainHeader />
