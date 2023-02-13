@@ -21,6 +21,7 @@ svg/
 0oldfiles/
 guide/
 reusables/
+.env
 
 # Editor directories and files
 .vscode/*

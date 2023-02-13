@@ -2,46 +2,52 @@ import React, { useEffect, useState } from 'react';
 import "./style/cards.css";
 import ProductCard from './productcard2';
 import AOS from 'aos';
-import "/node_modules/aos/dist/aos.css"
+import "/node_modules/aos/dist/aos.css";
 export default function CardsMaker(props)
 {
   AOS.init(600);
   const [showDetails, setShowDetails] = useState(false);
+
   useEffect(() =>
   {
     console.log(showDetails);
-  }, [])
+  }, [showDetails])
 
 
   return (
-    <div className='card-container'>
+    <div className='cards-container'>
       {
         props.data.map((item, index) =>
         {
 
-          if (showDetails)
+          if (!showDetails)
           {
-            return (<div key={index}>
+            return (
+              <div className='cardDivers' key={index}>
+                <div className="card_div">
 
-              <ProductCard
-                id={item.id}
-                index={index}
-                key={index}
-                img={item.img}
-                name={item.name}
-                category={item.category}
-                brand={item.brand}
-                quantity={item.quantity}
-                price={item.price}
-                originalPrice={item.originalPrice}
-                dicount={item.dicount}
-                dicountPercent={item.dicountPercent}
-                dateAdded={item.dateAdded}
-                period={item.period}
-                provider={item.provider}
-                item={item}
-              />
-            </div>)
+                  <ProductCard
+                    id={item.id}
+                    index={index}
+                    key={index}
+                    img={item.img}
+                    name={item.name}
+                    category={item.category}
+                    brand={item.brand}
+                    quantity={item.quantity}
+                    price={item.price}
+                    originalPrice={item.originalPrice}
+                    dicount={item.dicount}
+                    dicountPercent={item.dicountPercent}
+                    dateAdded={item.dateAdded}
+                    period={item.period}
+                    provider={item.provider}
+                    item={item}
+                    setShowDetails={setShowDetails}
+                  />
+                </div>
+              </div>
+            )
           }
 
           return (<div key={index}>
@@ -52,9 +58,9 @@ export default function CardsMaker(props)
               key={index}
               img={item.img}
               name={item.name}
-              dicount={item.dicount}
+              dicountPercent={item.dicountPercent}
               period={item.period}
-              showitem={setShowDetails(!showDetails)}
+              setShowDetails={setShowDetails}
             />
 
 

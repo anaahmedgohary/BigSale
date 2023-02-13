@@ -132,6 +132,7 @@
 }
 
 .email-input {
+  color: black;
   text-align: center;
   font-size: 1rem;
   background-color: rgb(255, 251, 213);

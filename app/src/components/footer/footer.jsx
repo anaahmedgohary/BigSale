@@ -1,4 +1,5 @@
 import React from 'react';
+import EmailSub from './emailSub';
 import logo from '/src/assets/images/bg01.png';
 import emailimg from '/src/assets/images/footer/email02.png';
 import facebook from '/src/assets/images/footer/facebook.png';
@@ -86,14 +87,15 @@ export default function MainFooter() {
             </div>
           </div>
 
-          <div className='newsletter-div follow-subscribe-col'>
+          {/* <div className='newsletter-div follow-subscribe-col'>
             <h4>Join Newsletter for new offers</h4>
             <form className='newsletter-form'>
               <input className='email-input' type="email" name="email" id="email" required placeholder='Your Email' />
               <input className='sub-input' type="submit" value="Subscribe" />
-              {/* <button className='sub-input' type='submit'>Subscribe</button> */}
+              <button className='sub-input' type='submit'>Subscribe</button>
             </form>
-          </div>
+          </div> */}
+          <EmailSub />
 
         </div>
 
