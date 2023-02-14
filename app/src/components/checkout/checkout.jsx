@@ -2,28 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './style/checkout.css';
 import { CartProvider } from "react-use-cart";
 // import BarCart from 'assets/productcardmap/cartgenerator/SideCart';
-import CheckoutBarCart from 'assets/productcardmap/cartgenerator/checkoutcartbar';
+// import CheckoutBarCart from 'assets/productcardmap/cartgenerator/checkoutcartbar';
+import BarCart from 'assets/productcardmap/cartgenerator/SideCart';
 import visa from 'assets/images/checkout/visa.png';
 
 export default function Checkout()
 {
-    const [total, setTotal] = useState(0)
-
-    useEffect(() =>
-    {
-        const newTotal = function updateTotal()
-        {
-            let totalInput = document.querySelector('#TotalInCart');
-            if (totalInput && totalInput.value)
-            {
-                setTotal(totalInput.value);
-                return totalInput.value;
-            } else { return 0 }
-        }();
-        setTotal(newTotal);
-        // let totalInput = document.querySelector('#TotalInCart');
-        // setTotal(totalInput.value)
-    }, []);
+    const [propTotal, setPropTotal] = useState(0);
 
     function HandelSubmit(e)
     {
@@ -35,12 +20,12 @@ export default function Checkout()
 
   return (
       <CartProvider>
-          <CheckoutBarCart />
+          <BarCart setPropTotal={setPropTotal} />
 
           <div className='chechout_container'>
               <div className='totaldiv_cc'>
                   <label htmlFor="">Total Amount:</label>
-                  <input type="number" value={total} readOnly />
+                  <input id='total_amount_inp' type="number" readOnly value={propTotal} />
               </div>
               
               <div className='payment_section'>

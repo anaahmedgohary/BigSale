@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import SideCartBar from './sidecartbar';
 import BarCartCounter from './sidecartcounter';
 
-export default function BarCart()
+export default function BarCart(props)
 {
     const [sideCart, setSideCart] = useState(false);
 
@@ -51,11 +51,11 @@ export default function BarCart()
             {
                 if (e.target === document.querySelector('#sideCartCont'))
                 {
-                    console.log(SideCartBar)
+                    // console.log(SideCartBar)
                     setSideCart(!sideCart)
                 }
             }} id='sideCartCont' className="cartModalHidden">
-                    <SideCartBar hideBtn={() => { setSideCart(false) }} />
+                <SideCartBar hideBtn={() => { setSideCart(false) }} setPropTotal={props.setPropTotal} />
             </div>
         </>
     )

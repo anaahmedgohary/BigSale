@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import './style/sidecart.css';
-import ChecCartBar from './checkoutcart';
+// import ChecCartBar from './checkoutcart';
+import ChecCartBar from './sidecartbar';
 import BarCartCounter from './sidecartcounter';
 
 export default function CheckoutBarCart()

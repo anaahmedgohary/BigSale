@@ -25,6 +25,11 @@ export default function SideCartBar(props)
             
             el.value <= 1 ? minB.style.visibility = 'collapse' : minB.style.visibility = 'visible';
         });
+        if (document.querySelector("#total_amount_inp"))
+        {
+            props.setPropTotal(cartTotal)
+        }
+
     }, [items])
 
     if (isEmpty)
@@ -106,7 +111,7 @@ export default function SideCartBar(props)
                                                 <button className=' bg-green-700 hover:bg-green-800 font-medium rounded-lg text-sm addplusonebtn'
                                                     onClick={() =>
                                                     {
-                                                        updateItemQuantity(item.id, item.quantity + 1)
+                                                        updateItemQuantity(item.id, item.quantity + 1);
                                                     }
                                                     }
                                                 >
@@ -127,7 +132,8 @@ export default function SideCartBar(props)
                                             <button
                                                 onClick={() =>
                                                 {
-                                                    removeItem(item.id)
+                                                    removeItem(item.id);
+                                                    // props.setPropTotal(cartTotal);
                                                 }}
                                             >Remove</button>
                                         </div>
