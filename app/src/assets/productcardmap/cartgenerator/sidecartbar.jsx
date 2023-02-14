@@ -30,7 +30,7 @@ export default function SideCartBar(props)
     if (isEmpty)
     {
         return (
-            <div className='cartSection'>
+            <div className='cartSection' id='Side_cart'>
 
                 <div className='sideCartHeader'>
                     <a href="/cart" title='Go To Cart Page' className='hover:text-cyan-600'>

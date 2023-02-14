@@ -22,16 +22,15 @@
 }
 $specialGreen: rgb(37, 158, 98);
 
-.header {
+.Main_header {
     // min-height: 200px;
     padding-inline: 0%;
     //    background-image: url(/src/assets/images/bg02.png);
     //    background-size: auto 100%;
     // background-repeat: no-repeat;
     // background-position: center center;
-    display: grid;
-    position: relative;
-    overflow: hidden;
+    // display: grid;
+    // overflow: hidden;
     //background-image: url(./image/assetttAsset4.svg);
 
     .sideBar-btn-div {
@@ -109,37 +108,67 @@ $specialGreen: rgb(37, 158, 98);
     display: none;
 }
 
-@keyframes fadeIn {
+.sideNavHidden {
+    left: min(-220%, -600px);
+}
+@keyframes fadeInSideNav {
+    0% {
+        background-color: transparent;
+       left: 0;
+    }
     100% {
-        left: 0%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        // background-color: red;
     }
 }
+
 @keyframes fadeOut {
+    
     100% {
-        left: -100%;
+        background-color: transparent;
+        left: min(-120%, -600px);
     }
 }
+
 @keyframes slideIn {
-    0%{
-        left: -100%;
+    0% {
+        left: min(-100%, -600px);
+
     }
     100% {
         left: 0%;
     }
 }
-@keyframes slideOut {
-    0%{
+@keyframes slideingOut {
+    0% {
         left: 0%;
     }
     100% {
-        left: -100%;
+        left: min(-220%, -600px);
     }
 }
+
+
+.slidehide {
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeOut 400ms ease 0ms 1 forwards;
+}
+
+.slideshow {
+    // background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeInSideNav 400ms ease 0ms 1 forwards;
+}
+
 .slide-in {
-    animation: slideIn 300ms ease-out 0ms 1 normal forwards;
+    // transition: 500ms;
+    // left: 0;
+    animation: slideIn 400ms ease 0ms 1 forwards;
 }
-.slide-out {
-    animation: slideOut 400ms ease-in 0ms 1 normal forwards;
+.slideBar-out {
+    // transition: 1000ms;
+    // left: min(-120%, -600px);
+    animation: slideingOut 600ms ease-in 100ms 1 forwards;
 }
 
 @media screen and(max-width:900px) {
@@ -166,7 +195,7 @@ $specialGreen: rgb(37, 158, 98);
         }
     }
 
-    .header {
+    .Main_header {
         .main-nav {
             display: none;
         }
@@ -218,37 +247,31 @@ $specialGreen: rgb(37, 158, 98);
             }
         }
 
-        #sidebarContainer {
-            display: grid;
-            width: 100%;
-            height: 100vh;
-            background-color: rgba(89, 89, 90, 0.7);
+        .sidebarContainer_Div {
             position: fixed;
-            z-index: 9;
-            // left:100%
+            bottom: 0;
+            // display: grid;
+            width: 100%;
+            min-height: 100vh;
+
+            // border: solid red;
+            z-index: 1;
         }
-        .startHidden {
-            left: -100%;
-        }
-        .slideshow {
-            animation: fadeIn 300ms ease-out 0ms 1 normal forwards;
-        }
-        .slidehide {
-            animation: fadeOut 400ms ease-in 100ms 1 normal forwards;
-        }
+        
 
         .sidebar-nav {
-            @include flexCenterWrap();
+            position: fixed;
+            // top: 0;
+            @include flexCenter();
+            flex-direction: column;
+            min-width: 350px;
+            // width: 60%;
+            height: 100%;
             // display: none;
             // align-self: center;
             // justify-self: center;
             background-color: #24243e;
-            min-width: 350px;
-            width: 60%;
-            height: 100%;
             // border: solid red;
-            position: absolute;
-            // left: -200%;
             ul {
                 width: 100%;
                 list-style: none;
@@ -257,8 +280,7 @@ $specialGreen: rgb(37, 158, 98);
                 gap: 60px;
                 // border: solid white;
                 border-radius: 12px;
-                margin-inline: auto;
-                padding-inline: 4%;
+                padding-inline: 20px;
 
                 li {
                     a {
@@ -280,7 +302,5 @@ $specialGreen: rgb(37, 158, 98);
             }
         }
     }
-    .hiddennav {
-        display: none;
-    }
+    
 }

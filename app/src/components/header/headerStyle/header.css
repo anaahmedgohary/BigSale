@@ -4,16 +4,13 @@
   margin: 0;
 }
 
-.header {
+.Main_header {
   padding-inline: 0%;
-  display: grid;
-  position: relative;
-  overflow: hidden;
 }
-.header .sideBar-btn-div {
+.Main_header .sideBar-btn-div {
   display: none;
 }
-.header .svg-img {
+.Main_header .svg-img {
   position: absolute;
   -o-object-fit: fill;
      object-fit: fill;
@@ -26,12 +23,12 @@
   z-index: -6;
   color: red;
 }
-.header .main-nav {
+.Main_header .main-nav {
   width: 100%;
   position: fixed;
   z-index: 1;
 }
-.header .main-nav ul {
+.Main_header .main-nav ul {
   padding-inline: 20px;
   padding-right: 100px;
   list-style: none;
@@ -45,7 +42,7 @@
   padding-block: 1%;
   background-color: rgb(36, 31, 31);
 }
-.header .main-nav ul li {
+.Main_header .main-nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +50,7 @@
   flex-grow: 1;
   flex-shrink: 0;
 }
-.header .main-nav ul li a {
+.Main_header .main-nav ul li a {
   flex-grow: 1;
   flex-shrink: 0;
   display: flex;
@@ -71,7 +68,7 @@
   border-radius: 12px;
   transition: 400ms;
 }
-.header .main-nav ul li a:hover {
+.Main_header .main-nav ul li a:hover {
   background-color: darkolivegreen;
   color: black;
 }
@@ -80,30 +77,46 @@
   display: none;
 }
 
-@-webkit-keyframes fadeIn {
+.sideNavHidden {
+  left: min(-220%, -600px);
+}
+
+@-webkit-keyframes fadeInSideNav {
+  0% {
+    background-color: transparent;
+    left: 0;
+  }
   100% {
-    left: 0%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
 
-@keyframes fadeIn {
+@keyframes fadeInSideNav {
+  0% {
+    background-color: transparent;
+    left: 0;
+  }
   100% {
-    left: 0%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
 @-webkit-keyframes fadeOut {
   100% {
-    left: -100%;
+    background-color: transparent;
+    left: min(-120%, -600px);
   }
 }
 @keyframes fadeOut {
   100% {
-    left: -100%;
+    background-color: transparent;
+    left: min(-120%, -600px);
   }
 }
 @-webkit-keyframes slideIn {
   0% {
-    left: -100%;
+    left: min(-100%, -600px);
   }
   100% {
     left: 0%;
@@ -111,36 +124,47 @@
 }
 @keyframes slideIn {
   0% {
-    left: -100%;
+    left: min(-100%, -600px);
   }
   100% {
     left: 0%;
   }
 }
-@-webkit-keyframes slideOut {
+@-webkit-keyframes slideingOut {
   0% {
     left: 0%;
   }
   100% {
-    left: -100%;
+    left: min(-220%, -600px);
   }
 }
-@keyframes slideOut {
+@keyframes slideingOut {
   0% {
     left: 0%;
   }
   100% {
-    left: -100%;
+    left: min(-220%, -600px);
   }
 }
-.slide-in {
-  -webkit-animation: slideIn 300ms ease-out 0ms 1 normal forwards;
-          animation: slideIn 300ms ease-out 0ms 1 normal forwards;
+.slidehide {
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-animation: fadeOut 400ms ease 0ms 1 forwards;
+          animation: fadeOut 400ms ease 0ms 1 forwards;
 }
 
-.slide-out {
-  -webkit-animation: slideOut 400ms ease-in 0ms 1 normal forwards;
-          animation: slideOut 400ms ease-in 0ms 1 normal forwards;
+.slideshow {
+  -webkit-animation: fadeInSideNav 400ms ease 0ms 1 forwards;
+          animation: fadeInSideNav 400ms ease 0ms 1 forwards;
+}
+
+.slide-in {
+  -webkit-animation: slideIn 400ms ease 0ms 1 forwards;
+          animation: slideIn 400ms ease 0ms 1 forwards;
+}
+
+.slideBar-out {
+  -webkit-animation: slideingOut 600ms ease-in 100ms 1 forwards;
+          animation: slideingOut 600ms ease-in 100ms 1 forwards;
 }
 
 @media screen and (max-width: 900px) {
@@ -165,10 +189,10 @@
   .topFixedBar #fixedBarTitle a {
     font-size: 40px;
   }
-  .header .main-nav {
+  .Main_header .main-nav {
     display: none;
   }
-  .header .sideBar-btn-div {
+  .Main_header .sideBar-btn-div {
     position: absolute;
     top: 10%;
     left: 12%;
@@ -178,7 +202,7 @@
     place-items: center;
     z-index: 10;
   }
-  .header .sideBar-btn-div .sideBar-btn {
+  .Main_header .sideBar-btn-div .sideBar-btn {
     height: 40px;
     width: 40px;
     gap: 3px;
@@ -192,60 +216,46 @@
     align-items: center;
     cursor: pointer;
   }
-  .header .sideBar-btn-div .sideBar-btn:hover {
+  .Main_header .sideBar-btn-div .sideBar-btn:hover {
     background-color: rgb(158, 47, 69);
   }
-  .header .sideBar-btn-div .sideBar-btn:hover span {
+  .Main_header .sideBar-btn-div .sideBar-btn:hover span {
     background-color: whitesmoke;
     border-color: darkgreen;
   }
-  .header .sideBar-btn-div .sideBar-btn span {
+  .Main_header .sideBar-btn-div .sideBar-btn span {
     width: 80%;
     height: 6px;
     background-color: black;
     border-radius: 50px 50px;
   }
-  .header #sidebarContainer {
-    display: grid;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(89, 89, 90, 0.7);
+  .Main_header .sidebarContainer_Div {
     position: fixed;
-    z-index: 9;
+    bottom: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1;
   }
-  .header .startHidden {
-    left: -100%;
-  }
-  .header .slideshow {
-    -webkit-animation: fadeIn 300ms ease-out 0ms 1 normal forwards;
-            animation: fadeIn 300ms ease-out 0ms 1 normal forwards;
-  }
-  .header .slidehide {
-    -webkit-animation: fadeOut 400ms ease-in 100ms 1 normal forwards;
-            animation: fadeOut 400ms ease-in 100ms 1 normal forwards;
-  }
-  .header .sidebar-nav {
+  .Main_header .sidebar-nav {
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    background-color: #24243e;
+    flex-direction: column;
     min-width: 350px;
-    width: 60%;
     height: 100%;
-    position: absolute;
+    background-color: #24243e;
   }
-  .header .sidebar-nav ul {
+  .Main_header .sidebar-nav ul {
     width: 100%;
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 60px;
     border-radius: 12px;
-    margin-inline: auto;
-    padding-inline: 4%;
+    padding-inline: 20px;
   }
-  .header .sidebar-nav ul li a {
+  .Main_header .sidebar-nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,10 +267,7 @@
     padding-block: 5px;
     border-radius: 12px;
   }
-  .header .sidebar-nav ul li a:hover {
+  .Main_header .sidebar-nav ul li a:hover {
     background-color: orange;
-  }
-  .hiddennav {
-    display: none;
   }
 }/*# sourceMappingURL=header.css.map */
