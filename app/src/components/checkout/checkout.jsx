@@ -35,12 +35,12 @@ export default function Checkout()
                   <form id='payment_form' className='card_form' onSubmit={HandelSubmit}>
                       <div className='card_form_row'>
                           <label htmlFor="">Card number</label>
-                          <input name=""  required />
+                          <input required />
                       </div>
                       <div className='card_form_row'>
                           <label htmlFor="">Card type</label>
                           {/* <input type="text" name=""  required /> */}
-                          <select name="creditcardtype" id="creditcardtype">
+                          <select name="creditcardtype" id="creditcardtype" required>
                               <option value=""></option>
                               {/* value="" is sent with form */}
                               <option value="Mastercard">

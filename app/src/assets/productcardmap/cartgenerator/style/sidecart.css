@@ -52,7 +52,7 @@
     background-color: rgba(0, 0, 0, 0.8);
   }
 }
-@-webkit-keyframes fadeOut {
+@-webkit-keyframes sideCartFadeOut {
   98% {
     background-color: transparent;
   }
@@ -61,7 +61,7 @@
     right: min(-120%, -600px);
   }
 }
-@keyframes fadeOut {
+@keyframes sideCartFadeOut {
   98% {
     background-color: transparent;
   }
@@ -72,8 +72,8 @@
 }
 .faderout {
   background-color: rgba(0, 0, 0, 0.8);
-  -webkit-animation: fadeOut 500ms ease-in 200ms 1 forwards;
-          animation: fadeOut 500ms ease-in 200ms 1 forwards;
+  -webkit-animation: sideCartFadeOut 500ms ease-in 200ms 1 forwards;
+          animation: sideCartFadeOut 500ms ease-in 200ms 1 forwards;
 }
 
 .cartModalHidden {

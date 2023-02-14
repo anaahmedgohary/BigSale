@@ -40,7 +40,7 @@ export default function ProductCard(props)
                             {
                             // props.setShowDetails(true);
                             let parent = e.target.parentElement.parentElement.parentElement;
-                            console.log(parent);
+                            // console.log(parent);
                             parent.classList.remove("detailsRoll");
                             parent.classList.add("detailsSlide");
                             parent.classList.remove("fadeOut");

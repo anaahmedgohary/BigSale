@@ -123,7 +123,7 @@ $specialGreen: rgb(37, 158, 98);
     }
 }
 
-@keyframes fadeOut {
+@keyframes sideBarFadeOut {
     
     100% {
         background-color: transparent;
@@ -152,7 +152,7 @@ $specialGreen: rgb(37, 158, 98);
 
 .slidehide {
     background-color: rgba(0, 0, 0, 0.8);
-    animation: fadeOut 400ms ease 0ms 1 forwards;
+    animation: sideBarFadeOut 400ms ease 0ms 1 forwards;
 }
 
 .slideshow {

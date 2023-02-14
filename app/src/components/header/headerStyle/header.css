@@ -102,13 +102,13 @@
     background-color: rgba(0, 0, 0, 0.8);
   }
 }
-@-webkit-keyframes fadeOut {
+@-webkit-keyframes sideBarFadeOut {
   100% {
     background-color: transparent;
     left: min(-120%, -600px);
   }
 }
-@keyframes fadeOut {
+@keyframes sideBarFadeOut {
   100% {
     background-color: transparent;
     left: min(-120%, -600px);
@@ -148,8 +148,8 @@
 }
 .slidehide {
   background-color: rgba(0, 0, 0, 0.8);
-  -webkit-animation: fadeOut 400ms ease 0ms 1 forwards;
-          animation: fadeOut 400ms ease 0ms 1 forwards;
+  -webkit-animation: sideBarFadeOut 400ms ease 0ms 1 forwards;
+          animation: sideBarFadeOut 400ms ease 0ms 1 forwards;
 }
 
 .slideshow {

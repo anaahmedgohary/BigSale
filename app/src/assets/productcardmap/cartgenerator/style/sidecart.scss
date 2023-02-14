@@ -43,7 +43,7 @@
         background-color: rgba(0, 0, 0, 0.8);
     }
 }
-@keyframes fadeOut {
+@keyframes sideCartFadeOut {
     // 0%{
     //     right: 0%;
     // }
@@ -61,7 +61,7 @@
 }
 .faderout {
     background-color: rgba(0, 0, 0, 0.8);
-    animation: fadeOut 500ms ease-in 200ms 1 forwards;
+    animation: sideCartFadeOut 500ms ease-in 200ms 1 forwards;
 }
 .cartModalHidden {
     right: min(-120%, -600px);
