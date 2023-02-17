@@ -16,11 +16,11 @@
 }
 
 .cardsContainer {
-    background-color: rgba(240, 248, 255, 0.99);
-    background-image: url(/src/assets/images/bg01.png);
-    background-size: auto;
+    background-color: rgba(220, 220, 220, 1);
+    // background-image: url(/src/assets/images/bg01.png);
+    // background-size: auto;
     // background-color: rgba(0, 0, 0, 0.7);
-    background-blend-mode: overlay;
+    // background-blend-mode: overlay;
     padding-block: 100px;
 }
 
@@ -28,43 +28,53 @@
     min-height: 800px;
     @include flexCenterWrap();
     align-items: flex-start;
+    padding-left: 50px;
     column-gap: 30px;
     row-gap: 0;
 }
 
 .card_div {
-    background-color: rgb(171, 219, 171);
-    min-width: 316px;
+    // background-color: rgb(171, 219, 171);
+    background-color: rgba(245, 245, 245, 1);
+    background-color: black;
+    background-color: white;
+    min-width: 300px;
     padding-inline: 0px;
-    padding-block: 20px;
-    border: solid;
+    // padding-block: 20px;
+    padding-top: 20px;
+    // border: solid;
+    overflow: hidden;
     @include gridCenter();
     gap: 10px;
     border-radius: 12px;
 
-    ul {
+    .product-card-list {
+        min-height: 420px;
+        // border: solid;
         list-style: none;
         @include gridCenter();
         row-gap: 0px;
         li {
             font-size: 20px;
         }
-        .item_name{
+        .item_name {
             // border: solid;
             max-width: 300px;
-            height: 66px;
+            // height: 66px;
             overflow: hidden;
             line-height: 24px;
             text-align: center;
             font-size: 20px;
             padding-top: 6px;
+            padding-bottom: 6px;
         }
-        .DetailsToggBtn{
-            button{
+        .DetailsToggBtn {
+            button {
                 border-radius: 3px;
                 transition: 300ms;
-                &:hover{
-                    background-color: whitesmoke;
+                &:hover {
+                    color: white;
+                    background-color: black;
                     box-shadow: 2px 2px 2px 1px black;
                 }
             }
@@ -73,29 +83,84 @@
 
     .addOrBuyDiv {
         text-align: center;
-        background-color: black;
-        padding-block: 10px;
+        // background-color: rgb(199, 245, 147);
+        // padding-block: 10px;
         width: 100%;
+        // border: solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         button {
+            flex-grow: 1;
             background-color: rgb(199, 245, 147);
+            // background-color: white;
+
+            color: black;
+        // border: solid red;
+             
+            width: 80%;
+            height: 100%;
             padding: 10px;
-            border-radius: 50px;
-            border: none;
+            // border-radius: 50px;
             font-size: 1.2rem;
             cursor: pointer;
-            transition: 500ms;
+            outline: solid 3px transparent;
+            transition: 300ms;
             &:hover {
-                scale: 1.2;
+                // scale: 1.03;
+                color: skyblue;
+                background-color: black;
+                outline: solid 3px rgb(68, 167, 206);
+            }
+            &:active{
                 color: white;
-                background-color: darkolivegreen;
+                background-color: green;
+                outline: solid 3px rgb(0, 0, 0);
             }
         }
     }
 }
-.main-img {
-    height: 140px;
-    width: 250px;
+.img-li {
+    background-color: white;
+    padding-bottom: 80px;
+    width: 100%;
+    // width: calc(100% + 40px);
+    // border: solid;
+}
+.product-card-img {
+    max-height: 160px;
+    min-width: 260px;
+    object-fit: contain;
+    width: 100%;
     border-radius: 8px;
+}
+.heart-like-div {
+    // border: solid;
+    width: 100%;
+    // width: calc(100% + 40px);
+    display: flex;
+    justify-content: space-between;
+
+    .hearts-discount-div {
+        .hearts-div {
+            color: rgb(165, 165, 165);
+            display: flex;
+            column-gap: 3px;
+            font-size: 20px;
+            // color: gray;
+            button {
+                &:hover {
+                    color: red;
+                }
+                &:active {
+                    color: red;
+                }
+                &:focus {
+                    color: red;
+                }
+            }
+        }
+    }
 }
 
 .detailsSlide {
@@ -148,7 +213,7 @@
 @keyframes fadeIn {
     0% {
         opacity: 0.1;
-        height: 449px;
+        // height: 449px;
         overflow: hidden;
         // visibility: hidden;
     }
@@ -157,13 +222,13 @@
     }
     50% {
         opacity: 0.5;
-        height: 480px;
+        // height: 480px;
         overflow: hidden;
         // visibility: visible;
     }
     99% {
         opacity: 0.9;
-        height: 558px;
+        // height: 558px;
         overflow: hidden;
     }
 }
@@ -173,19 +238,18 @@
 @keyframes fadeOut {
     0% {
         opacity: 0.1;
-        padding-bottom: 130px;
+        // padding-bottom: 130px;
     }
     30% {
         opacity: 0.1;
     }
     50% {
         opacity: 0.5;
-        padding-bottom: 80px;
+        // padding-bottom: 80px;
     }
     99% {
         opacity: 0.9;
-        padding-bottom: 30px;
-        
+        // padding-bottom: 30px;
     }
 }
 
@@ -196,6 +260,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-        min-height: 566px;
-
+    min-height: 566px;
 }

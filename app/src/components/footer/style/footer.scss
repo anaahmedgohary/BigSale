@@ -34,6 +34,7 @@ $nickelodeon: rgb(244, 109, 37);
     color: white;
     padding-top: 50px;
     padding-bottom: 40px;
+    padding-left: 50px;
 }
 .footerCol{
     padding-inline: 10px;
@@ -127,7 +128,7 @@ $nickelodeon: rgb(244, 109, 37);
 }
 .follow-subscribe-col{
     flex-basis: 40%;
-    min-width: 300px;
+    min-width: 290px;
 }
 .followus-div{
     @include gridCenter();
@@ -151,7 +152,7 @@ $nickelodeon: rgb(244, 109, 37);
     border-radius: 8px;
     padding-block: 6px;
     padding-inline: 6px;
-    width: 100%;
+    width: 96%;
     min-height: 26px;
 }
 .sub-input{

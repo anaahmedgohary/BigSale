@@ -1,6 +1,5 @@
-import React from 'react'
-import $ from "jquery";
-import "./landingstyle/landing.css"
+import React from 'react';
+import "./landingstyle/landing.css";
 
 
 
@@ -11,10 +10,9 @@ export default function Landing()
     <div className='homeContainer'>
       
 
-      <div className='welcome-div'>
+      {/* <div className='welcome-div'>
         <div>
           <button id='close-welcome-div' onClick={() => { $(".welcome-div").slideUp(600)}}>
-            {/* <i class="fa-solid fa-circle-xmark fa-xl"></i> */}
             <i className="fa-regular fa-circle-xmark"></i>
           </button>
         </div>
@@ -24,7 +22,7 @@ export default function Landing()
             We have the best SALES, DISCOUNTS, OFFERS and DEALS in the local market.
           </p>
         </div>
-      </div>
+      </div> */}
 
       <div className='categories'>
 

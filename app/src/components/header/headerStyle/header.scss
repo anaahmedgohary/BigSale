@@ -24,7 +24,13 @@ $specialGreen: rgb(37, 158, 98);
 
 .Main_header {
     // min-height: 200px;
-    padding-inline: 0%;
+    width: 80%;
+    padding-inline: 100px;
+    margin-inline: auto;
+    // border: solid red;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
     //    background-image: url(/src/assets/images/bg02.png);
     //    background-size: auto 100%;
     // background-repeat: no-repeat;
@@ -34,7 +40,7 @@ $specialGreen: rgb(37, 158, 98);
     //background-image: url(./image/assetttAsset4.svg);
 
     .sideBar-btn-div {
-        display: none;
+        display: grid;
     }
 
     .svg-img {
@@ -54,18 +60,40 @@ $specialGreen: rgb(37, 158, 98);
     }
 
     .main-nav {
-        width: 100%;
-        position: fixed;
+        // width: 50%;
+        position: absolute;
+        top: 0;
         z-index: 1;
+        margin-inline: auto;
+        width: 100%;
+        display: flex;
+        min-height: 80px;
+        .mh-logo-div {
+            position: absolute;
+            left: 150px;
+            top: 50%;
+            translate: 0% -50%;
+            img {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
 
         ul {
-            padding-inline: 20px;
-            padding-right: 100px;
+            flex-grow: 1;
+            flex-shrink: 0;
+            padding-inline: 100px;
+            padding-left: 150px;
+            // padding-right: 100px;
             list-style: none;
-            @include flexCenterWrap();
-            justify-content: space-evenly;
-            gap: 20px;
-            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            // width: 80%;
             padding-block: 1%;
             background-color: rgb(36, 31, 31);
             //border: solid white;
@@ -75,28 +103,26 @@ $specialGreen: rgb(37, 158, 98);
                 @include flexCenter();
                 align-content: center;
                 //  border: solid blue;
-                flex-grow: 1;
-                flex-shrink: 0;
+                // flex-grow: 1;
                 a {
                     flex-grow: 1;
-                    flex-shrink: 0;
                     @include flexCenter();
                     width: 100%;
                     text-decoration: none;
                     color: white;
-                    font-size: 20px;
+                    font-size: 16px;
                     font-weight: 600;
-                    background-color: rgb(204, 38, 35);
-                    border: solid;
+                    // background-color: rgb(204, 38, 35);
+                    // border: solid;
                     padding-block: 5px;
-                    padding-inline: 20px;
+                    padding-inline: 10px;
                     border-radius: 12px;
                     //width: 100%;
                     // border: solid orange;
                     transition: 400ms;
                     &:hover {
                         background-color: darkolivegreen;
-                        color: black;
+                        // color: black;
                     }
                 }
             }
@@ -107,6 +133,9 @@ $specialGreen: rgb(37, 158, 98);
 .topFixedBar {
     display: none;
 }
+.sidebar-nav {
+    display: none;
+}
 
 .sideNavHidden {
     left: min(-220%, -600px);
@@ -114,7 +143,7 @@ $specialGreen: rgb(37, 158, 98);
 @keyframes fadeInSideNav {
     0% {
         background-color: transparent;
-       left: 0;
+        left: 0;
     }
     100% {
         left: 0;
@@ -124,7 +153,6 @@ $specialGreen: rgb(37, 158, 98);
 }
 
 @keyframes sideBarFadeOut {
-    
     100% {
         background-color: transparent;
         left: min(-120%, -600px);
@@ -134,7 +162,6 @@ $specialGreen: rgb(37, 158, 98);
 @keyframes slideIn {
     0% {
         left: min(-100%, -600px);
-
     }
     100% {
         left: 0%;
@@ -148,7 +175,6 @@ $specialGreen: rgb(37, 158, 98);
         left: min(-220%, -600px);
     }
 }
-
 
 .slidehide {
     background-color: rgba(0, 0, 0, 0.8);
@@ -174,23 +200,49 @@ $specialGreen: rgb(37, 158, 98);
 @media screen and(max-width:900px) {
     .topFixedBar {
         display: grid;
-        min-height: 60px;
+        min-height: 80px;
         width: 100%;
         background-color: #0f0c29;
         position: fixed;
-        z-index: 2;
+        top: 0%;
+        z-index: 1;
 
         #fixedBarTitle {
             color: white;
             text-align: center;
             position: absolute;
-            left: 50%;
+            left: 60%;
             top: 50%;
             translate: -50% -50%;
             width: 60%;
             max-height: 100%;
             a {
-                font-size: 40px;
+                font-size: 30px;
+            }
+        }
+        .nsb-logo-div {
+            position: absolute;
+            left: 130px;
+            left: min(39%, 210px);
+            top: 50%;
+            translate: 0% -50%;
+            img {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        .nsb-user-div{
+            position: absolute;
+            right: 90px;
+            right: 20%;
+            right: min(24%, 150px);
+            top: 50%;
+            translate: 0% -50%;
+            a{
+                // font-size: 50px;
+                text-decoration: none;
             }
         }
     }
@@ -202,8 +254,8 @@ $specialGreen: rgb(37, 158, 98);
 
         .sideBar-btn-div {
             position: absolute;
-            top: 10%;
-            left: 12%;
+            top: 20px;
+            left: 70px;
             // justify-self: center;
             // margin-top: 18px ;
             //border: solid 2px;
@@ -212,7 +264,7 @@ $specialGreen: rgb(37, 158, 98);
             background-color: #0f0c29;
             //  padding: 6px;
             @include gridCenter();
-            z-index: 10;
+            z-index: 1;
 
             .sideBar-btn {
                 height: 40px;
@@ -255,39 +307,70 @@ $specialGreen: rgb(37, 158, 98);
             min-height: 100vh;
 
             // border: solid red;
-            z-index: 1;
+            z-index: 3;
         }
-        
 
         .sidebar-nav {
             position: fixed;
             // top: 0;
             @include flexCenter();
             flex-direction: column;
-            min-width: 350px;
+            min-width: 200px;
             // width: 60%;
             height: 100%;
             // display: none;
             // align-self: center;
             // justify-self: center;
             background-color: #24243e;
+            border: solid white;
+            border-radius: 12px;
             // border: solid red;
+            .sbn_closeBtn {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background-color: yellow;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button {
+                    font-size: 20px;
+                    font-weight: 666;
+                    line-height: 20px;
+                    // border: solid;
+                    border-radius: 50%;
+                    height: 100%;
+                    width: 100%;
+                    transition: 200ms;
+                    &:hover {
+                        background-color: orange;
+                    }
+                    &:active {
+                        background-color: red;
+                    }
+                }
+            }
             ul {
+                height: 80%;
+                max-height: 800px;
                 width: 100%;
                 list-style: none;
                 display: flex;
+                // align-items: center;
+                justify-content: space-around;
                 flex-direction: column;
-                gap: 60px;
+                // gap: 20px;
                 // border: solid white;
-                border-radius: 12px;
                 padding-inline: 20px;
-
                 li {
                     a {
                         @include flexCenter();
                         text-decoration: none;
                         color: black;
-                        font-size: 40px;
+                        font-size: 20px;
                         font-weight: 600;
                         background-color: $specialGreen;
                         padding-block: 5px;
@@ -302,5 +385,4 @@ $specialGreen: rgb(37, 158, 98);
             }
         }
     }
-    
 }

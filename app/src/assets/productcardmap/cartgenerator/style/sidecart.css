@@ -106,7 +106,7 @@
   font-size: 12px;
   padding-top: 20px;
   padding-bottom: 8px;
-  padding-right: 5px;
+  padding-right: 0px;
   overflow-y: scroll;
   z-index: 2;
 }
@@ -131,7 +131,7 @@
   border-radius: 50%;
   transition: 400ms;
 }
-.cartSection .itemsInCartDiv {
+.cartSection .sbc-itemsInCartDiv {
   background-color: rgb(79, 183, 224);
   color: black;
   padding-block: 6px;
@@ -141,10 +141,10 @@
   justify-content: flex-start;
   align-items: center;
 }
-.cartSection .itemsInCartDiv label {
+.cartSection .sbc-itemsInCartDiv label {
   font-size: 20px;
 }
-.cartSection .itemsInCartDiv input {
+.cartSection .sbc-itemsInCartDiv input {
   text-align: center;
   width: 60px;
   background-color: transparent;
@@ -154,73 +154,79 @@
   border: none;
   outline: none;
 }
-.cartSection .ItemsDiv {
+.cartSection .sbc-ItemsDiv {
   font-size: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: red;
 }
-.cartSection .ItemsDiv .itemDiv {
+.cartSection .sbc-ItemsDiv .sbc_itemDiv {
+  width: 100%;
   font-size: 12px;
-  border: none;
 }
-.cartSection .ItemsDiv .itemDiv .product-img {
+.cartSection .sbc-ItemsDiv .sbc_itemDiv:not(:last-child) {
+  border-bottom: solid gray;
+  padding-bottom: 10px;
+}
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .sbc-product-img {
   height: 40px;
 }
-.cartSection .ItemsDiv .itemDiv .itemsDetails {
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .itemsDetails {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   row-gap: 10px;
   padding-bottom: 20px;
 }
-.cartSection .ItemsDiv .itemDiv .itemsDetails .imgAndName {
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .itemsDetails .imgAndName {
   gap: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.cartSection .ItemsDiv .itemDiv .itemsDetails .detailDiv:not(:nth-child(-n+1)) {
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .itemsDetails .detailDiv {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.cartSection .ItemsDiv .itemDiv .itemsDetails .detailDiv:not(:nth-child(-n+1)) label {
-  width: 50%;
-}
-.cartSection .ItemsDiv .itemDiv .itemsDetails .detailDiv:not(:nth-child(-n+1)) input {
-  max-width: 80px;
-  padding: 0;
-  border: none;
-  outline: none;
-  width: 50%;
-}
-.cartSection .ItemsDiv .itemDiv .itemsDetails .detailDiv label {
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .itemsDetails .detailDiv label {
   font-size: 12px;
   text-align: center;
 }
-.cartSection .ItemsDiv .itemDiv .itemsDetails .detailDiv input {
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .itemsDetails .detailDiv input {
   background-color: transparent;
   text-align: center;
   font-size: 14px;
   border: none;
   outline: none;
 }
-.cartSection .ItemsDiv .itemDiv .controls-div {
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .itemsDetails .sbc_qtyDiv input {
+  max-width: 60px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .controls-div {
   background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0px;
+  gap: 10px;
   width: 100%;
 }
-.cartSection .ItemsDiv .itemDiv .controls-div .addOrMinusDiv {
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .controls-div .sbc-addOrMinusDiv {
   align-self: flex-start;
   display: flex;
-  gap: 20px 20px;
+  justify-content: start;
+  align-items: center;
+  gap: 0px 10px;
   padding-left: 6px;
 }
-.cartSection .ItemsDiv .itemDiv .controls-div .addOrMinusDiv button {
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .controls-div .sbc-addOrMinusDiv button {
   width: 80px;
   border: solid 1px gray;
   border-radius: 0;
@@ -229,22 +235,30 @@
   background-color: rgb(30, 30, 30);
   transition: 200ms;
 }
-.cartSection .ItemsDiv .itemDiv .controls-div .addOrMinusDiv .addplusonebtn:hover {
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .controls-div .sbc-addOrMinusDiv .addplusonebtn:hover {
   background-color: rgb(50, 50, 50);
   border-color: green;
 }
-.cartSection .ItemsDiv .itemDiv .controls-div .addOrMinusDiv .minus-item:hover {
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .controls-div .sbc-addOrMinusDiv .addplusonebtn:active {
+  background-color: rgb(60, 80, 60);
+}
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .controls-div .sbc-addOrMinusDiv .minus-item:hover {
   background-color: rgb(50, 50, 50);
   border-color: orangered;
 }
-.cartSection .ItemsDiv .itemDiv .controls-div .remove-item-div {
-  align-self: flex-end;
-  padding-right: 2px;
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .controls-div .sbc-addOrMinusDiv .minus-item:active {
+  background-color: rgb(100, 50, 50);
 }
-.cartSection .ItemsDiv .itemDiv .controls-div .remove-item-div button {
-  background-color: red;
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .controls-div .sbc-remove-item-div button {
+  border: solid 1px gray;
+  background-color: orange;
+  color: black;
+  font-weight: 600;
+}
+.cartSection .sbc-ItemsDiv .sbc_itemDiv .controls-div .sbc-remove-item-div button:hover {
   color: white;
-  padding-inline: 8px;
+  background-color: red;
+  border-color: orange;
 }
 .cartSection .checkoutOrClearDiv {
   display: flex;
@@ -263,17 +277,17 @@
 .cartSection .checkoutOrClearDiv .totalAndCheckout {
   display: flex;
 }
-.cartSection .checkoutOrClearDiv .totalPrice-div {
+.cartSection .checkoutOrClearDiv .sbc-totalPrice-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: none;
 }
-.cartSection .checkoutOrClearDiv .totalPrice-div p {
+.cartSection .checkoutOrClearDiv .sbc-totalPrice-div p {
   border: none;
 }
-.cartSection .checkoutOrClearDiv .totalPrice-div input {
+.cartSection .checkoutOrClearDiv .sbc-totalPrice-div input {
   font-size: 25px;
   font-weight: 600;
   width: 120px;
@@ -309,11 +323,11 @@
   box-shadow: 2px 2px 2px;
   background-color: rgb(16, 99, 16);
 }
-.cartSection .checkoutOrClearDiv .clearCDiv {
+.cartSection .checkoutOrClearDiv .sbc-clearCDiv {
   height: 20%;
   align-self: flex-end;
 }
-.cartSection .checkoutOrClearDiv .clearCDiv button {
+.cartSection .checkoutOrClearDiv .sbc-clearCDiv button {
   color: black;
   border-radius: 0;
   background-color: red;

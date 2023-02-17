@@ -1,0 +1,33 @@
+.msb_signup_form_div {
+  padding-left: 4px;
+  padding-right: 1px;
+}
+.msb_signup_form_div form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.msb_signup_form_div form div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+}
+.msb_signup_form_div form div label {
+  min-width: 80px;
+}
+.msb_signup_form_div form div input {
+  flex-grow: 1;
+  border: solid;
+  border-radius: 50px;
+  text-align: center;
+}
+.msb_signup_form_div form div button {
+  border: solid;
+  padding-inline: 10px;
+  padding-block: 5px;
+  background-color: green;
+  color: white;
+}/*# sourceMappingURL=signup.css.map */

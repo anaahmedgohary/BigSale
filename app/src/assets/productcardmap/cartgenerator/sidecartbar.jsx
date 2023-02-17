@@ -17,13 +17,16 @@ export default function SideCartBar(props)
 
     useEffect(() =>
     {
-        let item_quantity = document.querySelectorAll('.item_quantity')
+        // sbc-remove-item-div
+        let item_quantity = document.querySelectorAll('.sbc-item_quantity')
         item_quantity.forEach(el =>
         {
             let par = el.parentElement.parentElement.parentElement;
-            let minB = par.querySelector('.minus-item');
+            let minB = par.querySelector('.sbc-minus-item-div');
+            let removeBtn = par.querySelector('.sbc-remove-item-div');
             
-            el.value <= 1 ? minB.style.visibility = 'collapse' : minB.style.visibility = 'visible';
+            // el.value <= 1 ? minB.style.visibility = 'collapse' : minB.style.visibility = 'visible';
+            el.value <= 1 ? (minB.style.display = 'none', removeBtn.style.display = 'inline-block') : (minB.style.display = 'inline-block', removeBtn.style.display = 'none');
         });
         if (document.querySelector("#total_amount_inp"))
         {
@@ -63,23 +66,23 @@ export default function SideCartBar(props)
                     <i className="fa-regular fa-circle-xmark fa-4x transition-all red-400 text-red-600 hover:text-yellow-200 hover:bg-orange-400 rounded-full"></i>
                 </button>
             </div>
-                <div className='itemsInCartDiv'>
+            <div className='sbc-itemsInCartDiv'>
                     
                     <label>Total items in cart</label>
                     <input readOnly value={totalItems} />
                 </div>
 
-                <div className='ItemsDiv'>
+            <div className='sbc-ItemsDiv'>
                     {
                         items.map((item, index) =>
                         {
                             return (
-                                <div key={index} className="itemDiv">
+                                <div key={index} className="sbc_itemDiv">
                                     <div className='itemsDetails'>
 
                                         <div className='detailDiv imgAndName'>
                                             <img src={item.img} alt="product"
-                                                className='product-img' />
+                                                className='sbc-product-img' />
                                             <input readOnly value={item.name} />
                                         </div>
 
@@ -97,16 +100,16 @@ export default function SideCartBar(props)
                                               
                                         </div> */}
 
-                                        <div className='detailDiv'>
+                                        <div className='detailDiv sbc_qtyDiv'>
                                             <label>Quantity:</label>
-                                            <input className='item_quantity' readOnly value={item.quantity} />
+                                            <input className='sbc-item_quantity' readOnly value={item.quantity} />
 
                                         </div>
                                     </div>
 
                                     <div className='controls-div'>
 
-                                        <div className='addOrMinusDiv'>
+                                        <div className='sbc-addOrMinusDiv'>
                                             <div className='add-item-div'>
                                                 <button className=' bg-green-700 hover:bg-green-800 font-medium rounded-lg text-sm addplusonebtn'
                                                     onClick={() =>
@@ -117,8 +120,8 @@ export default function SideCartBar(props)
                                                 >
                                                     Add  +1</button>
                                             </div>
-                                            <div className='minus-item-div'>
-                                                <button className='rounded-full minus-item'
+                                            <div className='sbc-minus-item-div'>
+                                                <button className='minus-item text-sm'
                                                     onClick={() =>
                                                     {
                                                         updateItemQuantity(item.id, item.quantity - 1);
@@ -127,16 +130,24 @@ export default function SideCartBar(props)
                                                    minus -1
                                                 </button>
                                             </div>
+
+                                            <div className='sbc-remove-item-div'>
+                                                <button className='text-sm'
+                                                    onClick={() =>
+                                                    {
+                                                        removeItem(item.id);
+                                                    }}
+                                                >Remove</button>
+                                            </div>
                                         </div>
-                                        <div className='remove-item-div'>
+                                        {/* <div className='sbc-remove-item-div'>
                                             <button
                                                 onClick={() =>
                                                 {
                                                     removeItem(item.id);
-                                                    // props.setPropTotal(cartTotal);
                                                 }}
                                             >Remove</button>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             )
@@ -153,13 +164,13 @@ export default function SideCartBar(props)
                             Checkout
                         </a>
                     </div>
-                    <div className='totalPrice-div'>
+                    <div className='sbc-totalPrice-div'>
                         <p>Total</p>
                         <input id='TotalInCart' readOnly value={cartTotal} />
                     </div>
                 </div>
 
-                <div className='clearCDiv'>
+                <div className='sbc-clearCDiv'>
                     <button
                         onClick={emptyCart}
                     >

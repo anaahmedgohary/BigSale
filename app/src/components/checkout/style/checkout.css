@@ -5,11 +5,13 @@
   justify-content: center;
   align-items: center;
   padding-block: 100px;
+  padding-left: 50px;
 }
 .chechout_container .totaldiv_cc {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   -moz-column-gap: 20px;
        column-gap: 20px;
   background-color: black;
@@ -44,7 +46,6 @@
   padding-inline: 20px;
 }
 .chechout_container .card_form .card_form_row {
-  min-width: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +55,7 @@
   -moz-column-gap: 20px;
        column-gap: 20px;
   width: 100%;
-  min-width: 320px;
+  min-width: 300px;
 }
 .chechout_container .card_form .card_form_row label {
   text-align: center;
@@ -65,7 +66,9 @@
 .chechout_container .card_form .card_form_row input {
   text-align: center;
   flex-shrink: 0;
-  width: 320px;
+  width: 96%;
+  max-width: 320px;
+  min-width: 280px;
   background-color: rgb(232, 240, 254);
   border: 1px solid rgb(132, 140, 154);
   box-shadow: 1px 1px 2px 0px;
@@ -73,13 +76,27 @@
   border-radius: 8px;
   outline: none;
 }
+.chechout_container .card_form .card_form_row input:focus {
+  background-color: white;
+  outline: 2px solid orange;
+  border: none;
+  box-shadow: none;
+}
 .chechout_container .card_form .card_form_row select {
   flex-shrink: 0;
-  width: 320px;
+  width: 96%;
+  max-width: 320px;
+  min-width: 280px;
   text-align: center;
-  background-color: wheat;
+  background-color: rgb(232, 240, 254);
   min-height: 40px;
   border-radius: 8px;
+}
+.chechout_container .card_form .card_form_row select:focus {
+  background-color: white;
+  outline: 2px solid orange;
+  border: none;
+  box-shadow: none;
 }
 .chechout_container .card_form .submit_form_cc {
   margin-top: 40px;

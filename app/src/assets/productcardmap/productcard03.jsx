@@ -28,26 +28,40 @@ export default function ProductCard(props)
     {
         return (
             <>
-                <ul className=''>
+                <ul className='product-card-list'>
                     <li className='img-li'>
                         <img className='product-card-img' src={props.img} alt="product" />
-                        </li>
+                    </li>
+                    <div className='heart-like-div'>
+                        <div className='hearts-discount-div'>
+                            <div className='hearts-div'>
+                                <button>
+                                <i className="fa-solid fa-heart heart-like"></i>
+                                </button>
+                            </div>
+
+                            <p className='text-green-800'>{props.dicountPercent} Discount</p>
+                        </div>
+                        
+                        <div>
+                            <p className='line-through italic text-red-400'>{props.originalPrice} L.E</p>
+                            <p className='font-medium text-green-800'>{props.price} L.E</p>
+                        </div>
+
+                    </div>
                         <li className='item_name'>{props.name}</li>
-                        <li>Dicount: {props.dicountPercent}</li>
-                        <li>Offer Period: {props.period}</li>
                         <li className='DetailsToggBtn'>
-                        <button className=' bg-yellow-200 px-5 py-2 flex-grow border border-black' onClick={(e) =>
+                        <button className='bg-gray-500 px-5' onClick={(e) =>
                             {
                             // props.setShowDetails(true);
                             let parent = e.target.parentElement.parentElement.parentElement;
                             // console.log(parent);
                             parent.classList.remove("detailsRoll");
-                            parent.classList.add("detailsSlide");
                             parent.classList.remove("fadeOut");
                             parent.classList.add("fadeIn");
                             setShowDetails(!showDetails)
                             }}>
-                                Show Details
+                                Details
                             </button>
                         </li>
                     </ul>
@@ -55,7 +69,8 @@ export default function ProductCard(props)
                     <button
                         onClick={() => addItem(props.item)}
                     >
-                        Add To Cart
+                        <i className="fa-solid fa-cart-shopping"></i>
+                        &nbsp;&nbsp; Add to cart
                     </button>
                 </div>
 
@@ -64,19 +79,17 @@ export default function ProductCard(props)
     }
     return (
         <>
-            <ul className=''>
-                <li className='img-li'>
-                    <img className='product-card-img' src={props.img} alt="" />
-                </li>
+            <ul className='product-card-list'>
+                
                 <li className='item_name'>{props.name}</li>
                 {/* <li>Category: {props.category}</li> */}
                 <li>Brand: {props.brand}</li>
                 {/* <li>QTY: {props.quantity}</li> */}
                 {/* <li>Price After: {props.price}</li> */}
                 <li>old Price: {props.originalPrice}</li>
-                <li>Dicount: {props.dicountPercent}</li>
+                <li>Discount: {props.dicountPercent}</li>
                 <li>NEW Price: {props.price}</li>
-                {/* <li>Saving: {props.dicount}</li> */}
+                {/* <li>Saving: {props.discount}</li> */}
                 <li>Added on: {props.dateAdded}</li>
                 <li>Offer Period: {props.period}</li>
                 {/* <li>offer Id: {props.id}</li> */}
@@ -92,13 +105,13 @@ export default function ProductCard(props)
                         let parent = e.target.parentElement.parentElement.parentElement;
                         // console.log(parent);
                         parent.classList.remove("detailsSlide");
-                        parent.classList.add("detailsRoll");
+                        // parent.classList.add("detailsRoll");
                         parent.classList.remove("fadeIn");
                         parent.classList.add("fadeOut");
 
                         // props.setShowDetails(false);
-                    }} className=' bg-yellow-200 px-5 py-2 flex-grow border border-black'>
-                        Hide Details
+                    }} className=' bg-gray-500 px-5'>
+                        Cover
                     </button>
                 </li>
             </ul>
@@ -107,7 +120,8 @@ export default function ProductCard(props)
                 <button
                     onClick={() => addItem(props.item)}
                 >
-                    Add To Cart
+                    <i className="fa-solid fa-cart-shopping"></i>
+                    &nbsp;&nbsp; Add to cart
                 </button>
             </div>
         </>

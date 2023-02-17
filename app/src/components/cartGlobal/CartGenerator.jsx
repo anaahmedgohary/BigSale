@@ -83,7 +83,7 @@ export default function CartGenerator()
 
                                     <div className='addOrMinus'>
                                         <div className='add-item-div'>
-                                            <button className=' bg-green-700 hover:bg-green-800 font-medium rounded-lg text-sm '
+                                            <button className=''
                                                 onClick={() =>
                                                 {
                                                     updateItemQuantity(item.id, item.quantity + 1)

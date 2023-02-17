@@ -19,6 +19,7 @@ import MainFooter from "./components/footer/footer";
 import NoPage from "./components/page404/nopage";
 import Checkout from "./components/checkout/checkout";
 // import SideCart from "components/cartGlobal/sidecart/test";
+import Mainsidebar from "components/mainsidebar/mainsidebar";
 // checkoutcart
 
 
@@ -27,9 +28,10 @@ function App() {
   return (
     <Router className="App">
       <MainHeader />
+      <Mainsidebar />
       <Routes>
         <Route path='/' element={<Landing />} />
-        <Route path='/t' />
+        <Route path='/t' element={<Mainsidebar />} />
         <Route path='/providers' element={<Clients />} />
         <Route path='/ghazawy-2' element={<GhazawyMall />} />
         <Route path='/categories/featured' element={<FeaturedDeals />} />

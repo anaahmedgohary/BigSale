@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./style/cards.css";
-import ProductCard from './productcard2';
+import ProductCard from './productcard03';
 import AOS from 'aos';
 import "/node_modules/aos/dist/aos.css";
 export default function CardsMaker(props)
