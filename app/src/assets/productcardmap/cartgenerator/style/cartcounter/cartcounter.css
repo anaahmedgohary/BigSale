@@ -1,5 +1,5 @@
 .cartcountercontainer {
-  position: fixed;
+  position: absolute;
   top: 15px;
   right: 15px;
   overflow: hidden;
@@ -17,11 +17,14 @@
   cursor: pointer;
   position: relative;
 }
-.carticonContainer .cartIconLink {
-  color: whitesmoke;
+.carticonContainer .carticonDiv:hover i {
+  color: rgb(144, 240, 166);
+  border-bottom: red solid;
 }
 .carticonContainer .cartIconLink i {
+  transition: 200ms;
   font-size: 40px;
+  color: white;
 }
 .carticonContainer .cartCounter {
   position: absolute;
@@ -31,9 +34,21 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: orange;
+  background-color: red;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+  .cartcountercontainer {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    overflow: hidden;
+    border-radius: 8px;
+    z-index: 2;
+  }
 }/*# sourceMappingURL=cartcounter.css.map */

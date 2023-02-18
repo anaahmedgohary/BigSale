@@ -87,6 +87,16 @@
   font-size: 20px;
   padding-bottom: 10px;
 }
+.msb_list_item .msb_list_item_btn {
+  color: black;
+  transition: 200ms;
+}
+.msb_list_item .msb_list_item_btn:hover {
+  color: rgb(8, 138, 224);
+}
+.msb_list_item .msb_list_item_btn:focus {
+  color: rgb(8, 138, 224);
+}
 
 .msp_smallLists {
   display: grid;

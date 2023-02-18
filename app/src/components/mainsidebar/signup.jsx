@@ -10,19 +10,19 @@ const Signup = () =>
                 <form action="">
                     <div>
                         <label htmlFor="">Username</label>
-                        <input type="text" name="" id="" required />
+                        <input type="text" name="Username" id="Username" required />
                     </div>
                     <div>
                         <label htmlFor="">Phone</label>
-                        <input type="tel" name="" id="" required />
+                        <input type="tel" name="Phone" id="Phone" required />
                     </div>
                     <div>
                         <label htmlFor="">Email</label>
-                        <input type="email" name="" id="" required />
+                        <input type="email" name="email" id="signupemail" required />
                     </div>
                     <div>
                         <label htmlFor="">Password</label>
-                        <input type="password" name="" id="" required />
+                        <input type="password" name="password" id="signuppassword" required />
                     </div>
                     <div>
                         <button type='submit'>

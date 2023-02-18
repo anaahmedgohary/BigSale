@@ -91,6 +91,16 @@
     padding-bottom: 10px;
     // border-left: none;
     // border-right: none;
+    .msb_list_item_btn{
+        color: black;
+        transition: 200ms;
+        &:hover{
+            color: rgb(8, 138, 224);
+        }
+        &:focus{
+            color: rgb(8, 138, 224);
+        }
+    }
 }
 
 .msp_smallLists {

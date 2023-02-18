@@ -43,11 +43,18 @@ export default function MainHeader()
                 <div className='mh-logo-div'>
                     <a href="/">
 
-                <img src={bigsale} alt="" />
+                        <img src={bigsale} alt="" />
                     </a>
-            </div>
+                </div>
+
+                <div className='mh-user-div'>
+                    <a href="/user/profile" className='text-white'>
+                        <i className="fa-solid fa-circle-user fa-3x"></i>
+                    </a>
+                </div>
+
                 <ul id='navList'>
-                    
+
                     <li><a href="/categories/featured">Featured</a></li>
 
                     <li>
@@ -84,7 +91,7 @@ export default function MainHeader()
 
                 <div className='nsb-user-div'>
                     <a href="/user/profile" className='text-white'>
-                        <i class="fa-solid fa-circle-user fa-3x"></i>
+                        <i className="fa-solid fa-circle-user fa-3x"></i>
                     </a>
                 </div>
 

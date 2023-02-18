@@ -31,17 +31,12 @@ const Mainsidebar = () =>
             msb_container.remove('msb_start-hidden')
             msb_container.remove('msb_slideOutside')
             msb_container.add('msb_slideInside')
-            console.log("yea")
-
         } else
         {
 
             msb_container.remove('msb_slideInside')
             msb_container.add('msb_slideOutside')
-            console.log("nea")
             msb_container_modal.add('msb_fadeOut')
-
-
         }
     }, [showMSB])
 
@@ -130,7 +125,6 @@ const Mainsidebar = () =>
             {
                 setShowActivator(!showActivator);
                 setShowMSB(!showMSB)
-                // console.log("yea")
             }}>
                 {/* <i className="fa-solid fa-bars-staggered"></i> */}
                 <i className="fa-solid fa-right-to-bracket fa-2x"></i>
@@ -177,7 +171,6 @@ const Mainsidebar = () =>
                         {
                             setShowActivator(!showActivator);
                             setShowMSB(!showMSB)
-                            // console.log("yea")
                         }}
                     >
                         <i className="fa-solid fa-circle-left fa-2x"></i>
@@ -211,19 +204,30 @@ const Mainsidebar = () =>
                         <SendMessage />
                     </div>
 
-                    <div className='msb_main_list'>
+                    <div className='msb_main_list'
+                        onClick={(e) =>
+                        {
+                            let userButton = document.querySelector("#msb_user_btn");
+                            let navButton = document.querySelector("#msb_nav_btn");
+                            if (e.target !== userButton && e.target !== navButton)
+                            {
+                                setShowOptions(false);
+                                setShowOptions1(false);
+                            }
+                        }}
+                    >
 
                         <div className='msb_list_item'>
 
-                            <div className=''>
-                                <button
+                            <div>
+                                <button id='msb_nav_btn' className='msb_list_item_btn'
                                     onClick={() =>
                                     {
                                         setShowOptions(false)
                                         setShowOptions1(!showOptions1);
                                     }}
                                 >
-                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                    <i className="fa-solid fa-location-crosshairs"></i>
                                     &nbsp;&nbsp;
                                     Nav
                                 </button>
@@ -245,7 +249,7 @@ const Mainsidebar = () =>
                         <div className='msb_list_item'>
 
                             <div className=''>
-                                <button
+                                <button id='msb_user_btn' className='msb_list_item_btn'
                                     onClick={() =>
                                     {
                                         setShowOptions1(false)
@@ -253,7 +257,7 @@ const Mainsidebar = () =>
 
                                     }}
                                 >
-                                    <i class="fa-solid fa-user"></i>
+                                    <i className="fa-solid fa-user"></i>
                                     &nbsp;&nbsp;
                                     User
                                 </button>
@@ -276,7 +280,7 @@ const Mainsidebar = () =>
 
                         <div className='msb_list_item'>
 
-                            <button
+                            <button className='msb_list_item_btn'
                                 onClick={() =>
                                 {
                                     setshowSignup(true)
@@ -286,7 +290,7 @@ const Mainsidebar = () =>
                             </button>
                         </div>
                         <div className='msb_list_item'>
-                            <button
+                            <button className='msb_list_item_btn'
                                 onClick={() =>
                                 {
                                     setShowLogin(true)
@@ -296,7 +300,7 @@ const Mainsidebar = () =>
                             </button>
                         </div>
                         <div className='msb_list_item'>
-                            <button
+                            <button className='msb_list_item_btn'
                                 onClick={() =>
                                 {
                                     setShowMessager(true)

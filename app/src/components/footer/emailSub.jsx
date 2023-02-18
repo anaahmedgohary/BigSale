@@ -9,7 +9,6 @@ const EmailSub = () =>
     const [email, setEmail] = useState('');
     function handelSubmit(e)
     {
-        // console.log(email)
         e.preventDefault();
         // try
         // {
@@ -19,7 +18,7 @@ const EmailSub = () =>
 
             .then((response) =>
             {
-                // console.log(response)
+                console.log(response)
             })
             .catch((err) => { console.log(err) })
 
@@ -36,7 +35,7 @@ const EmailSub = () =>
 
             .then((response) =>
             {
-                // console.log(response);
+                console.log(response);
             })
             .catch((err) => { console.log(err) })
     }, [])
@@ -60,7 +59,7 @@ const EmailSub = () =>
         <div className='newsletter-div follow-subscribe-col'>
             <h4>Join Newsletter for new offers</h4>
             <form className='newsletter-form' onSubmit={handelSubmit}>
-                <input className='email-input' type="email" name="email" id="email" value={email} required placeholder='Your Email'
+                <input className='email-input' type="email" name="email" id="newsletteremail" value={email} required placeholder='Your Email'
                     onChange={(e) => { setEmail(e.target.value) }}
                 />
                 {/* <input className='sub-input' type="submit" value="Subscribe" /> */}

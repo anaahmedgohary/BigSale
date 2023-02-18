@@ -5,8 +5,8 @@
 }
 
 .Main_header {
-  width: 80%;
-  padding-inline: 100px;
+  width: 100%;
+  padding-inline: 0px;
   margin-inline: auto;
   display: flex;
   justify-content: center;
@@ -38,7 +38,7 @@
 }
 .Main_header .main-nav .mh-logo-div {
   position: absolute;
-  left: 150px;
+  left: 80px;
   top: 50%;
   translate: 0% -50%;
 }
@@ -48,17 +48,30 @@
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 400ms;
+  outline: solid transparent;
+}
+.Main_header .main-nav .mh-logo-div img:hover {
+  scale: 0.8;
+  outline: white solid;
+}
+.Main_header .main-nav .mh-user-div {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  translate: 0% -50%;
+}
+.Main_header .main-nav .mh-user-div a:hover {
+  color: skyblue;
 }
 .Main_header .main-nav ul {
   flex-grow: 1;
   flex-shrink: 0;
-  padding-inline: 100px;
-  padding-left: 150px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 10px;
   padding-block: 1%;
   background-color: rgb(36, 31, 31);
@@ -85,7 +98,8 @@
   transition: 400ms;
 }
 .Main_header .main-nav ul li a:hover {
-  background-color: darkolivegreen;
+  background-color: rgb(155, 243, 199);
+  color: black;
 }
 
 .topFixedBar {
@@ -222,6 +236,12 @@
     border-radius: 50%;
     -o-object-fit: cover;
        object-fit: cover;
+    transition: 400ms;
+    outline: solid transparent;
+  }
+  .topFixedBar .nsb-logo-div img:hover {
+    scale: 0.8;
+    outline: white solid;
   }
   .topFixedBar .nsb-user-div {
     position: absolute;
@@ -231,8 +251,8 @@
     top: 50%;
     translate: 0% -50%;
   }
-  .topFixedBar .nsb-user-div a {
-    text-decoration: none;
+  .topFixedBar .nsb-user-div a:hover {
+    color: skyblue;
   }
   .Main_header .main-nav {
     display: none;

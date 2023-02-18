@@ -1,4 +1,3 @@
-
 @mixin flexCenter {
     display: flex;
     justify-content: center;
@@ -22,12 +21,10 @@ $wraperColor: linear-gradient(to right, #fffbd5, #b20a2c);
 $specialGreen: rgb(37, 158, 98);
 $nickelodeon: rgb(244, 109, 37);
 
-
-
-.cartcountercontainer{
+.cartcountercontainer {
     // background-color: #0f0c29;
     // border: solid $nickelodeon;
-    position: fixed;
+    position: absolute;
     top: 15px;
     right: 15px;
     overflow: hidden;
@@ -35,7 +32,7 @@ $nickelodeon: rgb(244, 109, 37);
     z-index: 2;
 }
 
-.carticonContainer{
+.carticonContainer {
     // background-color: #0f0c29;
     padding: 4px;
     // position: absolute;
@@ -43,21 +40,30 @@ $nickelodeon: rgb(244, 109, 37);
     // bottom: 0%;
     @include flexCenter();
     // border: white solid;
-    
-    .carticonDiv{
+
+    .carticonDiv {
         cursor: pointer;
         position: relative;
-       // right: 0;
-        
-    }
-    .cartIconLink{
-       color: whitesmoke;
-        i{
-            font-size: 40px;
+        // right: 0;
+        &:hover {
+            i{
+                color: rgb(144, 240, 166);
+                border-bottom: red solid;
+            }
         }
     }
+    .cartIconLink {
+        i {
+            transition: 200ms;
+            font-size: 40px;
+            color: white;
+            // background-color: olive;
+        }
+        
+        
+    }
 
-    .cartCounter{
+    .cartCounter {
         position: absolute;
         left: 58%;
         top: 24%;
@@ -65,8 +71,22 @@ $nickelodeon: rgb(244, 109, 37);
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background-color: orange;
+        background-color: red;
+        color: white;
         @include flexCenter();
         text-decoration: none;
+    }
+}
+
+
+
+@media screen and(max-width:900px){
+    .cartcountercontainer{
+        position: fixed;
+        top: 15px;
+    right: 15px;
+    overflow: hidden;
+    border-radius: 8px;
+    z-index: 2;
     }
 }

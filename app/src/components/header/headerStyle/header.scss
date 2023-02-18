@@ -24,8 +24,9 @@ $specialGreen: rgb(37, 158, 98);
 
 .Main_header {
     // min-height: 200px;
-    width: 80%;
-    padding-inline: 100px;
+    width: 100%;
+    padding-inline: 0px;
+    
     margin-inline: auto;
     // border: solid red;
     display: flex;
@@ -70,7 +71,7 @@ $specialGreen: rgb(37, 158, 98);
         min-height: 80px;
         .mh-logo-div {
             position: absolute;
-            left: 150px;
+            left: 80px;
             top: 50%;
             translate: 0% -50%;
             img {
@@ -78,20 +79,41 @@ $specialGreen: rgb(37, 158, 98);
                 width: 50px;
                 border-radius: 50%;
                 object-fit: cover;
+                transition: 400ms;
+                outline: solid transparent;
+                &:hover{
+                    scale: 0.8;
+                    // border: solid orangered;
+                    outline: white solid;
+                    // object-fit: contain;
+                }
+            }
+        }
+        .mh-user-div{
+            position: absolute;
+            // right: min(24%, 150px);
+            right: 100px;
+            top: 50%;
+            translate: 0% -50%;
+            a{
+                // font-size: 50px;
+                &:hover{
+                    color: skyblue;
+                }
             }
         }
 
         ul {
             flex-grow: 1;
             flex-shrink: 0;
-            padding-inline: 100px;
-            padding-left: 150px;
+            // padding-inline: 100px;
+            // padding-right: 188px;
             // padding-right: 100px;
             list-style: none;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: center;
             gap: 10px;
             // width: 80%;
             padding-block: 1%;
@@ -121,7 +143,8 @@ $specialGreen: rgb(37, 158, 98);
                     // border: solid orange;
                     transition: 400ms;
                     &:hover {
-                        background-color: darkolivegreen;
+                        background-color: rgb(155, 243, 199);
+                        color: black;
                         // color: black;
                     }
                 }
@@ -231,6 +254,14 @@ $specialGreen: rgb(37, 158, 98);
                 width: 50px;
                 border-radius: 50%;
                 object-fit: cover;
+                transition: 400ms;
+                outline: solid transparent;
+                &:hover{
+                    scale: 0.8;
+                    // border: solid orangered;
+                    outline: white solid;
+                    // object-fit: contain;
+                }
             }
         }
         .nsb-user-div{
@@ -241,8 +272,9 @@ $specialGreen: rgb(37, 158, 98);
             top: 50%;
             translate: 0% -50%;
             a{
-                // font-size: 50px;
-                text-decoration: none;
+                &:hover{
+                    color: skyblue;
+                }
             }
         }
     }
