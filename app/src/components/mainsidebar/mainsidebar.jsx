@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import "./style/mainsidebar.css";
 import bigsale from "/bigsale.ico";
 import Signup from './signup';
+import Login from './login';
+import SendMessage from './sendmess';
 
 const Mainsidebar = () =>
 {
@@ -13,6 +15,8 @@ const Mainsidebar = () =>
     const [showOptions1, setShowOptions1] = useState(false);
 
     const [showSignup, setshowSignup] = useState(false);
+    const [showLogin, setShowLogin] = useState(false);
+    const [showMessager, setShowMessager] = useState(false);
 
 
     useEffect(() =>
@@ -43,6 +47,32 @@ const Mainsidebar = () =>
 
     useEffect(() =>
     {
+        let SendMessage_cont = document.querySelector(".msb_SendMessage_cont").classList;
+        let msb_container = document.querySelector(".msb_main_list").classList;
+
+
+        if (showMessager)
+        {
+            msb_container.remove('msb_slideInside')
+            msb_container.add('msb_slideOutside')
+
+            SendMessage_cont.remove('msb_start-hidden')
+            SendMessage_cont.remove('msb_slideOutside')
+            SendMessage_cont.add('msb_slideInside')
+
+        } else
+        {
+            SendMessage_cont.remove('msb_slideInside')
+            SendMessage_cont.add('msb_slideOutside')
+
+            msb_container.remove('msb_slideOutside')
+            msb_container.add('msb_slideInside')
+
+        }
+    }, [showMessager])
+
+    useEffect(() =>
+    {
         let signup_cont = document.querySelector(".msb_signup_cont").classList;
         let msb_container = document.querySelector(".msb_main_list").classList;
 
@@ -66,6 +96,32 @@ const Mainsidebar = () =>
 
         }
     }, [showSignup])
+
+    useEffect(() =>
+    {
+        let login_cont = document.querySelector(".msb_login_cont").classList;
+        let msb_container = document.querySelector(".msb_main_list").classList;
+
+
+        if (showLogin)
+        {
+            msb_container.remove('msb_slideInside')
+            msb_container.add('msb_slideOutside')
+
+            login_cont.remove('msb_start-hidden')
+            login_cont.remove('msb_slideOutside')
+            login_cont.add('msb_slideInside')
+
+        } else
+        {
+            login_cont.remove('msb_slideInside')
+            login_cont.add('msb_slideOutside')
+
+            msb_container.remove('msb_slideOutside')
+            msb_container.add('msb_slideInside')
+
+        }
+    }, [showLogin])
 
     return (<div>
 
@@ -107,8 +163,6 @@ const Mainsidebar = () =>
                         {
                             setShowOptions1(false);
                         }
-                        // setShowOptions(false);
-                        // setShowOptions1(false);
                     }
                 }}
             >
@@ -136,6 +190,8 @@ const Mainsidebar = () =>
                             onClick={() =>
                             {
                                 setshowSignup(false);
+                                setShowLogin(false);
+                                setShowMessager(false);
                             }}
                         >
                             <i className="fa-solid fa-house fa-2x"></i>
@@ -146,9 +202,18 @@ const Mainsidebar = () =>
                         <Signup />
                     </div>
 
-                    <div className='msb_main_list grid gap-y-2'>
+                    {/* Login */}
+                    <div className='msb_start-hidden msb_login_cont'>
+                        <Login />
+                    </div>
 
-                        <div className='qwe msb_list_item'>
+                    <div className='msb_start-hidden msb_SendMessage_cont'>
+                        <SendMessage />
+                    </div>
+
+                    <div className='msb_main_list'>
+
+                        <div className='msb_list_item'>
 
                             <div className=''>
                                 <button
@@ -156,8 +221,6 @@ const Mainsidebar = () =>
                                     {
                                         setShowOptions(false)
                                         setShowOptions1(!showOptions1);
-                                        console.log("f")
-
                                     }}
                                 >
                                     <i class="fa-solid fa-location-crosshairs"></i>
@@ -165,7 +228,7 @@ const Mainsidebar = () =>
                                     Nav
                                 </button>
                             </div>
-                            <div className={`msp_smallLists ${showOptions1 ? 'qwe1bbb' : 'msp_slideUp'}`}>
+                            <div className={`msp_smallLists ${showOptions1 ? 'msp_slideDown' : 'msp_slideUp'}`}>
                                 <button className='msb_closeSLB'
                                     onClick={() =>
                                     {
@@ -179,7 +242,7 @@ const Mainsidebar = () =>
                             </div>
                         </div>
 
-                        <div className='qwe msb_list_item'>
+                        <div className='msb_list_item'>
 
                             <div className=''>
                                 <button
@@ -195,7 +258,7 @@ const Mainsidebar = () =>
                                     User
                                 </button>
                             </div>
-                            <div className={`msp_smallLists ${showOptions ? 'qwe1b' : 'msp_slideUp'}`}>
+                            <div className={`msp_smallLists ${showOptions ? 'msp_slideDown' : 'msp_slideUp'}`}>
                                 <button className='msb_closeSLB'
                                     onClick={() =>
                                     {
@@ -223,14 +286,25 @@ const Mainsidebar = () =>
                             </button>
                         </div>
                         <div className='msb_list_item'>
-                            <a href="/login">
+                            <button
+                                onClick={() =>
+                                {
+                                    setShowLogin(true)
+                                }}
+                            >
                                 Login
-                            </a>
+                            </button>
                         </div>
                         <div className='msb_list_item'>
-                            <a href="/user/profile">
+                            <button
+                                onClick={() =>
+                                {
+                                    setShowMessager(true)
+                                }}
+                            >
                                 Contact
-                            </a>
+                            </button>
+
                         </div>
 
                     </div>

@@ -1,0 +1,76 @@
+.msb_SendMessage_form_div {
+  padding-left: 12px;
+  padding-right: 6px;
+}
+.msb_SendMessage_form_div form {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  row-gap: 20px;
+}
+.msb_SendMessage_form_div form div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 2px;
+       column-gap: 2px;
+}
+.msb_SendMessage_form_div form div label {
+  min-width: 80px;
+  text-align: center;
+}
+.msb_SendMessage_form_div form div input {
+  min-width: 220px;
+  line-height: 32px;
+  font-size: 18px;
+  flex-grow: 1;
+  border: solid 1px;
+  border-radius: 50px;
+  outline: none;
+  text-align: center;
+  transition: 200ms;
+}
+.msb_SendMessage_form_div form div input:focus {
+  border: solid 1px green;
+}
+.msb_SendMessage_form_div form div .msb-mess-inp {
+  min-width: 220px;
+  line-height: 22px;
+  flex-grow: 1;
+  border: solid 1px;
+  outline: none;
+  text-align: center;
+  height: 100px;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-break: anywhere;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  transition: 200ms;
+}
+.msb_SendMessage_form_div form div .msb-mess-inp:focus {
+  border: solid 1px green;
+}
+.msb_SendMessage_form_div form div button {
+  border: solid rgb(87, 87, 201);
+  padding-inline: 10px;
+  padding-block: 5px;
+  background-color: skyblue;
+  border-radius: 4px;
+  transition: 200ms;
+}
+.msb_SendMessage_form_div form div button:hover {
+  border: solid rgb(100, 170, 200);
+  color: white;
+  border-radius: 8px;
+}
+.msb_SendMessage_form_div form div button:active {
+  background-color: whitesmoke;
+  color: skyblue;
+}/*# sourceMappingURL=SendMessage.css.map */

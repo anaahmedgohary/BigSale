@@ -1,15 +1,15 @@
-.msb_signup_form_div {
+.msb_login_form_div {
   padding-left: 12px;
   padding-right: 6px;
 }
-.msb_signup_form_div form {
+.msb_login_form_div form {
   padding-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   row-gap: 20px;
 }
-.msb_signup_form_div form div {
+.msb_login_form_div form div {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -17,11 +17,11 @@
   -moz-column-gap: 2px;
        column-gap: 2px;
 }
-.msb_signup_form_div form div label {
+.msb_login_form_div form div label {
   min-width: 80px;
   text-align: center;
 }
-.msb_signup_form_div form div input {
+.msb_login_form_div form div input {
   min-width: 220px;
   line-height: 32px;
   font-size: 18px;
@@ -32,10 +32,10 @@
   text-align: center;
   transition: 200ms;
 }
-.msb_signup_form_div form div input:focus {
+.msb_login_form_div form div input:focus {
   border: solid 1px green;
 }
-.msb_signup_form_div form div button {
+.msb_login_form_div form div button {
   border: solid rgb(87, 87, 201);
   padding-inline: 10px;
   padding-block: 5px;
@@ -43,12 +43,12 @@
   border-radius: 4px;
   transition: 200ms;
 }
-.msb_signup_form_div form div button:hover {
+.msb_login_form_div form div button:hover {
   border: solid rgb(100, 170, 200);
   color: white;
   border-radius: 8px;
 }
-.msb_signup_form_div form div button:active {
+.msb_login_form_div form div button:active {
   background-color: whitesmoke;
   color: skyblue;
-}/*# sourceMappingURL=signup.css.map */
+}/*# sourceMappingURL=login.css.map */

@@ -58,15 +58,31 @@
   transition: 400ms;
 }
 
-.msb_main_list {
-  padding-left: 10px;
-  padding-right: 10px;
+.msb_login_cont {
   position: absolute;
   width: 100%;
   transition: 400ms;
 }
 
+.msb_SendMessage_cont {
+  position: absolute;
+  width: 100%;
+  transition: 400ms;
+}
+
+.msb_main_list {
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  width: 100%;
+  transition: 400ms;
+  display: grid;
+  row-gap: 40px;
+}
+
 .msb_list_item {
+  display: flex;
   border-bottom: solid gray;
   font-size: 20px;
   padding-bottom: 10px;
@@ -76,36 +92,27 @@
   display: grid;
   row-gap: 6px;
   border: solid;
-  padding-inline: 10px;
+  box-shadow: -4px 4px 4px 4px black;
+  padding-bottom: 6px;
   display: flex;
   flex-direction: column;
   background-color: white;
   z-index: 1;
+  position: absolute;
+  right: 20px;
+}
+.msp_smallLists a {
+  text-align: center;
+  padding-inline: 10px;
+  background-color: rgb(230, 230, 230);
+}
+.msp_smallLists a:hover {
+  background-color: rgb(155, 243, 199);
 }
 
 .msb_closeSLB {
   background-color: rgb(248, 103, 50);
   font-size: 12px;
-}
-
-.qwe {
-  display: flex;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
-}
-.qwe .qwe1b {
-  border: solid;
-  display: flex;
-  flex-direction: column;
-  left: 10%;
-  background-color: white;
-  z-index: 1;
-  -webkit-animation: msp_slideDown 400ms 1 forwards;
-          animation: msp_slideDown 400ms 1 forwards;
-}
-.qwe .qwe1bbb {
-  -webkit-animation: msp_slideDown ease-in-out 400ms 1 forwards;
-          animation: msp_slideDown ease-in-out 400ms 1 forwards;
 }
 
 .msp_slideDown {

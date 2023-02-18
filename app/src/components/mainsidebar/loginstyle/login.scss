@@ -1,4 +1,4 @@
-.msb_signup_form_div {
+.msb_login_form_div {
     // border: solid;
     padding-left: 12px;
     padding-right: 6px;
@@ -15,8 +15,9 @@
             align-items: center;
             justify-content: center;
             column-gap: 2px;
+            
 
-            label {
+            label{
                 min-width: 80px;
                 text-align: center;
                 // border: solid;
@@ -32,10 +33,11 @@
 
                 text-align: center;
                 transition: 200ms;
-                &:focus {
+                &:focus{
                     border: solid 1px green;
                     // outline: 2px solid gold;
                 }
+
             }
             button {
                 border: solid rgb(87, 87, 201);
