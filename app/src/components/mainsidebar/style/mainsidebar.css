@@ -99,7 +99,6 @@
 }
 
 .msp_smallLists {
-  display: grid;
   row-gap: 6px;
   border: solid;
   box-shadow: -4px 4px 4px 4px black;
@@ -107,7 +106,6 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  z-index: 1;
   position: absolute;
   right: 20px;
 }
@@ -123,6 +121,10 @@
 .msb_closeSLB {
   background-color: rgb(248, 103, 50);
   font-size: 12px;
+}
+
+.msp_start_slidedUp {
+  display: none;
 }
 
 .msp_slideDown {
@@ -141,6 +143,7 @@
     overflow: hidden;
   }
   100% {
+    z-index: 2;
     height: auto;
   }
 }
@@ -156,55 +159,73 @@
     overflow: hidden;
   }
   100% {
+    z-index: 2;
     height: auto;
   }
 }
-.msp_slideUp {
-  -webkit-animation: msp_slideUp ease-in-out 400ms 0ms 1 forwards;
-          animation: msp_slideUp ease-in-out 400ms 0ms 1 forwards;
+.msp_slideUpoo {
+  row-gap: 6px;
+  border: solid;
+  box-shadow: -4px 4px 4px 4px black;
+  padding-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  right: 20px;
+  z-index: 0;
+  -webkit-animation: msp_slideUp3 ease-in-out 400ms 0ms 1 forwards;
+          animation: msp_slideUp3 ease-in-out 400ms 0ms 1 forwards;
+}
+.msp_slideUpoo a {
+  text-align: center;
+  padding-inline: 10px;
+  background-color: rgb(230, 230, 230);
+}
+.msp_slideUpoo a:hover {
+  background-color: rgb(155, 243, 199);
 }
 
-@-webkit-keyframes msp_slideUp {
+@-webkit-keyframes msp_slideUp3 {
   0% {
-    display: flex;
-    height: auto;
-    height: 70px;
+    height: 175px;
     overflow: hidden;
   }
-  50% {
+  90% {
+    height: 0;
     overflow: hidden;
-    border: solid;
+    opacity: 0.001;
   }
   100% {
     height: 0;
     overflow: hidden;
-    border: none;
-    visibility: collapse;
+    opacity: 0;
+    display: none;
   }
 }
 
-@keyframes msp_slideUp {
+@keyframes msp_slideUp3 {
   0% {
-    display: flex;
-    height: auto;
-    height: 70px;
+    height: 175px;
     overflow: hidden;
   }
-  50% {
+  90% {
+    height: 0;
     overflow: hidden;
-    border: solid;
+    opacity: 0.001;
   }
   100% {
     height: 0;
     overflow: hidden;
-    border: none;
-    visibility: collapse;
+    opacity: 0;
+    display: none;
   }
 }
 .msb_start-hidden {
+  position: absolute;
   left: min(-100%, -320px);
   display: none;
-  border: solid;
+  visibility: collapse;
 }
 
 .msb_slideInside {

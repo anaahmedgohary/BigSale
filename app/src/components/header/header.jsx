@@ -95,31 +95,6 @@ export default function MainHeader()
                     </a>
                 </div>
 
-                {/* <div id='sidebar_Container' className='startHidden sidebarContainer'
-                    onClick={(e) =>
-                    {
-                        if (e.target == document.querySelector("#sidebar_Container"))
-                        {
-                            setShowbar(!showbar)
-                        }
-                    }}
-                >
-
-                    <div className='sidebar-nav' id='sidebar_nav'>
-                        <ul className='bar-List' id='barList'>
-                            <li><a href="/">Categories</a></li>
-                            <li>
-                                <a href="/categories/desktops">Desktops</a>
-                            </li>
-                            <li>
-                                <a href="/categories/laptops">Laptops</a>
-                            </li>
-                            <li><a href="/categories/smartphones">Smartphones</a></li>
-                            <li><a href="#getInToutch">Contact</a></li>
-                        </ul>
-
-                    </div>
-                </div> */}
             </div>
 
             <div id='sidebar_Container' className='sidebarContainer_Div hidden'

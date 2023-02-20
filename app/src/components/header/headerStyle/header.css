@@ -302,6 +302,7 @@
     z-index: 3;
   }
   .Main_header .sidebar-nav {
+    padding-top: 50px;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -315,7 +316,7 @@
   }
   .Main_header .sidebar-nav .sbn_closeBtn {
     position: absolute;
-    top: 10px;
+    top: 100px;
     right: 10px;
     background-color: yellow;
     width: 40px;
@@ -346,11 +347,17 @@
     width: 100%;
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    padding-inline: 20px;
+    row-gap: 40px;
+  }
+  .Main_header .sidebar-nav ul li {
+    display: flex;
+    width: 100%;
   }
   .Main_header .sidebar-nav ul li a {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -358,11 +365,11 @@
     color: black;
     font-size: 20px;
     font-weight: 600;
-    background-color: rgb(37, 158, 98);
+    background-color: rgb(253, 162, 112);
     padding-block: 5px;
-    border-radius: 12px;
+    transition: 400ms;
   }
   .Main_header .sidebar-nav ul li a:hover {
-    background-color: orange;
+    background-color: rgb(155, 243, 199);
   }
 }/*# sourceMappingURL=header.css.map */

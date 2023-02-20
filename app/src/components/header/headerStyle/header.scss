@@ -343,6 +343,7 @@ $specialGreen: rgb(37, 158, 98);
         }
 
         .sidebar-nav {
+            padding-top: 50px;
             position: fixed;
             // top: 0;
             @include flexCenter();
@@ -359,7 +360,7 @@ $specialGreen: rgb(37, 158, 98);
             // border: solid red;
             .sbn_closeBtn {
                 position: absolute;
-                top: 10px;
+                top: 100px;
                 right: 10px;
                 background-color: yellow;
                 width: 40px;
@@ -391,26 +392,30 @@ $specialGreen: rgb(37, 158, 98);
                 width: 100%;
                 list-style: none;
                 display: flex;
-                // align-items: center;
-                justify-content: space-around;
+                align-items: center;
+                justify-content: center;
                 flex-direction: column;
-                // gap: 20px;
-                // border: solid white;
-                padding-inline: 20px;
+                row-gap: 40px;
                 li {
+                    display: flex;
+                    // min-width: 200px;
+                    // flex-grow: 1;
+                    width: 100%;
                     a {
+                        width: 100%;
                         @include flexCenter();
                         text-decoration: none;
                         color: black;
                         font-size: 20px;
                         font-weight: 600;
-                        background-color: $specialGreen;
+                        background-color: rgb(253, 162, 112);
                         padding-block: 5px;
-                        border-radius: 12px;
+                        // border-radius: 12px;
                         //width: 100%;
                         // border: solid orange;
+                        transition: 400ms;
                         &:hover {
-                            background-color: orange;
+                            background-color: rgb(155, 243, 199);
                         }
                     }
                 }

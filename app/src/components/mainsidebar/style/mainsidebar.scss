@@ -104,7 +104,6 @@
 }
 
 .msp_smallLists {
-    display: grid;
     row-gap: 6px;
     border: solid;
     box-shadow: -4px 4px 4px 4px black;
@@ -112,7 +111,7 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    z-index: 1;
+    // z-index: 1;
     position: absolute;
     right: 20px;
     a {
@@ -129,6 +128,9 @@
     font-size: 12px;
 }
 
+.msp_start_slidedUp{
+    display: none;
+}
 .msp_slideDown {
     animation: msp_slideDown ease-in-out 400ms 1 forwards;
 }
@@ -144,48 +146,63 @@
         overflow: hidden;
     }
     100% {
+        z-index: 2;
         height: auto;
     }
 }
-.msp_slideUp {
-    // border: solid;
-    //     display: flex;
-    //     flex-direction: column;
-    // position: absolute;
-    // z-index: 1;
-    // background-color: white;
-    // right: 0%;
-    // transition: 400ms;
 
-    animation: msp_slideUp ease-in-out 400ms 0ms 1 forwards;
+.msp_slideUpoo {
+
+     row-gap: 6px;
+    border: solid;
+    box-shadow: -4px 4px 4px 4px black;
+    padding-bottom: 6px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    right: 20px;
+    a {
+        text-align: center;
+        padding-inline: 10px;
+        background-color: rgb(230, 230, 230);
+        &:hover{
+            background-color:  rgb(155, 243, 199);
+        }
+    }
+    z-index: 0;
+    
+    animation: msp_slideUp3 ease-in-out 400ms 0ms 1 forwards;
+    // display: none;
+    // left: 100%;
 }
-@keyframes msp_slideUp {
+
+@keyframes msp_slideUp3 {
     0% {
-        display: flex;
-        height: auto;
-        height: 70px;
-
+        height: 175px;
         overflow: hidden;
-        // border: solid;
+        
     }
-    50% {
-        // height: 60px;
+    90%{
+        height: 0;
         overflow: hidden;
-        border: solid;
+        // rotate: 180deg;
+        opacity: 0.001;
     }
     100% {
         height: 0;
         overflow: hidden;
-        border: none;
-        visibility: collapse;
+    opacity: 0;
+        // visibility: collapse;
+        display: none;
     }
 }
 
 .msb_start-hidden {
+    position: absolute;
     left: min(-100%, -320px);
-    // visibility: collapse;
     display: none;
-    border: solid;
+    visibility: collapse;
 }
 
 .msb_slideInside {
@@ -205,6 +222,7 @@
 }
 
 .msb_slideOutside {
+    // position: fixed;
     animation: msb_slideOutside ease-in-out 400ms 0ms 1 forwards;
 }
 @keyframes msb_slideOutside {
