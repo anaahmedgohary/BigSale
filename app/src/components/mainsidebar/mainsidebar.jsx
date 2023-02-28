@@ -5,7 +5,7 @@ import Signup from './signup';
 import Login from './login';
 import SendMessage from './sendmess';
 
-const Mainsidebar = () =>
+export default function  MainsSidebar ()
 {
 
     useEffect(() =>
@@ -262,4 +262,4 @@ const Mainsidebar = () =>
     </div>);
 }
 
-export default Mainsidebar;
+// export default Mainsidebar;

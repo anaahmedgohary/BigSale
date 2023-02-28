@@ -19,7 +19,8 @@ import MainFooter from "./components/footer/footer";
 import NoPage from "./components/page404/nopage";
 import Checkout from "./components/checkout/checkout";
 // import SideCart from "components/cartGlobal/sidecart/test";
-import Mainsidebar from "./components/mainsidebar/mainsidebar";
+// import Mainsidebar from "./components/mainsidebar/mainsidebar";
+import MainsSidebar from "./components/mainsidebar/mainsidebar";
 // checkoutcart
 import HostedPayment from "./components/checkout/hostedpay";
 import DonePayment from "./components/checkout/donepay";
@@ -30,7 +31,7 @@ function App() {
   return (
     <Router className="App">
       <MainHeader />
-      <Mainsidebar />
+      <MainsSidebar />
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/t' element={<DonePayment />} />
