@@ -27,32 +27,33 @@ const EmailSub = () =>
         // console.log(err);
         // }
     };
-    useEffect(() =>
-    {
-        axios
-            .post(`${baseURL}/newsletter`, { email: "qqq" })
-            // .get(`${baseURL}/newsletter`)
 
-            .then((response) =>
-            {
-                console.log(response);
-            })
-            .catch((err) => { console.log(err) })
-    }, [])
+    // useEffect(() =>
+    // {
+    //     axios
+    //         .post(`${baseURL}/newsletter`, { email: "qqq" })
+    //         // .get(`${baseURL}/newsletter`)
 
-    useEffect(() =>
-    {
-        axios(`${baseURL}`, {
-            method: 'GET',
-        })
-            .then(response =>
-            {
-                // console.log(response.data)
-            }).catch(e =>
-            {
-                console.log(e);
-            })
-    }, [])
+    //         .then((response) =>
+    //         {
+    //             console.log(response);
+    //         })
+    //         .catch((err) => { console.log(err) })
+    // }, [])
+
+    // useEffect(() =>
+    // {
+    //     axios(`${baseURL}`, {
+    //         method: 'GET',
+    //     })
+    //         .then(response =>
+    //         {
+    //             // console.log(response.data)
+    //         }).catch(e =>
+    //         {
+    //             console.log(e);
+    //         })
+    // }, [])
 
 
     return (

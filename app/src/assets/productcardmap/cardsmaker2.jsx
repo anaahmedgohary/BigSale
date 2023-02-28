@@ -5,13 +5,13 @@ import AOS from 'aos';
 import "/node_modules/aos/dist/aos.css";
 export default function CardsMaker(props)
 {
-  AOS.init(600);
+  AOS.init({ duration: 600 });
   const [showDetails, setShowDetails] = useState(false);
 
-  useEffect(() =>
-  {
-    console.log(showDetails);
-  }, [showDetails])
+  // useEffect(() =>
+  // {
+  //   console.log(showDetails);
+  // }, [showDetails])
 
 
   return (
@@ -23,7 +23,7 @@ export default function CardsMaker(props)
           if (!showDetails)
           {
             return (
-              <div className='cardDivers' key={index}>
+              <div className='cardDivers' key={index} data-aos="fade-up">
                 <div className="card_div">
 
                   <ProductCard

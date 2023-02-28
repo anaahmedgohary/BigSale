@@ -64,7 +64,6 @@ export default function MainHeader()
                         <a href="/categories/laptops">Laptops</a>
                     </li>
                     <li><a href="/categories/smartphones">Smartphones</a></li>
-                    <li><a href="#getInToutch">Contact</a></li>
                 </ul>
             </nav>
 
@@ -120,7 +119,7 @@ export default function MainHeader()
                         </button>
                     </div>
                     <ul className='bar-List' id='barList'>
-                        <li><a href="/">Categories</a></li>
+                        <li><a href="/categories/featured">Featured</a></li>
                         <li>
                             <a href="/categories/desktops">Desktops</a>
                         </li>
@@ -129,7 +128,7 @@ export default function MainHeader()
                         </li>
                         <li><a href="/categories/smartphones">Smartphones</a></li>
                         <li><a href="/cart">Cart</a></li>
-                        <li><a href="#getInToutch">Contact</a></li>
+
                     </ul>
 
                 </div>

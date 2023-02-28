@@ -57,6 +57,9 @@
   width: 100%;
   min-width: 300px;
 }
+.chechout_container .card_form .card_form_row #cvvPIN {
+  text-decoration: none;
+}
 .chechout_container .card_form .card_form_row label {
   text-align: center;
   flex-shrink: 0;

@@ -35,6 +35,14 @@ export default function SideCartBar(props)
 
     }, [items])
 
+    useEffect(() =>
+    {
+        if (props.clearCart === true)
+        {
+            emptyCart();
+        }
+    }, [props.clearCart])
+
     if (isEmpty)
     {
         return (

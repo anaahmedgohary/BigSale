@@ -22,6 +22,10 @@ svg/
 guide/
 reusables/
 .env
+.env.local
+localhost.pem
+localhost-key.pem
+vite.config.js
 
 # Editor directories and files
 .vscode/*

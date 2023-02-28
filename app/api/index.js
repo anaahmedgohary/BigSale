@@ -1,8 +1,15 @@
 const express = require('express');
 require("dotenv").config();
 // 4LocalDev
-const cors = require("cors")
+const cors = require("cors");
 
+// https
+const https = require('https');
+const fs = require('fs');
+const httpsOptions = process.env.HTTPS_OPTIONS || {
+    key: fs.readFileSync('./localhost-key.pem'),
+    cert: fs.readFileSync('./localhost.pem')
+} || "empty";
 
 
 
@@ -19,10 +26,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Sub routes
+app.use("/api/payment", require("./routes/paytaps"));
 
 
-
-
+// Api Routes
 app.get("/", (req, res) =>
 {
     console.log("get req home")
@@ -56,10 +64,23 @@ app.post("/api/newsletter", async (req, res) =>
 
 
 
-
-app.listen(PORT, () =>
+if (!process.env.NODE_ENV || process.env.NODE_ENV !== "development")
 {
-    console.log(`Server is Listening on ${PORT}`)
-});
+    console.log(process.env.NODE_ENV)
+    console.log(httpsOptions)
+    console.log()
+    app.listen(PORT, () =>
+    {
+        console.log(`server http on port ${PORT}`)
+    });
+} else
+{
+
+    https.createServer(httpsOptions, app).listen(PORT, () =>
+    {
+        console.log(`Server https on ${PORT}`);
+    });
+}
+
 
 module.exports = app;

@@ -19,8 +19,10 @@ import MainFooter from "./components/footer/footer";
 import NoPage from "./components/page404/nopage";
 import Checkout from "./components/checkout/checkout";
 // import SideCart from "components/cartGlobal/sidecart/test";
-import Mainsidebar from "components/mainsidebar/mainsidebar";
+import Mainsidebar from "./components/mainsidebar/mainsidebar";
 // checkoutcart
+import HostedPayment from "./components/checkout/hostedpay";
+import DonePayment from "./components/checkout/donepay";
 
 
 function App() {
@@ -31,7 +33,7 @@ function App() {
       <Mainsidebar />
       <Routes>
         <Route path='/' element={<Landing />} />
-        <Route path='/t' element={<Mainsidebar />} />
+        <Route path='/t' element={<DonePayment />} />
         <Route path='/providers' element={<Clients />} />
         <Route path='/ghazawy-2' element={<GhazawyMall />} />
         <Route path='/categories/featured' element={<FeaturedDeals />} />
@@ -39,7 +41,8 @@ function App() {
         <Route path='/categories/smartphones' element={<SmartPhone />} />
         <Route path='/categories/desktops' element={<DeskTops />} />
         <Route path='/cart' element={<GlobalCart />} />
-        <Route path='/checkoutcart' element={<Checkout />} />
+        <Route path='/checkoutcart' element={<HostedPayment />} />
+        <Route path='/paymentsuccess' element={<DonePayment />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
       <MainFooter/>

@@ -55,7 +55,7 @@ export default function BarCart(props)
                     setSideCart(!sideCart)
                 }
             }} id='sideCartCont' className="cartModalHidden">
-                <SideCartBar hideBtn={() => { setSideCart(false) }} setPropTotal={props.setPropTotal} />
+                <SideCartBar hideBtn={() => { setSideCart(false) }} setPropTotal={props.setPropTotal} clearCart={props.clearCart} />
             </div>
         </>
     )

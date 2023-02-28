@@ -1,11 +1,4 @@
-
-
-
-
-
-
-
-.chechout_container{
+.chechout_container {
     background-color: transparent;
     display: flex;
     flex-flow: column;
@@ -15,38 +8,37 @@
     padding-block: 100px;
     padding-left: 50px;
 
-.totaldiv_cc{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 20px;
-    background-color: black;
-    color: white;
-    width: 100%;
-    label{
-        font-size: 28px;
-        min-width: 140px;
-        
+    .totaldiv_cc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        background-color: black;
+        color: white;
+        width: 100%;
+        label {
+            font-size: 28px;
+            min-width: 140px;
+        }
+        input {
+            background-color: transparent;
+            outline: none;
+            // border: solid;
+            max-width: 140px;
+            font-size: 28px;
+            text-decoration: underline;
+            text-align: center;
+        }
     }
-    input{
-        background-color: transparent;
-        outline: none;
-        // border: solid;
-        max-width: 140px;
-        font-size: 28px;
-        text-decoration: underline;
-        text-align: center;
+
+    .payment_section {
+        background-color: whitesmoke;
+        width: 100%;
+        padding-block: 50px;
     }
-}
 
-.payment_section{
-    background-color: whitesmoke;
-    width: 100%;
-    padding-block: 50px;
-}
-
-.card_form{
+    .card_form {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -57,7 +49,7 @@
         padding-inline: 20px;
         // border: solid;
 
-        .card_form_row{
+        .card_form_row {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -68,7 +60,20 @@
             width: 100%;
             min-width: 300px;
             // border: solid;
-            label{
+            #cvvPIN {
+                text-decoration: none;
+                // &::-webkit-outer-spin-button {
+                //     -webkit-appearance: none;
+                //     // appearance: none;
+                //     margin: 0;
+                // }
+                // &::-webkit-inner-spin-button {
+                //     -webkit-appearance: none;
+                //     // appearance: none;
+                //     margin: 0;
+                // }
+            }
+            label {
                 // flex-grow: 1;
                 text-align: center;
                 flex-shrink: 0;
@@ -76,7 +81,7 @@
                 width: min(50%, 140px);
                 // border: solid;
             }
-            input{
+            input {
                 // flex-grow: 1;
                 text-align: center;
                 flex-shrink: 0;
@@ -89,14 +94,14 @@
                 min-height: 40px;
                 border-radius: 8px;
                 outline: none;
-                &:focus{
+                &:focus {
                     background-color: white;
                     outline: 2px solid orange;
                     border: none;
-                    box-shadow:none;
+                    box-shadow: none;
                 }
             }
-            select{
+            select {
                 // flex-grow: 1;
                 flex-shrink: 0;
                 width: 96%;
@@ -106,17 +111,17 @@
                 background-color: rgb(232, 240, 254);
                 min-height: 40px;
                 border-radius: 8px;
-                &:focus{
+                &:focus {
                     background-color: white;
                     outline: 2px solid orange;
                     border: none;
-                    box-shadow:none;
+                    box-shadow: none;
                 }
             }
         }
-        .submit_form_cc{
+        .submit_form_cc {
             margin-top: 40px;
-            input{
+            input {
                 font-size: 20px;
                 font-weight: 600;
                 color: white;
@@ -128,26 +133,16 @@
                 border-radius: 8px;
                 outline: green solid 0px;
                 transition: 400ms;
-                &:hover{
+                &:hover {
                     box-shadow: 4px 4px 4px;
                     background-color: lightgreen;
                     color: black;
                 }
-                &:active{
+                &:active {
                     transition: 0;
                     outline-width: 2px;
-                    
                 }
             }
         }
     }
-
-
-
-
-
-
-
-
-
 }

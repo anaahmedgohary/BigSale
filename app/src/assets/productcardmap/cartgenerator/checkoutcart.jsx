@@ -60,7 +60,7 @@ export default function SideCartBar(props)
                                     <div className='detailDiv imgAndName'>
                                         <img src={item.img} alt="product"
                                             className='product-img' />
-                                        <input readOnly value={item.name} />
+                                        <input id='coc_itemName' readOnly value={item.name} />
                                     </div>
 
                                    
@@ -71,13 +71,13 @@ export default function SideCartBar(props)
                                         </div> */}
                                     <div className='detailDiv'>
                                             <label title='After Discount'>Price AD:</label>
-                                            <input className='item_price' readOnly value={item.price} />
+                                        <input id='coc_itemPrice' className='item_price' readOnly value={item.price} />
                                               
                                         </div>
 
                                     <div className='detailDiv'>
                                         <label>Quantity:</label>
-                                        <input className='item_quantity' readOnly value={item.quantity} />
+                                        <input id='coc_itemQty' className='item_quantity' readOnly value={item.quantity} />
 
                                     </div>
                                 </div>
