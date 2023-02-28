@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './style/hostedpay.css';
 import { CartProvider } from "react-use-cart";
 
-import BarCart from 'assets/productcardmap/cartgenerator/SideCart';
+import BarCart from '/src/assets/productcardmap/cartgenerator/SideCart';
 import axios from 'axios';
 
 export default function HostedPayment()

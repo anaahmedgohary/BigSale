@@ -3,8 +3,8 @@ import './style/checkout.css';
 import { CartProvider } from "react-use-cart";
 // import BarCart from 'assets/productcardmap/cartgenerator/SideCart';
 // import CheckoutBarCart from 'assets/productcardmap/cartgenerator/checkoutcartbar';
-import BarCart from 'assets/productcardmap/cartgenerator/SideCart';
-import visa from 'assets/images/checkout/visa.png';
+import BarCart from '/src/assets/productcardmap/cartgenerator/SideCart';
+// import visa from '/src/assets/images/checkout/visa.png';
 import axios from 'axios';
 
 export default function Checkout()

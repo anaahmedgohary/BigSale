@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CartProvider } from "react-use-cart";
-import BarCart from 'assets/productcardmap/cartgenerator/SideCart';
+import BarCart from '/src/assets/productcardmap/cartgenerator/SideCart';
 
 export default function DonePayment()
 {

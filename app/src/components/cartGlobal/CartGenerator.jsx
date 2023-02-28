@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useCart } from "react-use-cart";
-import $ from 'jquery';
 import "./cartstyle/cart.css";
 
 export default function CartGenerator()
